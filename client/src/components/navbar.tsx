@@ -9,10 +9,15 @@ export function Navbar() {
 
   const NavItems = () => (
     <>
-      <a href="#products" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+      <a href="/#products" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
         Products
       </a>
-      <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+      <Link href="/blockchain-dna">
+        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+          BlockchainDNA
+        </a>
+      </Link>
+      <a href="/#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
         About
       </a>
       <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
