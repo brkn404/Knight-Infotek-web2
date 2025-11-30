@@ -17,6 +17,11 @@ export function Navbar() {
           BlockchainDNA
         </a>
       </Link>
+      <Link href="/cha-ching-analytics">
+        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+          Cha-Ching Analytics
+        </a>
+      </Link>
       <a href="/#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
         About
       </a>
