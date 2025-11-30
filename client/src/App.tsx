@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import BlockchainDNA from "@/pages/blockchain-dna";
 import ChaChingAnalytics from "@/pages/cha-ching-analytics";
+import ZeroKnight30 from "@/pages/zero-knight-30";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/blockchain-dna" component={BlockchainDNA} />
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
+      <Route path="/zero-knight-30" component={ZeroKnight30} />
       <Route component={NotFound} />
     </Switch>
   );

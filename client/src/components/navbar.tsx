@@ -22,6 +22,11 @@ export function Navbar() {
           Cha-Ching Analytics
         </a>
       </Link>
+      <Link href="/zero-knight-30">
+        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+          ZeroKnight30
+        </a>
+      </Link>
       <a href="/#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
         About
       </a>
