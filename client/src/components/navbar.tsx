@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@assets/generated_images/high_quality_3d_silver_knight_chess_piece_logo.png";
+import logo from "@assets/knight-infotek-logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,10 +47,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
           <a className="flex items-center gap-2 group">
-            <img src={logo} alt="Knight InfoTek Logo" className="w-8 h-8 object-contain" />
-            <span className="font-display font-bold text-xl tracking-wider text-foreground">
-              KNIGHT<span className="text-primary">INFOTEK</span>
-            </span>
+            <img src={logo} alt="Knight InfoTek Logo" className="h-12 object-contain" />
           </a>
         </Link>
 
