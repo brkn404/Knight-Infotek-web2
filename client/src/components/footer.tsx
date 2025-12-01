@@ -1,4 +1,5 @@
 import { Shield } from "lucide-react";
+import logo from "@assets/generated_images/modernized_knight_infotek_logo_icon.png";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <Shield className="w-6 h-6 text-primary" />
+              <img src={logo} alt="Knight InfoTek Logo" className="w-8 h-8 object-contain" />
               <span className="font-display font-bold text-xl tracking-wider text-foreground">
                 KNIGHT<span className="text-primary">INFOTEK</span>
               </span>
