@@ -147,15 +147,17 @@ export default function ChaChingAnalytics() {
             <div className="space-y-8">
               <div className="bg-card/50 p-6 rounded-xl border border-primary/20">
                 <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                  <Network className="text-primary" /> Digital Genome Concept
+                  <Network className="text-primary" /> GenomeX Enhanced Modules
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Transactions are "genes." Patterns are "traits." Anomalies are "mutations." We anchor this behavioral DNA on-chain.
+                  Powered by the GenomeX behavioral intelligence platform, leveraging advanced modules for precision compliance:
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Pattern Persistence across wallets</li>
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Evolution-Resistant Embeddings</li>
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Mutation Resistance Scoring</li>
+                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> <strong>PatternTags:</strong> High-speed compliance & anomaly classification</li>
+                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> <strong>DriftScanner:</strong> Behavioral drift scoring for wallets & assets</li>
+                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> <strong>BehaviorPrint:</strong> Mutation-aware hash fingerprints</li>
+                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> <strong>CostShield:</strong> Adversarial economic risk scoring</li>
+                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> <strong>ExplainCore:</strong> Human-readable regulator-grade reasoning</li>
                 </ul>
               </div>
 

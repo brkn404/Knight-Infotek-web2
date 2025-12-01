@@ -7,6 +7,7 @@ import Home from "@/pages/home";
 import BlockchainDNA from "@/pages/blockchain-dna";
 import ChaChingAnalytics from "@/pages/cha-ching-analytics";
 import ZeroKnight30 from "@/pages/zero-knight-30";
+import ChainGuardian from "@/pages/chain-guardian";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/blockchain-dna" component={BlockchainDNA} />
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
       <Route path="/zero-knight-30" component={ZeroKnight30} />
+      <Route path="/chain-guardian" component={ChainGuardian} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -89,9 +89,9 @@ export default function ZeroKnight30() {
               
               <div className="grid gap-6">
                 {[
-                  { title: "Active Interception", desc: "Neutralizes threats in <4 seconds, before settlement finality.", icon: Crosshair },
-                  { title: "Behavioral DNA Lock", desc: "Biometric-grade behavioral binding for every transaction.", icon: Fingerprint },
-                  { title: "Air-Gapped Sovereignty", desc: "Full local operation for critical infrastructure defense.", icon: Server }
+                  { title: "Behavioral Snapshot Recovery (BSR)", desc: "Instantly restore only corrupted files using behavioral fingerprints. No full system rollback needed.", icon: Crosshair },
+                  { title: "Clean State Anchors (CSAs)", desc: "Local, immutable integrity anchors that operate offline. No cloud or blockchain dependency.", icon: Fingerprint },
+                  { title: "Air-Gapped Sovereignty", desc: "Full local operation. No internet, no updates, no external signals required.", icon: Server }
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
                     <div className="p-3 rounded bg-primary/10 text-primary border border-primary/20">

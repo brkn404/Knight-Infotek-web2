@@ -27,6 +27,11 @@ export function Navbar() {
           ZeroKnight30
         </a>
       </Link>
+      <Link href="/chain-guardian">
+        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+          ChainGuardian
+        </a>
+      </Link>
       <a href="/#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
         About
       </a>

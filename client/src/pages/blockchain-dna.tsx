@@ -104,12 +104,12 @@ export default function BlockchainDNA() {
 
               <div className="grid gap-4">
                 {[
-                  { title: "GenID", desc: "Identity Registry for humans, agents, and devices", icon: Shield },
-                  { title: "ChainLedger", desc: "Forensic-grade audit & history registry", icon: FileCheck },
-                  { title: "RuleEngine", desc: "Behavior & policy enforcement registry", icon: Activity },
-                  { title: "RiskMonitor", desc: "Threat detection & drift registry", icon: Shield },
-                  { title: "ProofHub", desc: "Attestation & ZK-proof registry", icon: Lock },
-                  { title: "AuthorityChain", desc: "Delegation & responsibility roll-up", icon: Network },
+                  { title: "GenID", desc: "Identity Registry for 9 entity classes: Humans, Wallets, AI Agents, DAOs, Stablecoin Issuers, RWAs, Institutions, and Autonomous Systems.", icon: Shield },
+                  { title: "ChainLedger", desc: "Forensic-grade audit & history registry. Logs complete behavioral lineage, not just transactions.", icon: FileCheck },
+                  { title: "RuleEngine", desc: "Behavior & policy enforcement registry. Enforces jurisdiction-level controls and AML/SAR rules.", icon: Activity },
+                  { title: "RiskMonitor", desc: "Threat detection & drift registry. Detects off-pattern behavior, sanctions evasion, and agent takeovers.", icon: Shield },
+                  { title: "ProofHub", desc: "Attestation & ZK-proof registry. Real-time compliance proofs and chain-of-care evidence.", icon: Lock },
+                  { title: "AuthorityChain", desc: "Delegation & responsibility roll-up. Professional roll-up and scope-of-practice enforcement for AI.", icon: Network },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4 p-4 rounded-lg bg-card/50 border border-white/5 hover:border-primary/30 transition-colors">
                     <div className="p-2 rounded bg-primary/10 text-primary mt-1">
