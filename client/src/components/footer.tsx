@@ -1,5 +1,5 @@
 import { Shield } from "lucide-react";
-import logo from "@assets/generated_images/modernized_knight_infotek_logo_icon.png";
+import logo from "@assets/generated_images/high_quality_3d_silver_knight_chess_piece_logo.png";
 
 export function Footer() {
   return (

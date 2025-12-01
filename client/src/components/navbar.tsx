@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@assets/generated_images/modernized_knight_infotek_logo_icon.png";
+import logo from "@assets/generated_images/high_quality_3d_silver_knight_chess_piece_logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
