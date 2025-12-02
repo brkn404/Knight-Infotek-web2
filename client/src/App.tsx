@@ -8,6 +8,8 @@ import BlockchainDNA from "@/pages/blockchain-dna";
 import ChaChingAnalytics from "@/pages/cha-ching-analytics";
 import ZeroKnight30 from "@/pages/zero-knight-30";
 import ChainGuardian from "@/pages/chain-guardian";
+import Blog from "@/pages/blog";
+import Support from "@/pages/support";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +20,8 @@ function Router() {
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
       <Route path="/zero-knight-30" component={ZeroKnight30} />
       <Route path="/chain-guardian" component={ChainGuardian} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/support" component={Support} />
       <Route component={NotFound} />
     </Switch>
   );

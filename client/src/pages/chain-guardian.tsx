@@ -16,7 +16,7 @@ export default function ChainGuardian() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center pt-16 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center pt-20 md:pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBg} 
@@ -64,9 +64,139 @@ export default function ChainGuardian() {
         </div>
       </section>
 
-      {/* Core Value Prop */}
+      {/* Overview Section */}
+      <section className="py-24 bg-background relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
+                WHAT IS <span className="text-orange-500">CHAINGUARDIAN</span>?
+              </h2>
+            </div>
+            
+            <div className="prose prose-invert max-w-none">
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-center">
+                <strong className="text-white">ChainGuardian</strong> is a real-time content filtering and compliance system that detects illegal or problematic content embedded in Bitcoin transactions <strong className="text-orange-500">before blocks are mined</strong>. It protects miners, mining pools, node operators, and exchanges from legal liability while ensuring regulatory compliance across multiple jurisdictions.
+              </p>
+              
+              <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
+                <strong className="text-white">Key Differentiator:</strong> First and only product focused on pre-mining content filtering with hash-only verification (never views actual content). Powered by Knight Global Enterprises' GenomeX behavioral intelligence platform.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              <Card className="bg-card/50 border-white/10">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mb-4">
+                    <Eye className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-white">Real-Time Content Detection</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Mempool monitoring with multi-format content extraction (OP_RETURN, witness data, Ordinals). File type and pattern analysis with signature matching.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 border-white/10">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mb-4">
+                    <Lock className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-white">Hash-Only Verification</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Never views actual content (privacy-preserving). SHA-256 hash-based analysis with threat intelligence integration. Signature database matching.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 border-white/10">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mb-4">
+                    <Globe className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-white">Jurisdiction Compliance</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    US: FBI IC3 reporting, 7-year retention. EU: GDPR compliance, Europol reporting, 3-year retention. UK: Action Fraud reporting, 5-year retention. Automated reporting workflows.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 border-white/10">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mb-4">
+                    <ShieldAlert className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-white">Liability Protection</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Protect miners, pools, and nodes from criminal and civil liability. Pre-mining filtering prevents illegal content from being permanently written to the blockchain.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Problem */}
       <section className="py-24 bg-card/30 border-y border-white/5">
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
+              THE <span className="text-destructive">PROBLEM</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 text-center">
+              Modern blockchains (especially Bitcoin) are increasingly used to embed illegal content
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {[
+                {
+                  title: "CSAM & Extremist Content",
+                  desc: "Illegal material embedded in OP_RETURN payloads and inscriptions creates severe criminal liability for miners and pools.",
+                  icon: FileWarning
+                },
+                {
+                  title: "Pirated Content & Malware",
+                  desc: "Attackers systematically test how much illegal content they can embed, creating permanent exposure risks.",
+                  icon: ShieldAlert
+                },
+                {
+                  title: "Regulatory Exposure",
+                  desc: "Under EU, US, and international law, knowingly storing illegal content can be prosecutable. Future regulations may mandate filtering.",
+                  icon: Globe
+                },
+                {
+                  title: "Permanent Liability",
+                  desc: "Once harmful content is committed, industry-wide exposure is permanent. The blockchain cannot be 'edited'.",
+                  icon: Lock
+                }
+              ].map((item) => (
+                <div key={item.title} className="p-6 rounded-xl bg-background/50 border border-white/10">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 rounded bg-destructive/10 text-destructive">
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Value Prop */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-top-left" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
@@ -75,7 +205,7 @@ export default function ChainGuardian() {
               </h2>
               <h3 className="text-xl text-white font-bold mb-6">Liability is not optional.</h3>
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                Once illegal content (CSAM, extremist propaganda, malware) is mined into a block, everyone who touches it—miners, pools, exchanges, nodes—is exposed to criminal and civil liability.
+                Once illegal content (CSAM, extremist propaganda, malware) is mined into a block, everyone who touches it—miners, pools, exchanges, nodes—is exposed to criminal and civil liability. ChainGuardian prevents this by intercepting harmful content before it becomes permanent.
               </p>
               
               <div className="space-y-6">
@@ -123,15 +253,74 @@ export default function ChainGuardian() {
         </div>
       </section>
 
+      {/* Core Capabilities */}
+      <section className="py-24 bg-card/30 border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
+            CORE <span className="text-orange-500">CAPABILITIES</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "Mempool-Level Content Detection",
+                desc: "Real-time monitoring of OP_RETURN payloads, inscription flows, Ordinal-like structures, high-entropy embedded content, suspicious UTXO patterns, anomalous transaction construction, and behavioral signatures of known malicious uploaders. Uses behavioral fingerprints rather than signatures, remaining effective against new embedding techniques.",
+                icon: Eye
+              },
+              {
+                title: "Hash-Only Content Verification",
+                desc: "Hash-matching against illegal-content hash registries, court-ordered databases, regulator-provided hash lists, and cross-pool threat intelligence networks. ChainGuardian never ingests raw content, enabling safe and legal operation.",
+                icon: Database
+              },
+              {
+                title: "Behavioral Risk Scoring (GenomeX)",
+                desc: "Using GenomeX modules: PatternTags for policy-violating patterns, DriftScanner for off-pattern uploader behavior, CostShield to raise attacker effort, BehaviorPrint for mutation-aware patterns, and ExplainCore for regulator-readable narratives. Identifies malicious behavior even from new addresses.",
+                icon: Zap
+              },
+              {
+                title: "Jurisdiction-Aware Policy Enforcement",
+                desc: "Different regions have different liability triggers. ChainGuardian supports US federal filtering policies, EU Digital Services Act mandates, UK Online Safety frameworks, local compliance variations, and miner/pool-specific policies. Can block, flag, or escalate depending on configuration.",
+                icon: Globe
+              },
+              {
+                title: "Safe Block Template Generation",
+                desc: "Integrates with mining pool block template builders, node validation paths, mempool sorting logic, and custom filtering rules. Miners receive a clean, compliant template, ensuring downstream actors (exchanges, nodes, custodians) remain protected.",
+                icon: Lock
+              },
+              {
+                title: "Evidence & Reporting",
+                desc: "Produces regulator-ready reason codes, case summaries, tamper-evident logs, timestamped event trails, and audit artifacts—all without exposing content. Perfect for compliance and legal defense.",
+                icon: FileWarning
+              }
+            ].map((capability) => (
+              <Card key={capability.title} className="bg-background/50 border-white/10 hover:border-orange-500/30 transition-colors">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded bg-orange-500/10 text-orange-500">
+                      <capability.icon className="w-5 h-5" />
+                    </div>
+                    <CardTitle className="text-lg font-display">{capability.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{capability.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Architecture / Hash-Only */}
       <section className="py-24 bg-background relative overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-bottom-right" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">
               HASH-ONLY <span className="text-orange-500">VERIFICATION</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Protecting infrastructure without compromising privacy. ChainGuardian never ingests raw content.
+              Protecting infrastructure without compromising privacy. ChainGuardian never ingests raw content—only hashes, behavior patterns, metadata, and risk signals.
             </p>
           </div>
 
@@ -192,41 +381,172 @@ export default function ChainGuardian() {
         </div>
       </section>
 
-      {/* Target Market */}
-      <section className="py-24 bg-secondary/5 border-t border-white/5">
+      {/* Use Cases */}
+      <section className="py-24 bg-card/30 border-y border-white/5">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-                PROTECTING <span className="text-white">INFRASTRUCTURE</span>
-              </h2>
-              <p className="text-muted-foreground mb-8 text-lg">
-                ChainGuardian is the "content safety firewall" for the blockchain ecosystem.
-              </p>
-              
-              <div className="grid sm:grid-cols-2 gap-4">
-                {[
-                  "Bitcoin Mining Pools",
-                  "Solo Miners",
-                  "Crypto Exchanges",
-                  "Institutional Node Operators",
-                  "Regulated Mining Ops",
-                  "Custodians"
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 p-3 rounded bg-background/50 border border-white/5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
-                    <span className="font-medium text-foreground">{item}</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
+            KEY <span className="text-orange-500">USE CASES</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Bitcoin Mining Pools",
+                desc: "Protect block templates from illegal content before mining. Ensure compliance with jurisdictional requirements for safe block production.",
+                icon: Server
+              },
+              {
+                title: "Solo Miners",
+                desc: "Local compliance shielding without central services. Operate independently while maintaining legal protection.",
+                icon: Lock
+              },
+              {
+                title: "Exchanges",
+                desc: "Filter inbound mempool activity and avoid liability-tainted transactions. Protect downstream infrastructure and customers.",
+                icon: Globe
+              },
+              {
+                title: "Institutions Running Nodes",
+                desc: "Ensure nodes don't propagate or index potentially illegal payloads. Maintain regulatory compliance and legal protection.",
+                icon: ShieldAlert
+              },
+              {
+                title: "Regulated Mining Operations",
+                desc: "Meet jurisdictional requirements for safe block production. Automated compliance with US, EU, UK, and APAC regulations.",
+                icon: FileWarning
+              },
+              {
+                title: "Custodians & Infrastructure",
+                desc: "Protect against exposure to illegal content in blockchain data. Maintain compliance and avoid legal liability.",
+                icon: Eye
+              }
+            ].map((useCase) => (
+              <Card key={useCase.title} className="bg-background/50 border-white/10 hover:border-orange-500/30 transition-colors">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded bg-orange-500/10 text-orange-500">
+                      <useCase.icon className="w-5 h-5" />
+                    </div>
+                    <CardTitle className="text-lg font-display">{useCase.title}</CardTitle>
                   </div>
-                ))}
-              </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{useCase.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Specifications */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
+              TECHNICAL <span className="text-orange-500">SPECIFICATIONS</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  metric: "Sub-millisecond",
+                  label: "Analysis Latency",
+                  desc: "Real-time mempool processing"
+                },
+                {
+                  metric: "Mempool-Scale",
+                  label: "Throughput",
+                  desc: "Real-time transaction analysis"
+                },
+                {
+                  metric: "Bitcoin Core, Stratum V2",
+                  label: "Compatibility",
+                  desc: "Custom pool software support"
+                },
+                {
+                  metric: "No Content Stored",
+                  label: "Privacy",
+                  desc: "Hash-only verification"
+                },
+                {
+                  metric: "On-Premise / Local",
+                  label: "Deployment",
+                  desc: "Node or pool-level integration"
+                },
+                {
+                  metric: "99.9%+",
+                  label: "Uptime",
+                  desc: "Enterprise-grade reliability"
+                }
+              ].map((item) => (
+                <div key={item.label} className="p-6 rounded-xl bg-card/50 border border-white/10 text-center">
+                  <div className="text-2xl font-display font-bold text-orange-500 mb-2">{item.metric}</div>
+                  <div className="text-lg font-bold text-white mb-2">{item.label}</div>
+                  <div className="text-sm text-muted-foreground">{item.desc}</div>
+                </div>
+              ))}
             </div>
-            
-            <div className="order-1 lg:order-2 relative">
-               <img 
-                src={commandImg} 
-                alt="Mining Pool Command" 
-                className="rounded-xl border border-white/10 shadow-2xl"
-              />
+          </div>
+        </div>
+      </section>
+
+      {/* Differentiators */}
+      <section className="py-24 bg-card/30 border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
+            KEY <span className="text-orange-500">DIFFERENTIATORS</span>
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              "Privacy-First: Never touches raw content—only hashes and behavior",
+              "Real-Time Protection: Prevents harm before irreversible block inclusion",
+              "Behavioral Intelligence: More resilient than signature-only solutions",
+              "Jurisdiction-Aware Rules: Future-proof as global regulations evolve",
+              "Infrastructure-Compatible: No protocol changes needed; drop-in deployment",
+              "Regulator-Ready Explainability: Every decision is human-interpretable"
+            ].map((item) => (
+              <div key={item} className="p-4 rounded-lg bg-background/50 border border-white/10">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                  <p className="text-sm text-foreground leading-relaxed">{item}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Market Positioning */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
+              MARKET <span className="text-orange-500">POSITIONING</span>
+            </h2>
+            <div className="bg-card/50 p-8 rounded-xl border border-white/10">
+              <p className="text-muted-foreground mb-6 text-lg">
+                ChainGuardian is the first commercially viable solution enabling compliant Bitcoin mining, legally protected node operations, safe exchange infrastructure, and risk-managed mempool propagation.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                It is positioned as the "content safety firewall" for the blockchain ecosystem—analogous to:
+              </p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                  <span><strong>Proof-of-reserves</strong> → for balances</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                  <span><strong>MEV protection</strong> → for economic fairness</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                  <span><strong>ChainGuardian</strong> → for safety & legal integrity</span>
+                </li>
+              </ul>
+              <p className="text-muted-foreground mt-6 italic">
+                A new essential layer for responsible mining and node operation.
+              </p>
             </div>
           </div>
         </div>

@@ -8,9 +8,10 @@ import { metaImagesPlugin } from "./vite-plugin-meta-images";
 export default defineConfig({
   plugins: [
     react(),
-    runtimeErrorOverlay(),
+    ...(process.env.NODE_ENV !== "production" ? [runtimeErrorOverlay()] : []),
     tailwindcss(),
     metaImagesPlugin(),
+    // Replit plugins only in development on Replit
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [

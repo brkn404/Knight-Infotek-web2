@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Behavioral Trust in Blockchain",
+    "excerpt": "Exploring how behavioral intelligence is transforming blockchain security and compliance.",
+    "date": "January 15, 2025",
+    "category": "Blockchain",
+    "readTime": "5 min read",
+    "slug": "future-behavioral-trust-blockchain",
+    "published": true
+  },
+  {
+    "id": 2,
+    "title": "AI Governance: Balancing Autonomy and Control",
+    "excerpt": "How GenomeX enables safe deployment of autonomous AI agents in regulated industries.",
+    "date": "January 10, 2025",
+    "category": "AI",
+    "readTime": "7 min read",
+    "slug": "ai-governance-autonomy-control",
+    "published": true
+  },
+  {
+    "id": 3,
+    "title": "Real-Time Compliance at Blockchain Speed",
+    "excerpt": "Understanding how Cha-Ching Analytics delivers compliance in under 4 seconds.",
+    "date": "January 5, 2025",
+    "category": "Compliance",
+    "readTime": "6 min read",
+    "slug": "real-time-compliance-blockchain-speed",
+    "published": true
+  }
+]
+

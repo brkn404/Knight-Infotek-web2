@@ -59,9 +59,9 @@ const products = [
 
 export function Products() {
   return (
-    <section id="products" className="py-24 bg-background relative">
+    <section id="products" className="py-12 md:py-16 bg-background relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">
             CORE <span className="text-primary">TECHNOLOGIES</span>
           </h2>

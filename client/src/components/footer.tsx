@@ -1,5 +1,3 @@
-import { Shield } from "lucide-react";
-import logo from "@assets/generated_images/high_quality_3d_silver_knight_chess_piece_logo.png";
 
 export function Footer() {
   return (
@@ -7,8 +5,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="Knight InfoTek Logo" className="w-8 h-8 object-contain" />
+            <div className="mb-6">
               <span className="font-display font-bold text-xl tracking-wider text-foreground">
                 KNIGHT<span className="text-primary">INFOTEK</span>
               </span>
@@ -21,20 +18,20 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-white mb-4">Solutions</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Cha-Ching Analytics</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">BlockchainDNA</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">ZeroKnight30</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Enterprise Consulting</a></li>
+              <li><a href="/cha-ching-analytics" className="hover:text-primary transition-colors">Cha-Ching Analytics</a></li>
+              <li><a href="/blockchain-dna" className="hover:text-primary transition-colors">BlockchainDNA</a></li>
+              <li><a href="/zero-knight-30" className="hover:text-primary transition-colors">ZeroKnight30</a></li>
+              <li><a href="/chain-guardian" className="hover:text-primary transition-colors">ChainGuardian</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-bold text-white mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
+              <li><a href="/#about" className="hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="/#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>

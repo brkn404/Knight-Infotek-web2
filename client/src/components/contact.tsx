@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Globe } from "lucide-react";
 
 export function Contact() {
   return (
@@ -24,18 +24,8 @@ export function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white">US Headquarters</h4>
-                  <p className="text-muted-foreground">123 Innovation Drive<br />Tech Valley, CA 94043</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded bg-primary/10 text-primary">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-white">Email</h4>
-                  <p className="text-muted-foreground">contact@knightinfotek.com</p>
+                  <h4 className="font-bold text-white">Address</h4>
+                  <p className="text-muted-foreground">Santa Ana, CA USA</p>
                 </div>
               </div>
               
@@ -45,7 +35,35 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-white">Phone</h4>
-                  <p className="text-muted-foreground">+1 (888) 555-0123</p>
+                  <p className="text-muted-foreground">714-466-4121</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded bg-primary/10 text-primary">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-white">Email</h4>
+                  <p className="text-muted-foreground">
+                    <a href="mailto:contact@knightinfotek.com" className="hover:text-primary transition-colors">
+                      contact@knightinfotek.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded bg-primary/10 text-primary">
+                  <Globe className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-white">Website</h4>
+                  <p className="text-muted-foreground">
+                    <a href="https://www.knightinfotek.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      www.knightinfotek.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -73,9 +91,12 @@ export function Contact() {
                 <label className="text-sm font-medium text-white">Interest</label>
                 <select className="flex h-10 w-full rounded-md border border-white/10 bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-white">
                   <option>General Inquiry</option>
-                  <option>Cha-Ching Analytics</option>
-                  <option>BlockchainDNA</option>
-                  <option>ZeroKnight30</option>
+                  <option>Cha-Ching Analytics (CCA)</option>
+                  <option>BlockchainDNA (BDNA)</option>
+                  <option>ZeroKnight30 (ZK30)</option>
+                  <option>ChainGuardian</option>
+                  <option>Enterprise Integration</option>
+                  <option>Partner Program</option>
                 </select>
               </div>
               
@@ -88,6 +109,72 @@ export function Contact() {
                 SEND MESSAGE
               </Button>
             </form>
+          </div>
+        </div>
+        
+        {/* Additional Contact Emails Section */}
+        <div className="mt-16 pt-16 border-t border-white/10">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold font-display mb-8 text-center">
+              ADDITIONAL <span className="text-primary">CONTACT</span> INFORMATION
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div>
+                <h4 className="font-bold text-white mb-4">General</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>
+                    <a href="mailto:info@knightinfotek.com" className="hover:text-primary transition-colors">
+                      info@knightinfotek.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-white mb-4">Business</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>
+                    <a href="mailto:sales@knightinfotek.com" className="hover:text-primary transition-colors">
+                      sales@knightinfotek.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:billing@knightinfotek.com" className="hover:text-primary transition-colors">
+                      billing@knightinfotek.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-white mb-4">Support</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>
+                    <a href="mailto:support@knightinfotek.com" className="hover:text-primary transition-colors">
+                      support@knightinfotek.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-white mb-4">Careers</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>
+                    <a href="mailto:jobs@knightinfotek.com" className="hover:text-primary transition-colors">
+                      jobs@knightinfotek.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:careers@knightinfotek.com" className="hover:text-primary transition-colors">
+                      careers@knightinfotek.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:hr@knightinfotek.com" className="hover:text-primary transition-colors">
+                      hr@knightinfotek.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

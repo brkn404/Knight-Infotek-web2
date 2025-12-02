@@ -17,7 +17,7 @@ export default function BlockchainDNA() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center pt-16 overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center pt-20 md:pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBg} 
@@ -69,6 +69,121 @@ export default function BlockchainDNA() {
         </div>
       </section>
 
+      {/* Overview Section */}
+      <section className="py-24 bg-background relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
+                WHAT IS <span className="text-primary">BLOCKCHAINDNA</span>?
+              </h2>
+            </div>
+            
+            <div className="prose prose-invert max-w-none">
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-center">
+                BlockchainDNA is the <strong className="text-white">Universal Identity & Provenance Chain</strong> — a foundational infrastructure layer that provides critical value to current blockchain ecosystems today while positioning as the essential infrastructure for Blockchain 4.0 when AI agents meet blockchain technology.
+              </p>
+              
+              <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
+                <strong className="text-white">In simple terms:</strong> BlockchainDNA is the trust layer that enables identity, provenance, and accountability for everything on blockchain — from wallets and assets today, to AI agents tomorrow.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <Card className="bg-card/50 border-white/10">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <Network className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-white">Universal Identity</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Identity for 9 entity types: Human, AI Agent, Wallet, Stablecoin, RWA, DAO, Device, Institution, and Autonomous System. Behavioral verification ensures identity through behavior, not just credentials.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 border-white/10">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <Layers className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-white">Provenance Tracking</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Immutable lineage for all entities. Complete audit trails with cryptographic verification. Selective disclosure with zero-knowledge proofs for privacy-preserving compliance.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 border-white/10">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <Brain className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-white">AI Agent Economy</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Essential infrastructure for Blockchain 4.0. ERC8004 compliant identity for AI agents. Professional AI governance with human authority roll-up. Cross-chain AI coordination.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Problem */}
+      <section className="py-24 bg-card/30 border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
+              THE <span className="text-destructive">PROBLEM</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 text-center">
+              Blockchains were built for transparency—but not trust.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "Identity Gaps",
+                  desc: "Addresses don't represent entities, intents, or authority. As chains evolve into settlement rails for AI agents, identity becomes critical.",
+                  icon: Shield
+                },
+                {
+                  title: "Provenance Gaps",
+                  desc: "Most chains provide history—but not behavioral lineage or accountability. Regulators require verifiable identity and provenance.",
+                  icon: FileCheck
+                },
+                {
+                  title: "Compliance Gaps",
+                  desc: "Regulators require verifiable identity, risk scoring, sanctions checks, provenance, and explainability—all in real-time.",
+                  icon: Activity
+                },
+                {
+                  title: "AI Risks",
+                  desc: "AI agents cannot rely on public-key ownership alone; they require behavioral governance and delegation models.",
+                  icon: Brain
+                }
+              ].map((item) => (
+                <div key={item.title} className="p-6 rounded-xl bg-background/50 border border-white/10">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 rounded bg-destructive/10 text-destructive">
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Architecture */}
       <section className="py-24 bg-secondary/5 relative">
         <div className="container mx-auto px-4">
@@ -77,7 +192,7 @@ export default function BlockchainDNA() {
               PLATFORM <span className="text-primary">ARCHITECTURE</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A next-generation governance chain anchoring identity, behavior, and compliance across all entities.
+              BDNA is a cross-chain identity, provenance, and behavioral governance system. It is not a coin, L1, or blockchain replacement—it is trust infrastructure compatible with any blockchain.
             </p>
           </div>
 
@@ -104,12 +219,41 @@ export default function BlockchainDNA() {
 
               <div className="grid gap-4">
                 {[
-                  { title: "GenID", desc: "Identity Registry for 9 entity classes: Humans, Wallets, AI Agents, DAOs, Stablecoin Issuers, RWAs, Institutions, and Autonomous Systems.", icon: Shield },
-                  { title: "ChainLedger", desc: "Forensic-grade audit & history registry. Logs complete behavioral lineage, not just transactions.", icon: FileCheck },
-                  { title: "RuleEngine", desc: "Behavior & policy enforcement registry. Enforces jurisdiction-level controls and AML/SAR rules.", icon: Activity },
-                  { title: "RiskMonitor", desc: "Threat detection & drift registry. Detects off-pattern behavior, sanctions evasion, and agent takeovers.", icon: Shield },
-                  { title: "ProofHub", desc: "Attestation & ZK-proof registry. Real-time compliance proofs and chain-of-care evidence.", icon: Lock },
-                  { title: "AuthorityChain", desc: "Delegation & responsibility roll-up. Professional roll-up and scope-of-practice enforcement for AI.", icon: Network },
+                  { 
+                    title: "GenID", 
+                    desc: "Universal Behavioral Identity Registry for 9 entity classes: Human, Wallet, Smart Contract, AI Agent, DAO, Stablecoin Issuer, RWA Issuer, Financial Institution, and Autonomous System. Behavior-first, not credential-first identity.", 
+                    icon: Shield 
+                  },
+                  { 
+                    title: "ChainLedger", 
+                    desc: "Behavioral Provenance Registry providing tamper-evident records of transaction patterns, historical behavior, authority lineage, device/agent usage, sanctions exposure, compliance flags, and drift/anomaly events. Complete behavioral lineage, not just transaction history.", 
+                    icon: FileCheck 
+                  },
+                  { 
+                    title: "AuthorityChain", 
+                    desc: "Delegation & Accountability Registry introducing professional roll-up, delegated authority chains, scope-of-practice enforcement, and human-in-the-loop supervision for AI agents. Enables autonomous action within provable constraints.", 
+                    icon: Network 
+                  },
+                  { 
+                    title: "ProofHub", 
+                    desc: "Compliance & Attestation Registry enabling real-time compliance proofs, chain-of-care evidence, immutable attestations, and explainable decisioning via ExplainCore. Perfect for auditors, regulators, and legal environments.", 
+                    icon: Lock 
+                  },
+                  { 
+                    title: "RiskMonitor", 
+                    desc: "Behavioral Threat & Drift Detection Registry using GenomeX modules (DriftScanner, PatternTags, BehaviorPrint, CostShield) to detect anomalous wallet flows, off-pattern behavior, sanction evasion, agent takeovers, and smart contract behavioral drift.", 
+                    icon: Shield 
+                  },
+                  { 
+                    title: "RuleEngine", 
+                    desc: "Governance & Policy Registry enforcing jurisdiction-level controls, AML/SAR rules, scope-of-authority restrictions, DAO governance policies, and institutional compliance frameworks.", 
+                    icon: Activity 
+                  },
+                  { 
+                    title: "AccessGate", 
+                    desc: "Privacy & Selective Disclosure Registry offering zk-based selective proofs, pseudonymous but verifiable identity, regulator-only disclosure functionality, and GDPR-compliant data-minimization models.", 
+                    icon: Lock 
+                  },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4 p-4 rounded-lg bg-card/50 border border-white/5 hover:border-primary/30 transition-colors">
                     <div className="p-2 rounded bg-primary/10 text-primary mt-1">
@@ -260,22 +404,193 @@ export default function BlockchainDNA() {
         </div>
       </section>
 
-      {/* Target Industries */}
-      <section className="py-24 bg-background">
+      {/* How It Works */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-bottom-right" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
+              HOW <span className="text-primary">IT WORKS</span>
+            </h2>
+            <div className="space-y-6">
+              {[
+                {
+                  step: "1",
+                  title: "Entity Performs Action",
+                  desc: "Wallet transfer, smart contract interaction, agent decision, or API call triggers the BDNA system."
+                },
+                {
+                  step: "2",
+                  title: "GenomeX Generates Behavioral DNA",
+                  desc: "Dynamic embeddings, drift vectors, and behavioral class are created in real-time using the GenomeX platform."
+                },
+                {
+                  step: "3",
+                  title: "BDNA Registries Record Identity & Provenance",
+                  desc: "GenID validates entity, ChainLedger logs complete lineage, and AuthorityChain confirms role and delegation."
+                },
+                {
+                  step: "4",
+                  title: "RiskMonitor Evaluates Behavioral Trust Score",
+                  desc: "Drift, sanctions, threat models, and off-pattern actions are analyzed to generate a trust score."
+                },
+                {
+                  step: "5",
+                  title: "RuleEngine Enforces Governance & Compliance",
+                  desc: "Jurisdiction, institutional policies, and authority rules are applied automatically."
+                },
+                {
+                  step: "6",
+                  title: "ProofHub Produces Attestations",
+                  desc: "Real-time compliance proofs, proof-of-integrity, and explainable outputs are generated for auditors and regulators."
+                },
+                {
+                  step: "7",
+                  title: "AccessGate Allows Selective Disclosure",
+                  desc: "Regulators can see what they need while users maintain privacy through zk-based selective proofs."
+                }
+              ].map((item) => (
+                <div key={item.step} className="flex gap-6 p-6 rounded-xl bg-card/50 border border-white/10 hover:border-primary/30 transition-colors">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+                    <span className="text-primary font-display font-bold text-xl">{item.step}</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-24 bg-card/30 border-y border-white/5">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
-            TARGET <span className="text-primary">INDUSTRIES</span>
+            KEY <span className="text-primary">USE CASES</span>
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              "Healthcare", "Legal", "Finance / Banking", "Military / Gov",
-              "Education", "AI Ecosystems", "Supply Chain", "Cybersecurity"
-            ].map((industry) => (
-              <div key={industry} className="p-6 rounded-xl bg-card border border-white/5 text-center hover:border-primary/50 hover:bg-primary/5 transition-all group">
-                <span className="font-display font-bold text-lg text-muted-foreground group-hover:text-white transition-colors">
-                  {industry}
-                </span>
+              {
+                title: "AI Agent Identity & Governance",
+                desc: "ERC-8004-compatible identity, delegation, oversight, and scope control for autonomous agents operating in blockchain ecosystems.",
+                icon: Brain
+              },
+              {
+                title: "Stablecoin Issuer Compliance",
+                desc: "Identity, provenance, governance, attestation, and reserve validation layering for stablecoin ecosystems requiring regulatory compliance.",
+                icon: Activity
+              },
+              {
+                title: "RWA & Tokenized Finance",
+                desc: "Behavioral identity and provenance for tokenized assets, custodians, and asset issuers in the growing tokenized economy.",
+                icon: FileCheck
+              },
+              {
+                title: "Cross-Chain Sanctions & AML",
+                desc: "Unified behavioral risk signals across Ethereum, Arbitrum, Base, BSC, Polygon, and other major chains for comprehensive compliance.",
+                icon: Globe
+              },
+              {
+                title: "DeFi & Exchange Safety",
+                desc: "Fraud prevention, pattern detection, and behavioral drift scoring in real-time for decentralized finance platforms and exchanges.",
+                icon: Shield
+              },
+              {
+                title: "Institutional Blockchain Adoption",
+                desc: "Regulator-grade provenance & identity infrastructure enabling enterprise and government chain usage with full compliance assurance.",
+                icon: Network
+              }
+            ].map((useCase) => (
+              <Card key={useCase.title} className="bg-background/50 border-white/10 hover:border-primary/30 transition-colors">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded bg-primary/10 text-primary">
+                      <useCase.icon className="w-5 h-5" />
+                    </div>
+                    <CardTitle className="text-lg font-display">{useCase.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{useCase.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Model */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
+              INTEGRATION <span className="text-primary">MODEL</span>
+            </h2>
+            <p className="text-muted-foreground mb-8 text-center text-lg">
+              BDNA integrates seamlessly with existing infrastructure via multiple interfaces
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "REST & GraphQL APIs",
+                  desc: "Standard API interfaces for real-time identity, provenance, and compliance queries."
+                },
+                {
+                  title: "SDKs",
+                  desc: "TypeScript, Python, and Go SDKs for rapid integration into existing applications."
+                },
+                {
+                  title: "Webhooks & Event Streams",
+                  desc: "Real-time event notifications for behavioral changes, risk alerts, and compliance events."
+                },
+                {
+                  title: "Chainlink CCIP",
+                  desc: "Cross-chain coordination and data synchronization across multiple blockchain networks."
+                },
+                {
+                  title: "Compliance Modules (CCA)",
+                  desc: "Direct integration with Cha-Ching Analytics for enhanced compliance capabilities."
+                },
+                {
+                  title: "Identity Modules (GenID)",
+                  desc: "Standalone identity verification and behavioral authentication services."
+                }
+              ].map((item) => (
+                <div key={item.title} className="p-6 rounded-xl bg-card/50 border border-white/10">
+                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Differentiators */}
+      <section className="py-24 bg-card/30 border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
+            KEY <span className="text-primary">DIFFERENTIATORS</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              "Behavior-First Identity: Not biometric, not credentials—behavioral DNA",
+              "AI-Native Governance: Built for human + agent ecosystems from the start",
+              "Real-Time Provenance: Audit trails that generate themselves",
+              "Cross-Chain, Cross-Entity Scope: Universal identity across all major chains",
+              "Explainable & Regulator-Ready: ExplainCore enables human-readable reasoning",
+              "Privacy-Conscious: zk-selective proofs and jurisdictional controls"
+            ].map((item) => (
+              <div key={item} className="p-4 rounded-lg bg-background/50 border border-white/10">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-sm text-foreground leading-relaxed">{item}</p>
+                </div>
               </div>
             ))}
           </div>
