@@ -1,5 +1,7 @@
 # Quick Deploy Guide for knightinfotek.com
 
+**📖 For complete documentation, see: `VPS-SETUP-DOCUMENTATION.md`**
+
 Since you already have the directory at `/var/www/knightinfotek.com`, here's the quick setup:
 
 ## First Time Setup
