@@ -3,6 +3,7 @@ import { Activity, ShieldCheck, Zap, Lock, Globe, Server, FileWarning, Network }
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -22,10 +23,10 @@ export default function ChaChingAnalytics() {
           <img 
             src={heroBg} 
             alt="CCA Background" 
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
-          <div className="absolute inset-0 cyber-grid opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/60 to-background/50" />
+          <div className="absolute inset-0 cyber-grid opacity-15" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -49,21 +50,12 @@ export default function ChaChingAnalytics() {
                 The world's first autonomous AI-powered behavioral genome hashing system. 
                 Prevent fraud, ensure compliance, and maintain financial stability in the tokenized economy.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-display text-lg h-12 px-8">
-                  Request Demo
-                </Button>
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-display text-lg h-12 px-8">
-                  View Technical Spec
-                </Button>
-              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Overview Section */}
+      {/* Product Overview Section */}
       <section className="py-24 bg-background relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -73,13 +65,70 @@ export default function ChaChingAnalytics() {
               </h2>
             </div>
             
-            <div className="prose prose-invert max-w-none">
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-center">
-                <strong className="text-white">Cha-Ching Analytics (CCA)</strong> is the world's most comprehensive real-time compliance and security platform for tokenized assets, stablecoins, and decentralized finance. With <strong className="text-primary">82+ production-ready modules</strong> spanning behavioral analysis, regulatory compliance, risk management, and forensic investigation, CCA delivers <strong className="text-primary">"Compliance at Blockchain Speed"</strong>—enabling institutions to operate in the tokenized economy with confidence, trust, and regulatory certainty.
-              </p>
+            <div className="prose prose-invert max-w-none mb-16">
+              <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10 mb-8">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Product Overview</h3>
+                <p className="text-xl text-muted-foreground mb-6 leading-relaxed text-center">
+                  <strong className="text-white">Cha-Ching Analytics (CCA)</strong> is a real-time compliance and security platform for tokenized assets, stablecoins, and decentralized finance. It provides autonomous fraud prevention, regulatory compliance, and risk management for institutions operating in the tokenized economy.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">What It Does</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Prevents fraud before transactions complete</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Ensures real-time regulatory compliance across multiple jurisdictions</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Validates stablecoin reserves and tokenized asset integrity</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Monitors cross-chain transactions for suspicious activity</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Generates regulator-grade compliance reports and evidence</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">Problems It Solves</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Fraud happens faster than manual systems can react</strong> - CCA stops fraud before it settles</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Multiple jurisdictions with different regulations</strong> - Unified compliance framework</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Irreversible transactions mean errors cannot be undone</strong> - Prevents bad transactions before they occur</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Stablecoin reserve integrity concerns</strong> - Real-time validation and monitoring</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Cross-chain fraud and laundering</strong> - Unified detection across all chains</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               
               <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
-                <strong className="text-white">Core Value Proposition:</strong> While competitors catch bad actors after the crime, Cha-Ching Analytics stops fraud before it happens through AI-powered behavioral genome hashing, real-time anomaly detection, and autonomous compliance decision-making.
+                <strong className="text-white">Core Value Proposition:</strong> While competitors catch bad actors after the crime, Cha-Ching Analytics stops fraud before it happens through AI-powered behavioral analysis, real-time anomaly detection, and autonomous compliance decision-making.
               </p>
             </div>
 
@@ -306,58 +355,6 @@ export default function ChaChingAnalytics() {
         </div>
       </section>
 
-      {/* Technical Specifications */}
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-top-left" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
-              TECHNICAL <span className="text-primary">SPECIFICATIONS</span>
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  metric: "< 4 seconds",
-                  label: "Decision Time",
-                  desc: "From transaction detection to compliance action"
-                },
-                {
-                  metric: "17,788 wallets/sec",
-                  label: "QSBA Performance",
-                  desc: "Quantum-inspired anomaly detection throughput"
-                },
-                {
-                  metric: "0.056 ms",
-                  label: "Per Wallet Latency",
-                  desc: "Batch processing mode efficiency"
-                },
-                {
-                  metric: "99.9%",
-                  label: "Uptime Target",
-                  desc: "Enterprise-grade reliability"
-                },
-                {
-                  metric: "6+ L1/L2",
-                  label: "Chains Supported",
-                  desc: "Ethereum, Arbitrum, Base, Polygon, BSC, Optimism"
-                },
-                {
-                  metric: "82+",
-                  label: "Production Modules",
-                  desc: "Comprehensive compliance stack"
-                }
-              ].map((item) => (
-                <div key={item.label} className="p-6 rounded-xl bg-card/50 border border-white/10 text-center">
-                  <div className="text-3xl font-display font-bold text-primary mb-2">{item.metric}</div>
-                  <div className="text-lg font-bold text-white mb-2">{item.label}</div>
-                  <div className="text-sm text-muted-foreground">{item.desc}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Core Capabilities Detail */}
       <section className="py-24 bg-card/30 border-y border-white/5">
         <div className="container mx-auto px-4">
@@ -536,32 +533,6 @@ export default function ChaChingAnalytics() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Deployment Options */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
-            DEPLOYMENT & <span className="text-primary">INTEGRATION</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              "REST / GraphQL APIs",
-              "Webhooks & Event Streams",
-              "SDKs (TS/Python/Go)",
-              "SIEM/SOC Integrations",
-              "Internal Bank Systems",
-              "Stablecoin Issuer Tooling",
-              "Exchange Backends",
-              "Regulator Dashboards",
-              "Air-Gapped (Partial)"
-            ].map((option) => (
-              <div key={option} className="p-4 rounded-lg bg-card/50 border border-white/10 text-center">
-                <p className="text-sm font-medium text-foreground">{option}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

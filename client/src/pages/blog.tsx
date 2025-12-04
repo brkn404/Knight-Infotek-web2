@@ -81,30 +81,18 @@ export default function Blog() {
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                     {post.excerpt}
                   </p>
-                  <Link href={`/blog/${post.slug}`}>
-                    <a className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium group-hover:gap-2 transition-all">
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                  <Link 
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium group-hover:gap-2 transition-all"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </CardContent>
               </Card>
               ))}
             </div>
           )}
-
-          {/* Coming Soon Message */}
-          <div className="mt-16 text-center">
-            <div className="bg-card/50 rounded-xl p-12 border border-white/10 max-w-2xl mx-auto">
-              <h2 className="text-2xl font-bold font-display mb-4 text-white">
-                More Content Coming Soon
-              </h2>
-              <p className="text-muted-foreground">
-                We're constantly publishing new insights on behavioral trust, blockchain technology, AI governance, and cybersecurity. 
-                Check back regularly for the latest updates.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

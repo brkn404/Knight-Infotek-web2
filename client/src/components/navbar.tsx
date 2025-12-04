@@ -42,25 +42,17 @@ export function Navbar() {
       >
         Products
       </a>
-      <Link href="/blockchain-dna">
-        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-          BlockchainDNA
-        </a>
+      <Link href="/blockchain-dna" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+        BlockchainDNA
       </Link>
-      <Link href="/cha-ching-analytics">
-        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-          Cha-Ching Analytics
-        </a>
+      <Link href="/cha-ching-analytics" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+        Cha-Ching Analytics
       </Link>
-      <Link href="/zero-knight-30">
-        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-          ZeroKnight30
-        </a>
+      <Link href="/zero-knight-30" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+        ZeroKnight30
       </Link>
-      <Link href="/chain-guardian">
-        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-          ChainGuardian
-        </a>
+      <Link href="/chain-guardian" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+        ChainGuardian
       </Link>
       <a 
         href="/#about" 
@@ -91,27 +83,20 @@ export function Navbar() {
       >
         Contact
       </a>
-      <Link href="/blog">
-        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-          Blog
-        </a>
-      </Link>
-      <Link href="/support">
-        <a className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-          Support
-        </a>
-      </Link>
+          <Link href="/blog" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            Blog
+          </Link>
     </>
   );
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 h-20 md:h-24 flex items-center justify-between">
-        <Link href="/">
-          <a className="flex items-center gap-3 group overflow-visible">
-            <img src={logo} alt="Knight InfoTek Logo" className="h-16 md:h-20 scale-150 md:scale-[2] origin-left object-contain transition-transform group-hover:scale-[1.55] md:group-hover:scale-[2.1]" />
-          </a>
-        </Link>
+            <Link href="/">
+              <div className="flex items-center gap-3 group overflow-visible cursor-pointer">
+                <img src={logo} alt="Knight InfoTek Logo" className="h-16 md:h-20 scale-150 md:scale-[2] origin-left object-contain transition-transform group-hover:scale-[1.55] md:group-hover:scale-[2.1]" />
+              </div>
+            </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">

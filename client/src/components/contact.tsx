@@ -15,7 +15,7 @@ export function Contact() {
               GET IN <span className="text-primary">TOUCH</span>
             </h2>
             <p className="text-muted-foreground mb-8 text-lg">
-              Ready to deploy the Global Ledger of Truth in your enterprise? Contact our US team to discuss integration and compliance solutions.
+              Interested in licensing or acquiring KGE technologies? Contact our team to discuss IP licensing, product acquisition, or implementation support services.
             </p>
             
             <div className="space-y-6">
@@ -91,12 +91,14 @@ export function Contact() {
                 <label className="text-sm font-medium text-white">Interest</label>
                 <select className="flex h-10 w-full rounded-md border border-white/10 bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-white">
                   <option>General Inquiry</option>
-                  <option>Cha-Ching Analytics (CCA)</option>
-                  <option>BlockchainDNA (BDNA)</option>
-                  <option>ZeroKnight30 (ZK30)</option>
-                  <option>ChainGuardian</option>
-                  <option>Enterprise Integration</option>
-                  <option>Partner Program</option>
+                  <option>IP Licensing Inquiry</option>
+                  <option>Product Acquisition</option>
+                  <option>Cha-Ching Analytics (CCA) - Licensing</option>
+                  <option>BlockchainDNA (BDNA) - Licensing</option>
+                  <option>ZeroKnight30 (ZK30) - Licensing</option>
+                  <option>ChainGuardian - Licensing</option>
+                  <option>Implementation & Support Services</option>
+                  <option>Transition Support Contract</option>
                 </select>
               </div>
               
@@ -160,16 +162,6 @@ export function Contact() {
                   <li>
                     <a href="mailto:jobs@knightinfotek.com" className="hover:text-primary transition-colors">
                       jobs@knightinfotek.com
-                    </a>
-                  </li>
-                  <li>
-                    <a href="mailto:careers@knightinfotek.com" className="hover:text-primary transition-colors">
-                      careers@knightinfotek.com
-                    </a>
-                  </li>
-                  <li>
-                    <a href="mailto:hr@knightinfotek.com" className="hover:text-primary transition-colors">
-                      hr@knightinfotek.com
                     </a>
                   </li>
                 </ul>

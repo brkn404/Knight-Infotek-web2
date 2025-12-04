@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ShieldAlert, Globe, Lock, Eye, Server, FileWarning, Zap, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -21,10 +22,10 @@ export default function ChainGuardian() {
           <img 
             src={heroBg} 
             alt="ChainGuardian Background" 
-            className="w-full h-full object-cover opacity-20 hue-rotate-180" 
+            className="w-full h-full object-cover opacity-45 hue-rotate-180" 
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
-          <div className="absolute inset-0 cyber-grid opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
+          <div className="absolute inset-0 cyber-grid opacity-15" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -48,23 +49,14 @@ export default function ChainGuardian() {
               </p>
               
               <p className="text-lg text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-                The world’s first pre-block content safety engine. Detect and block harmful, illegal, or high-liability content before it is permanently written to the blockchain.
+                The world's first pre-block content safety engine. Detect and block harmful, illegal, or high-liability content before it is permanently written to the blockchain.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-orange-600 text-white hover:bg-orange-700 font-display text-lg h-12 px-8">
-                  Deploy Protection
-                </Button>
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-display text-lg h-12 px-8">
-                  View Integration Docs
-                </Button>
-              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Overview Section */}
+      {/* Product Overview Section */}
       <section className="py-24 bg-background relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -74,10 +66,67 @@ export default function ChainGuardian() {
               </h2>
             </div>
             
-            <div className="prose prose-invert max-w-none">
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-center">
-                <strong className="text-white">ChainGuardian</strong> is a real-time content filtering and compliance system that detects illegal or problematic content embedded in Bitcoin transactions <strong className="text-orange-500">before blocks are mined</strong>. It protects miners, mining pools, node operators, and exchanges from legal liability while ensuring regulatory compliance across multiple jurisdictions.
-              </p>
+            <div className="prose prose-invert max-w-none mb-16">
+              <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10 mb-8">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Product Overview</h3>
+                <p className="text-xl text-muted-foreground mb-6 leading-relaxed text-center">
+                  <strong className="text-white">ChainGuardian</strong> is a real-time content filtering and compliance system that detects illegal or problematic content embedded in Bitcoin transactions <strong className="text-orange-500">before blocks are mined</strong>. It protects miners, mining pools, node operators, and exchanges from legal liability.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">What It Does</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                        <span>Monitors Bitcoin mempool for illegal or problematic content before blocks are mined</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                        <span>Detects content using hash-only verification (never views actual content)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                        <span>Blocks or flags problematic transactions before they become permanent</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                        <span>Ensures compliance with US, EU, UK, and other jurisdictional requirements</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                        <span>Generates regulator-ready evidence and compliance reports</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">Problems It Solves</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Illegal content embedded in blockchain creates criminal liability</strong> - Prevents illegal content from being permanently written</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Miners and pools face regulatory exposure</strong> - Ensures compliance with jurisdictional requirements</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Once content is committed, exposure is permanent</strong> - Blocks harmful content before block finalization</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Future regulations may mandate filtering</strong> - Proactive compliance solution</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>No existing pre-mining content filter</strong> - First and only solution for pre-block content safety</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               
               <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
                 <strong className="text-white">Key Differentiator:</strong> First and only product focused on pre-mining content filtering with hash-only verification (never views actual content). Powered by Knight Global Enterprises' GenomeX behavioral intelligence platform.
@@ -435,57 +484,6 @@ export default function ChainGuardian() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
-              TECHNICAL <span className="text-orange-500">SPECIFICATIONS</span>
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  metric: "Sub-millisecond",
-                  label: "Analysis Latency",
-                  desc: "Real-time mempool processing"
-                },
-                {
-                  metric: "Mempool-Scale",
-                  label: "Throughput",
-                  desc: "Real-time transaction analysis"
-                },
-                {
-                  metric: "Bitcoin Core, Stratum V2",
-                  label: "Compatibility",
-                  desc: "Custom pool software support"
-                },
-                {
-                  metric: "No Content Stored",
-                  label: "Privacy",
-                  desc: "Hash-only verification"
-                },
-                {
-                  metric: "On-Premise / Local",
-                  label: "Deployment",
-                  desc: "Node or pool-level integration"
-                },
-                {
-                  metric: "99.9%+",
-                  label: "Uptime",
-                  desc: "Enterprise-grade reliability"
-                }
-              ].map((item) => (
-                <div key={item.label} className="p-6 rounded-xl bg-card/50 border border-white/10 text-center">
-                  <div className="text-2xl font-display font-bold text-orange-500 mb-2">{item.metric}</div>
-                  <div className="text-lg font-bold text-white mb-2">{item.label}</div>
-                  <div className="text-sm text-muted-foreground">{item.desc}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

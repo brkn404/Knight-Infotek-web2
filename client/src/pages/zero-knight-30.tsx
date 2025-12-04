@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ShieldAlert, Lock, Server, Eye, Crosshair, Fingerprint, Zap, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -21,10 +22,10 @@ export default function ZeroKnight30() {
           <img 
             src={heroBg} 
             alt="ZK30 Background" 
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/60 to-background" />
-          <div className="absolute inset-0 cyber-grid opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
+          <div className="absolute inset-0 cyber-grid opacity-15" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -50,21 +51,12 @@ export default function ZeroKnight30() {
               <p className="text-lg text-muted-foreground mb-10 max-w-2xl leading-relaxed">
                 AI-first integrity, threat detection, and autonomous self-healing platform for enterprise, critical infrastructure, government, and high-assurance environments. Unlike traditional EDR tools, ZK30 uses behavioral intelligence to detect any deviation—no signatures, no cloud, no external dependencies.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-destructive text-destructive-foreground hover:bg-destructive/90 font-display text-lg h-12 px-8">
-                  Initialize Defense
-                </Button>
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-display text-lg h-12 px-8">
-                  System Architecture
-                </Button>
-              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Overview Section */}
+      {/* Product Overview Section */}
       <section className="py-24 bg-background relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -74,13 +66,70 @@ export default function ZeroKnight30() {
               </h2>
             </div>
             
-            <div className="prose prose-invert max-w-none">
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-center">
-                <strong className="text-white">ZK30-Gladiator</strong> is the world's first autonomous AI defense platform featuring <strong className="text-primary">Blockchain-Anchored Behavioral Snapshot Recovery (BSR)</strong>—a revolutionary self-healing system that detects, validates, and instantly restores file integrity using behavioral context and immutable blockchain attestation.
-              </p>
+            <div className="prose prose-invert max-w-none mb-16">
+              <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10 mb-8">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Product Overview</h3>
+                <p className="text-xl text-muted-foreground mb-6 leading-relaxed text-center">
+                  <strong className="text-white">ZeroKnight30 (ZK30)</strong> is an autonomous AI defense platform that provides behavioral integrity monitoring, threat detection, and instant selective recovery for enterprise systems, critical infrastructure, and air-gapped environments.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">What It Does</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Monitors file and process behavior to detect unauthorized changes</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Detects zero-day attacks and novel threats through behavioral analysis</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Instantly recovers only compromised files in seconds</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Operates fully offline with no external dependencies</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Provides explainable security decisions for audit and compliance</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">Problems It Solves</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Zero-day attacks bypass signature-based tools</strong> - Detects any behaviorally abnormal mutation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Supply-chain compromises in signed binaries</strong> - Behavioral integrity monitoring catches unauthorized changes</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Ransomware encrypts files faster than cloud detection can respond</strong> - Instant recovery in milliseconds</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Critical infrastructure requires disconnected systems</strong> - Full offline operation with no external dependencies</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>System downtime from full restores</strong> - Selective recovery of only compromised files</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               
               <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
-                Unlike traditional security solutions that rely on static signatures and reactive responses, ZK30-Gladiator combines AI-powered behavioral analysis, blockchain-anchored integrity, instant selective recovery, and full air-gap compatibility for high-security environments.
+                Unlike traditional security solutions that rely on static signatures and reactive responses, ZeroKnight30 combines AI-powered behavioral analysis, integrity monitoring, instant selective recovery, and full air-gap compatibility for high-security environments.
               </p>
             </div>
 
@@ -104,11 +153,11 @@ export default function ZeroKnight30() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <ShieldCheck className="w-6 h-6 text-primary" />
                   </div>
-                  <CardTitle className="text-white">Blockchain-Anchored Recovery</CardTitle>
+                  <CardTitle className="text-white">Advanced Recovery System</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Immutable proof of clean states prevents tampering. Behavioral Snapshot Graph tracks complete file version lineage. Selective recovery of only corrupted files in seconds.
+                    Maintains secure integrity records to enable rapid recovery of compromised components while preventing tampering and minimizing system disruption.
                   </p>
                 </CardContent>
               </Card>
@@ -122,7 +171,7 @@ export default function ZeroKnight30() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Local LLM (ORACLE) reasons about threats in real-time. Understands context, not just content. Predicts attacker next steps and recommends optimal countermeasures.
+                    Advanced AI analysis provides real-time threat assessment and response recommendations. Understands context and behavioral patterns to make intelligent security decisions.
                   </p>
                 </CardContent>
               </Card>
@@ -169,7 +218,7 @@ export default function ZeroKnight30() {
                 },
                 {
                   title: "Ransomware",
-                  desc: "Encrypts files faster than cloud-based detection can respond. ZK30's instant BSR recovery restores files in milliseconds.",
+                  desc: "Encrypts files faster than cloud-based detection can respond. ZK30 provides rapid recovery capabilities to minimize impact.",
                   icon: Zap
                 },
                 {
@@ -212,17 +261,17 @@ export default function ZeroKnight30() {
                 {[
                   {
                     title: "Behavioral Integrity Monitoring",
-                    desc: "Baselines normal file/process behavior, detects unauthorized mutations, identifies drift and behavioral anomalies, classifies suspicious patterns, detects privilege escalation attempts, and observes inter-process relationships—all without signatures or prior knowledge of threats.",
+                    desc: "Continuously monitors system behavior to establish baselines and detect any deviations from normal patterns. Identifies anomalies and suspicious activity without requiring signatures or prior threat knowledge.",
                     icon: Eye
                   },
                   {
-                    title: "BehaviorPrint: Contextual Integrity Hashing",
-                    desc: "Traditional hashes break when files legitimately change. BehaviorPrint adapts by incorporating metadata, behavioral context, mutation lineage, expected change profiles, and semantic content patterns. This allows ZK30 to distinguish legitimate change vs malicious tampering with surgical precision.",
+                    title: "Advanced Integrity Verification",
+                    desc: "Uses sophisticated techniques to distinguish between legitimate file changes and malicious tampering, enabling precise detection of unauthorized modifications.",
                     icon: Fingerprint
                   },
                   {
-                    title: "Behavioral Snapshot Graph (BSG)",
-                    desc: "Every critical file/process has a behavioral lineage graph with versions, mutations, behavioral fingerprints, and ancestry relationships. This enables both forensic visibility and rapid recovery.",
+                    title: "Rapid Recovery System",
+                    desc: "Maintains comprehensive behavioral history to enable fast recovery of compromised components while preserving system integrity.",
                     icon: Crosshair
                   }
                 ].map((item) => (
@@ -256,73 +305,67 @@ export default function ZeroKnight30() {
             </motion.div>
           </div>
 
-          {/* BSR & CSA Highlight */}
+          {/* Recovery & Integrity Highlight */}
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="bg-card/50 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-primary flex items-center gap-2">
-                  <Crosshair className="w-5 h-5" /> Behavioral Snapshot Recovery (BSR)
+                  <Crosshair className="w-5 h-5" /> Selective Recovery
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  ZK30's flagship capability: Instantly recover only corrupted files, not the whole system.
+                  ZK30's advanced recovery system can restore only affected components, minimizing downtime and system disruption.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Identify which files are compromised</span>
+                    <span>Precise identification of compromised components</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Determine the closest clean behavioral ancestor</span>
+                    <span>Rapid restoration to known good states</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Restore in milliseconds (~0.1–3 seconds)</span>
+                    <span>Minimal system downtime</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Avoid downtime and prevent cascading corruption</span>
+                    <span>Prevents cascading failures</span>
                   </li>
                 </ul>
-                <p className="text-xs text-muted-foreground italic">
-                  No backups. No snapshots. Recovery is behavioral, not filesystem-based.
-                </p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-primary flex items-center gap-2">
-                  <Fingerprint className="w-5 h-5" /> Clean State Anchors (CSAs)
+                  <Fingerprint className="w-5 h-5" /> Integrity Verification
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  CSAs are integrity anchors stored locally inside ZK30. They are immutable, tamper-evident, version-linked, behavior-indexed, and offline-verifiable.
+                  Maintains secure, tamper-evident integrity records that enable verification and recovery without external dependencies.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Local-only storage (no blockchain)</span>
+                    <span>Local-only storage for maximum security</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Immutable and tamper-evident</span>
+                    <span>Tamper-evident integrity records</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Version-linked and behavior-indexed</span>
+                    <span>Version tracking and verification</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Fully offline-verifiable</span>
+                    <span>Fully offline operation</span>
                   </li>
                 </ul>
-                <p className="text-xs text-muted-foreground italic">
-                  CSAs do NOT write to BDNA or any blockchain. They remain internal for security and compliance reasons.
-                </p>
               </CardContent>
             </Card>
           </div>
@@ -455,57 +498,6 @@ export default function ZeroKnight30() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
-              TECHNICAL <span className="text-primary">SPECIFICATIONS</span>
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  metric: "~0.1–3 seconds",
-                  label: "Recovery Time",
-                  desc: "Depending on file size"
-                },
-                {
-                  metric: "Continuous",
-                  label: "Integrity Checks",
-                  desc: "Adaptive, contextual monitoring"
-                },
-                {
-                  metric: "Local-Only",
-                  label: "CSA Storage",
-                  desc: "Tamper-evident, offline-verifiable"
-                },
-                {
-                  metric: "Low Overhead",
-                  label: "Resource Usage",
-                  desc: "Optimized watchers and monitors"
-                },
-                {
-                  metric: "Linux (Primary)",
-                  label: "Supported OS",
-                  desc: "Windows support in development"
-                },
-                {
-                  metric: "On-Prem / Air-Gapped",
-                  label: "Deployment",
-                  desc: "Offline endpoint operation"
-                }
-              ].map((item) => (
-                <div key={item.label} className="p-6 rounded-xl bg-card/50 border border-white/10 text-center">
-                  <div className="text-2xl font-display font-bold text-primary mb-2">{item.metric}</div>
-                  <div className="text-lg font-bold text-white mb-2">{item.label}</div>
-                  <div className="text-sm text-muted-foreground">{item.desc}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

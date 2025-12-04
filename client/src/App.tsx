@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -9,8 +9,12 @@ import ChaChingAnalytics from "@/pages/cha-ching-analytics";
 import ZeroKnight30 from "@/pages/zero-knight-30";
 import ChainGuardian from "@/pages/chain-guardian";
 import Blog from "@/pages/blog";
-import Support from "@/pages/support";
+import BlogPost from "@/pages/blog-post";
+import Docs from "@/pages/docs";
+import DocsIndex from "@/pages/docs-index";
+import FAQ from "@/pages/faq";
 import NotFound from "@/pages/not-found";
+import RedirectPage from "@/pages/redirect";
 
 function Router() {
   return (
@@ -20,8 +24,55 @@ function Router() {
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
       <Route path="/zero-knight-30" component={ZeroKnight30} />
       <Route path="/chain-guardian" component={ChainGuardian} />
+      <Route path="/docs" component={DocsIndex} />
+      <Route path="/docs/:product/*" component={Docs} />
+      <Route path="/docs/:filename" component={Docs} />
+      <Route path="/faq" component={FAQ} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/blog" component={Blog} />
-      <Route path="/support" component={Support} />
+      {/* Redirect common incorrect URLs to correct /docs/ paths */}
+      <Route path="/troubleshooting">
+        {() => <RedirectPage to="/docs/blockchain-dna/troubleshooting/README" />}
+      </Route>
+      <Route path="/troubleshooting/">
+        {() => <RedirectPage to="/docs/blockchain-dna/troubleshooting/README" />}
+      </Route>
+      <Route path="/api">
+        {() => <RedirectPage to="/docs/blockchain-dna/api/README" />}
+      </Route>
+      <Route path="/api/">
+        {() => <RedirectPage to="/docs/blockchain-dna/api/README" />}
+      </Route>
+      <Route path="/integrations">
+        {() => <RedirectPage to="/docs/blockchain-dna/integrations/README" />}
+      </Route>
+      <Route path="/integrations/">
+        {() => <RedirectPage to="/docs/blockchain-dna/integrations/README" />}
+      </Route>
+      <Route path="/documentation">
+        {() => <RedirectPage to="/docs/blockchain-dna/documentation/README" />}
+      </Route>
+      <Route path="/documentation/">
+        {() => <RedirectPage to="/docs/blockchain-dna/documentation/README" />}
+      </Route>
+      <Route path="/features">
+        {() => <RedirectPage to="/docs/blockchain-dna/features/README" />}
+      </Route>
+      <Route path="/features/">
+        {() => <RedirectPage to="/docs/blockchain-dna/features/README" />}
+      </Route>
+      <Route path="/resources">
+        {() => <RedirectPage to="/docs/blockchain-dna/resources/README" />}
+      </Route>
+      <Route path="/resources/">
+        {() => <RedirectPage to="/docs/blockchain-dna/resources/README" />}
+      </Route>
+      <Route path="/getting-started">
+        {() => <RedirectPage to="/docs/blockchain-dna/getting-started/README" />}
+      </Route>
+      <Route path="/getting-started/">
+        {() => <RedirectPage to="/docs/blockchain-dna/getting-started/README" />}
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );

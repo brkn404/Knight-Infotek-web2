@@ -1,4 +1,4 @@
-import { CheckCircle2, Building2, Globe, Shield, Brain } from "lucide-react";
+import { CheckCircle2, Building2, Globe, Shield, Brain, Linkedin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function About() {
@@ -12,7 +12,8 @@ export function About() {
               <span className="text-primary">GLOBAL INFRASTRUCTURE</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Knight InfoTek has evolved. Formerly a premier Cybersecurity and AI consulting firm, we have transformed into the exclusive US distribution arm for Knight Global Enterprises—delivering behavioral trust infrastructure for the autonomous future.
+              Knight Global Enterprises invents and owns the technology. We build products and IP that others license or acquire to build their own companies. 
+              Knight InfoTek provides implementation support, transition services, and helps companies take over products as their own.
             </p>
           </div>
 
@@ -22,20 +23,20 @@ export function About() {
                 Our Mission
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                We bring the "Global Ledger of Truth" to US industries. We provide the essential infrastructure for regulated sectors—Healthcare, Legal, Finance, and Education—to safely adopt autonomous AI agents under strict human professional oversight.
+                <strong>KGE (Ireland)</strong> invents and owns all intellectual property—patents, software frameworks, and behavioral intelligence technologies. We conduct R&D and develop products that others can license or acquire to build their own companies.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Knight Global Enterprises operates globally through a structured multi-entity approach: <strong>KGE (Ireland)</strong> owns all IP and handles R&D, while <strong>Knight InfoTek LLC (USA)</strong> serves as the reseller, implementation partner, and customer-facing services provider.
+                <strong>Knight InfoTek LLC (USA)</strong> provides implementation support, transition services, and helps companies take over products as their own. We offer 12-36 months of transitional support after acquisitions, plus optional extended support, IP consulting, and feature development.
               </p>
               
               <div className="space-y-4">
                 {[
-                  "US-Based Support & Integration",
-                  "Compliance with US Regulations (HIPAA, SEC, FINRA)",
-                  "Enterprise-Grade SLA Assurance",
-                  "Direct Bridge to Knight Global Innovation",
+                  "IP Licensing & Acquisition Opportunities",
+                  "12-36 Month Transitional Support Contracts",
                   "Implementation & Integration Services",
-                  "Managed Services on KGE Platform"
+                  "Product Takeover & Migration Support",
+                  "Extended Support & IP Consulting",
+                  "Feature Development & Customization"
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
@@ -89,7 +90,7 @@ export function About() {
                   <div className="bg-background/50 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-bold text-white mb-4">Professional Overview</h4>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
-                      Brian Knight is a U.S. Marine Corps veteran, Unix administrator, cybersecurity expert, and AI innovator with deep expertise in blockchain and cryptocurrency mining operations. His career spans over three decades, combining military precision with cutting-edge technical innovation across Unix/Linux systems, cybersecurity operations, AI development, and blockchain infrastructure.
+                      Brian Knight is a U.S. Marine Corps veteran, systems architect, cybersecurity expert, and AI innovator with deep expertise in blockchain and cryptocurrency mining operations. His career spans over three decades, combining military precision with cutting-edge technical innovation across Unix/Linux systems, cybersecurity operations, AI development, and blockchain infrastructure.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
                       Today, as the founder and creative lead of Knight InfoTek, Brian is fusing AI, cybersecurity, and blockchain technology into something entirely new.
@@ -98,16 +99,31 @@ export function About() {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="bg-primary/10 rounded-lg p-6 border border-primary/20">
-                    <h4 className="text-lg font-bold text-white mb-4">Key Qualifications</h4>
+                  <div className="bg-primary/10 rounded-lg p-6 border border-primary/20 mb-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-lg font-bold text-white">Key Qualifications</h4>
+                      <a 
+                        href="https://www.linkedin.com/in/brian-knight2k" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+                        title="Connect on LinkedIn"
+                      >
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                    </div>
                     <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>CISSP - (ISC)² ID: 1657523</span>
+                      </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                         <span>U.S. Marine Corps Veteran</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>30+ years Unix/Linux administration</span>
+                        <span>30+ years systems architecture</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -266,6 +282,70 @@ export function About() {
                 <p className="text-muted-foreground mt-4 text-sm">
                   <strong className="text-white">Documentation and certification information available upon request.</strong>
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Business Model Section */}
+          <div className="mt-16 mb-16">
+            <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl md:text-4xl font-bold font-display mb-4 text-white">
+                  OUR <span className="text-primary">BUSINESS MODEL</span>
+                </h3>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  KGE invents the technology. Others license or acquire it to build their own companies.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="bg-background/50 border-white/10">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-white">
+                      <Building2 className="w-5 h-5 text-primary" /> Full Acquisition
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      Complete IP ownership transfer. Buyer receives full patents, trademarks, codebase, and all rights. One-time purchase payment.
+                    </p>
+                    <p className="text-xs text-primary font-medium">
+                      "It's gone" — Product fully transferred
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-background/50 border-white/10">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-white">
+                      <Brain className="w-5 h-5 text-primary" /> Acquisition + Support
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      Buyer owns the product. Knight InfoTek provides 12-36 months of transitional support: migration, training, stabilization, and feature development.
+                    </p>
+                    <p className="text-xs text-primary font-medium">
+                      Most common model — Paid support during transition
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-background/50 border-white/10">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-white">
+                      <Globe className="w-5 h-5 text-primary" /> Licensing
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      Best long-term model. Buyer gets full usage rights, rebranding, and product building capabilities. KGE retains IP ownership, licensing fees, and royalties.
+                    </p>
+                    <p className="text-xs text-primary font-medium">
+                      Recurring revenue — IP ownership retained
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>

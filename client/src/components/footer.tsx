@@ -1,3 +1,4 @@
+import { Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,6 +14,15 @@ export function Footer() {
             <p className="text-muted-foreground max-w-md mb-6">
               The US Reseller for Knight Global Enterprises. Building the trust layer for the autonomous future.
             </p>
+            <a 
+              href="https://www.linkedin.com/in/brian-knight2k" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span>Connect on LinkedIn</span>
+            </a>
           </div>
           
           <div>

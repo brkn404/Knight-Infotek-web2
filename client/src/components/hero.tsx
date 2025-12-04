@@ -11,10 +11,10 @@ export function Hero() {
         <img 
           src={heroBg} 
           alt="Enterprise Blockchain Background" 
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
-        <div className="absolute inset-0 cyber-grid opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+        <div className="absolute inset-0 cyber-grid opacity-15" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -40,8 +40,8 @@ export function Hero() {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-6 max-w-2xl leading-relaxed">
-              Knight InfoTek delivers the next generation of compliance, identity, and provenance infrastructure. 
-              We bridge the gap between AI autonomy and human professional authority.
+              Knight Global Enterprises invents and owns the IP. We build products and technologies that others license or acquire to build their own companies. 
+              Knight InfoTek provides implementation support and transition services.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -52,7 +52,7 @@ export function Hero() {
               </a>
               <a href="#contact">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-display text-lg h-12 px-8">
-                  <ShieldCheck className="mr-2 w-5 h-5" /> Get Started
+                  <ShieldCheck className="mr-2 w-5 h-5" /> Licensing & Acquisition
                 </Button>
               </a>
             </div>

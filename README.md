@@ -91,6 +91,14 @@ npm run dev:client
 
 Visit `http://localhost:5000` to view the website.
 
+## 📚 Documentation
+
+- **DEPLOYMENT-WORKFLOW.md** - Complete deployment guide and update workflows
+- **BLOG-UPDATE-WORKFLOW.md** - How to update blog posts
+- **README-DEPLOYMENT.md** - Quick deployment reference
+- **QUICK-DEPLOY.md** - Quick VPS deployment steps
+- **BLOG-UPDATE-GUIDE.md** - Blog management guide
+
 ## 📝 Available Scripts
 
 - `npm run dev` - Start development server (backend + frontend)

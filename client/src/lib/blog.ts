@@ -22,7 +22,13 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       return getFallbackPosts();
     }
     const posts: BlogPost[] = await response.json();
-    return posts.filter(post => post.published);
+    const published = posts.filter(post => post.published);
+    // Sort by date (newest first)
+    return published.sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return dateB - dateA; // Descending order (newest first)
+    });
   } catch (error) {
     console.error('Error loading blog posts:', error);
     return getFallbackPosts();
@@ -38,17 +44,53 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
     if (!post) return null;
     
     // Try to load full content from markdown file
-    try {
-      const contentResponse = await fetch(`/content/blog/${slug}.md`);
-      if (contentResponse.ok) {
-        const content = await contentResponse.text();
-        // Parse frontmatter if present
-        const { content: markdownContent } = parseMarkdownFrontmatter(content);
-        return { ...post, content: markdownContent };
+    // Files may have date prefixes (YYYY-MM-DD-) or no prefix
+    // Try common date patterns first, then slug-only
+    
+    // Generate possible filenames based on common patterns
+    const possibleFilenames: string[] = [];
+    
+    // Add date-prefixed versions (common patterns from blog posts)
+    const datePrefixes = ['2025-01-15-', '2025-01-22-', '2025-02-01-', '2025-02-10-', '2025-02-20-', '2025-02-27-', '2025-02-28-', '2025-12-24-', '2025-12-25-'];
+    datePrefixes.forEach(prefix => {
+      possibleFilenames.push(`${prefix}${slug}.md`);
+    });
+    
+    // Add slug-only version
+    possibleFilenames.push(`${slug}.md`);
+    
+    // Try each filename
+    for (const filename of possibleFilenames) {
+      try {
+        const contentResponse = await fetch(`/content/blog/${filename}`);
+        if (contentResponse.ok) {
+          const contentType = contentResponse.headers.get('content-type');
+          // Only process if it's text/markdown or text/plain, not HTML
+          if (!contentType || !contentType.includes('text/html')) {
+            const content = await contentResponse.text();
+            // Check if content looks like HTML (starts with <!DOCTYPE or <html)
+            const trimmed = content.trim();
+            if (trimmed.startsWith('<!DOCTYPE') || trimmed.startsWith('<html')) {
+              console.warn(`File ${filename} returned HTML instead of markdown`);
+              continue;
+            }
+            // Parse frontmatter if present (our format uses --- separator)
+            const { content: markdownContent } = parseMarkdownFrontmatter(content);
+            if (markdownContent && markdownContent.trim().length > 0) {
+              console.log(`✓ Loaded content from ${filename}`);
+              return { ...post, content: markdownContent };
+            } else {
+              console.warn(`File ${filename} parsed but has no content after frontmatter`);
+            }
+          }
+        }
+      } catch (e) {
+        // Continue to next filename pattern
+        console.debug(`Failed to load ${filename}:`, e);
       }
-    } catch (e) {
-      // Markdown file not found, that's okay
     }
+    
+    console.warn(`Could not find markdown file for slug: ${slug}. Tried: ${possibleFilenames.join(', ')}`);
     
     return post;
   } catch (error) {
@@ -58,28 +100,46 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
 }
 
 // Parse markdown frontmatter
+// Our blog format uses --- as a separator after metadata, not traditional frontmatter
 function parseMarkdownFrontmatter(markdown: string): { frontmatter: Record<string, string>, content: string } {
+  // Check for traditional frontmatter first
   const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
   const match = markdown.match(frontmatterRegex);
   
-  if (!match) {
-    return { frontmatter: {}, content: markdown };
+  if (match) {
+    const frontmatterText = match[1];
+    const content = match[2];
+    const frontmatter: Record<string, string> = {};
+    
+    frontmatterText.split('\n').forEach(line => {
+      const colonIndex = line.indexOf(':');
+      if (colonIndex > 0) {
+        const key = line.substring(0, colonIndex).trim();
+        const value = line.substring(colonIndex + 1).trim().replace(/^["']|["']$/g, '');
+        frontmatter[key] = value;
+      }
+    });
+    
+    return { frontmatter, content };
   }
   
-  const frontmatterText = match[1];
-  const content = match[2];
-  const frontmatter: Record<string, string> = {};
+  // Our format: title, then metadata lines, then --- separator, then content
+  // Skip the title (first line starting with #)
+  // Skip metadata lines (starting with **)
+  // Find the --- separator
+  const lines = markdown.split('\n');
+  let contentStart = 0;
   
-  frontmatterText.split('\n').forEach(line => {
-    const colonIndex = line.indexOf(':');
-    if (colonIndex > 0) {
-      const key = line.substring(0, colonIndex).trim();
-      const value = line.substring(colonIndex + 1).trim().replace(/^["']|["']$/g, '');
-      frontmatter[key] = value;
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].trim() === '---') {
+      contentStart = i + 1;
+      break;
     }
-  });
+  }
   
-  return { frontmatter, content };
+  // Return everything after the --- separator as content
+  const content = lines.slice(contentStart).join('\n');
+  return { frontmatter: {}, content };
 }
 
 // Fallback posts if JSON file can't be loaded

@@ -3,6 +3,7 @@ import { ArrowRight, Network, Shield, Brain, Globe, Lock, FileCheck, Activity, L
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -22,10 +23,10 @@ export default function BlockchainDNA() {
           <img 
             src={heroBg} 
             alt="BlockchainDNA Background" 
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
-          <div className="absolute inset-0 cyber-grid opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
+          <div className="absolute inset-0 cyber-grid opacity-15" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -55,21 +56,12 @@ export default function BlockchainDNA() {
                 The Universal Identity, Provenance, Behavior, and Compliance Chain for Human + AI + Asset Governance.
                 The trust substrate for the autonomous future.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-display text-lg h-12 px-8">
-                  Download Spec Sheet
-                </Button>
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-display text-lg h-12 px-8">
-                  View Architecture
-                </Button>
-              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Overview Section */}
+      {/* Product Overview Section */}
       <section className="py-24 bg-background relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -79,10 +71,67 @@ export default function BlockchainDNA() {
               </h2>
             </div>
             
-            <div className="prose prose-invert max-w-none">
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-center">
-                BlockchainDNA is the <strong className="text-white">Universal Identity & Provenance Chain</strong> — a foundational infrastructure layer that provides critical value to current blockchain ecosystems today while positioning as the essential infrastructure for Blockchain 4.0 when AI agents meet blockchain technology.
-              </p>
+            <div className="prose prose-invert max-w-none mb-16">
+              <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10 mb-8">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Product Overview</h3>
+                <p className="text-xl text-muted-foreground mb-6 leading-relaxed text-center">
+                  <strong className="text-white">BlockchainDNA</strong> is the Universal Identity & Provenance Chain—a foundational trust infrastructure layer that provides identity, provenance, and behavioral governance for blockchain ecosystems, from wallets and assets today to AI agents tomorrow.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">What It Does</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Provides universal identity for 9 entity types (human, wallet, AI agent, stablecoin, RWA, DAO, device, institution, autonomous system)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Tracks complete behavioral provenance and lineage for all entities</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Enables delegation and authority chains for AI agents and autonomous systems</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Detects behavioral drift and anomalies in real-time</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Generates regulator-grade attestations and compliance proofs</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
+                    <h4 className="text-lg font-bold text-white mb-3">Problems It Solves</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Addresses don't represent identity or authority</strong> - Provides verifiable behavioral identity</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>No behavioral lineage or accountability</strong> - Complete provenance tracking</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Regulators require verifiable identity and compliance</strong> - Real-time compliance with explainable decisions</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>AI agents cannot rely on public-key ownership alone</strong> - Behavioral governance and delegation models</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <span><strong>Cross-chain identity fragmentation</strong> - Universal identity across all major chains</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               
               <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
                 <strong className="text-white">In simple terms:</strong> BlockchainDNA is the trust layer that enables identity, provenance, and accountability for everything on blockchain — from wallets and assets today, to AI agents tomorrow.
@@ -400,67 +449,6 @@ export default function BlockchainDNA() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-bottom-right" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
-              HOW <span className="text-primary">IT WORKS</span>
-            </h2>
-            <div className="space-y-6">
-              {[
-                {
-                  step: "1",
-                  title: "Entity Performs Action",
-                  desc: "Wallet transfer, smart contract interaction, agent decision, or API call triggers the BDNA system."
-                },
-                {
-                  step: "2",
-                  title: "GenomeX Generates Behavioral DNA",
-                  desc: "Dynamic embeddings, drift vectors, and behavioral class are created in real-time using the GenomeX platform."
-                },
-                {
-                  step: "3",
-                  title: "BDNA Registries Record Identity & Provenance",
-                  desc: "GenID validates entity, ChainLedger logs complete lineage, and AuthorityChain confirms role and delegation."
-                },
-                {
-                  step: "4",
-                  title: "RiskMonitor Evaluates Behavioral Trust Score",
-                  desc: "Drift, sanctions, threat models, and off-pattern actions are analyzed to generate a trust score."
-                },
-                {
-                  step: "5",
-                  title: "RuleEngine Enforces Governance & Compliance",
-                  desc: "Jurisdiction, institutional policies, and authority rules are applied automatically."
-                },
-                {
-                  step: "6",
-                  title: "ProofHub Produces Attestations",
-                  desc: "Real-time compliance proofs, proof-of-integrity, and explainable outputs are generated for auditors and regulators."
-                },
-                {
-                  step: "7",
-                  title: "AccessGate Allows Selective Disclosure",
-                  desc: "Regulators can see what they need while users maintain privacy through zk-based selective proofs."
-                }
-              ].map((item) => (
-                <div key={item.step} className="flex gap-6 p-6 rounded-xl bg-card/50 border border-white/10 hover:border-primary/30 transition-colors">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <span className="text-primary font-display font-bold text-xl">{item.step}</span>
-                  </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

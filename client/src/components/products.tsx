@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, Activity, Dna, ShieldAlert, Lock } from "lucide-react";
 import { Link } from "wouter";
 
@@ -18,7 +17,6 @@ const products = [
     description: "Real-time behavioral genome hashing and fraud detection for the tokenized economy. Compliance at blockchain speed.",
     image: ccaImg,
     icon: Activity,
-    status: "Live",
     features: ["Behavioral Genome Hashing", "Real-time Fraud Detection", "Token Validation"],
     link: "/cha-ching-analytics"
   },
@@ -29,7 +27,6 @@ const products = [
     description: "The intersection where AI agents meet Blockchain 4.0. The Universal Proof-of-Identity & Provenance Chain.",
     image: dnaImg,
     icon: Dna,
-    status: "Core Vision",
     features: ["Identity Layer", "AI Governance", "Immutable Truth"],
     link: "/blockchain-dna"
   },
@@ -40,7 +37,6 @@ const products = [
     description: "Next-generation zero trust architecture for autonomous systems. Secure the future of automated enterprise.",
     image: zk30Img,
     icon: ShieldAlert,
-    status: "Coming Soon",
     features: ["Zero Trust", "Threat Prevention", "Automated Defense"],
     link: "/zero-knight-30"
   },
@@ -51,7 +47,6 @@ const products = [
     description: "Liability protection for miners, pools, and nodes. Detects illegal content before it hits the blockchain.",
     image: cgImg,
     icon: Lock,
-    status: "New",
     features: ["Mempool Firewall", "Hash-Only Verification", "Liability Shield"],
     link: "/chain-guardian"
   }
@@ -66,7 +61,7 @@ export function Products() {
             CORE <span className="text-primary">TECHNOLOGIES</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Deploying Knight Global Enterprises' advanced suite of blockchain and AI governance tools for the US market.
+            Advanced technologies and IP available for licensing or acquisition. Build your own company on KGE's behavioral trust infrastructure.
           </p>
         </div>
 
@@ -88,9 +83,6 @@ export function Products() {
                       alt={product.title} 
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
-                    <Badge className="absolute top-4 right-4 z-20 bg-background/80 backdrop-blur text-primary border-primary/20">
-                      {product.status}
-                    </Badge>
                   </div>
                   
                   <CardHeader className="p-4 pb-2">
