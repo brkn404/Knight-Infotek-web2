@@ -13,8 +13,8 @@ module.exports = {
       exec_mode: 'fork',
       env: {
         NODE_ENV: 'production',
-        PORT: 5000, // Default port - DO NOT CHANGE: VPS runs multiple sites with fixed ports
-        // Port is managed via PM2 environment or Nginx config, not here
+        PORT: 5001, // Port for knightinfotek.com - DO NOT CHANGE: VPS runs multiple sites with fixed ports
+        // This port (5001) is configured in Nginx for www.knightinfotek.com
       },
       error_file: './logs/pm2-error.log',
       out_file: './logs/pm2-out.log',
