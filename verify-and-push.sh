@@ -1,7 +1,7 @@
 #!/bin/bash
 # Verify and push all changes to GitHub
 
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 
 echo "📋 Current Git Status:"
 git status --short

@@ -20,7 +20,7 @@ The blog system uses simple JSON and Markdown files that can be easily updated w
 ### On Your VPS:
 
 ```bash
-cd /path/to/KnightGlobal
+cd /path/to/Knight_InfoTek
 git pull
 npm run build
 # Restart your server (if using PM2: pm2 restart knightinfotek)

@@ -22,7 +22,7 @@ mappings = {
 }
 
 source_base = Path('/Volumes/evo4TB/kit/KGE/docs/products')
-dest_base = Path('/Volumes/evo4TB/kit/KGE/KnightGlobal/content/docs')
+dest_base = Path('/Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/docs')
 
 if not source_base.exists():
     print(f'❌ Source directory not found: {source_base}')

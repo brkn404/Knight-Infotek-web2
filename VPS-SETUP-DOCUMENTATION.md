@@ -108,7 +108,7 @@ pm2 save
 ### Step 1: Local Development & Push
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 
 # Make your changes
 # Edit files in client/src/, content/blog/, etc.
@@ -192,7 +192,7 @@ The Node.js server serves the built client files from `dist/public/`.
 
 1. **Create markdown file** in `content/blog/`:
    ```bash
-   cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+   cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
    nano content/blog/2025-12-26-your-new-post.md
    ```
 
@@ -343,7 +343,7 @@ sudo tail -f /var/log/nginx/knightinfotek.com-error.log
 
 ### Local
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 git add -A && git commit -m "Changes" && git push origin main
 ```
 

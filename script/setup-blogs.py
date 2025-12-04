@@ -9,7 +9,7 @@ from pathlib import Path
 from datetime import datetime
 
 source_dir = Path("/Volumes/evo4TB/kit/KGE/docs/products/blogs/blog")
-dest_dir = Path("/Volumes/evo4TB/kit/KGE/KnightGlobal/content/blog")
+dest_dir = Path("/Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/blog")
 
 def infer_category(title, filename):
     """Infer category from title and filename"""

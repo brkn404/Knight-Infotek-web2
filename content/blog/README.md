@@ -47,7 +47,7 @@ This directory contains all blog posts for the Knight InfoTek website.
 
 4. **On your VPS**:
    ```bash
-   cd /path/to/KnightGlobal
+   cd /path/to/Knight_InfoTek
    git pull
    npm run build
    # Restart your server if needed

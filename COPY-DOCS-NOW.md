@@ -7,7 +7,7 @@ The documentation structure has been created, but the files need to be copied fr
 Run these commands to copy all documentation files:
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 
 # Copy BlockchainDNA documentation
 cp -r /Volumes/evo4TB/kit/KGE/docs/products/BDNA/knowledge-base/* content/docs/blockchain-dna/
@@ -25,7 +25,7 @@ cp -r /Volumes/evo4TB/kit/KGE/docs/products/ChainGuard/knowledge-base/* content/
 ## Or Use the Python Script
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 python3 script/copy-docs.py
 ```
 

@@ -11,7 +11,7 @@ Simple guide for updating blog posts on the Knight InfoTek website.
 ### 1. Edit Blog Posts (Local)
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 
 # Edit the blog posts JSON file
 nano content/blog/blog-posts.json

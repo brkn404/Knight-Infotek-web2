@@ -7,14 +7,14 @@ To see the blog posts on your development server, you need to copy them to `clie
 Run this command to sync all blog files:
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 ./sync-all-blogs.sh
 ```
 
 Or manually:
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 mkdir -p client/public/content/blog
 cp content/blog/*.md client/public/content/blog/
 cp content/blog/blog-posts.json client/public/content/blog/

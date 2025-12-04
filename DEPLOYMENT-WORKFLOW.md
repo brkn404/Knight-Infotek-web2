@@ -40,7 +40,7 @@ git remote set-url origin https://github.com/brkn404/Knight-Infotek-web2.git
 ### On Your Local Machine
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 
 # 1. Make your changes (edit files, add content, etc.)
 
@@ -105,7 +105,7 @@ Then just run: `./deploy.sh`
 
 ```bash
 # On your local machine
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 
 # Edit the blog posts list
 nano content/blog/blog-posts.json

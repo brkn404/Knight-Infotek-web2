@@ -1,8 +1,8 @@
 #!/bin/bash
 # Copy all blog markdown files to client/public/content/blog
 
-SOURCE="/Volumes/evo4TB/kit/KGE/KnightGlobal/content/blog"
-DEST="/Volumes/evo4TB/kit/KGE/KnightGlobal/client/public/content/blog"
+SOURCE="/Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/blog"
+DEST="/Volumes/evo4TB/kit/KGE/Knight_InfoTek/client/public/content/blog"
 
 echo "Copying blog markdown files..."
 mkdir -p "$DEST"

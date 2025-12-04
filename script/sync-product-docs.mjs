@@ -3,7 +3,7 @@ import { join } from 'path';
 import { existsSync } from 'fs';
 
 // Source is at /Volumes/evo4TB/kit/KGE/docs/products
-// Dest is at /Volumes/evo4TB/kit/KGE/KnightGlobal/content/docs
+// Dest is at /Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/docs
 const sourceBase = '/Volumes/evo4TB/kit/KGE/docs/products';
 const destBase = join(process.cwd(), 'content/docs');
 

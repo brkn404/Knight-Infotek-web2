@@ -1,8 +1,8 @@
 #!/bin/bash
 # Sync all blog files to client/public for development
 
-SOURCE="/Volumes/evo4TB/kit/KGE/KnightGlobal/content/blog"
-DEST="/Volumes/evo4TB/kit/KGE/KnightGlobal/client/public/content/blog"
+SOURCE="/Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/blog"
+DEST="/Volumes/evo4TB/kit/KGE/Knight_InfoTek/client/public/content/blog"
 
 echo "Syncing all blog files..."
 mkdir -p "$DEST"

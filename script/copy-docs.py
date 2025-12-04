@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 source_base = Path("/Volumes/evo4TB/kit/KGE/docs/products")
-dest_base = Path("/Volumes/evo4TB/kit/KGE/KnightGlobal/content/docs")
+dest_base = Path("/Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/docs")
 
 products = [
     {"source": "BDNA/knowledge-base", "dest": "blockchain-dna"},

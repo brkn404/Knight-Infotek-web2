@@ -29,7 +29,7 @@ This is a modern, responsive website built with React, TypeScript, and Vite. It 
 ## 📁 Project Structure
 
 ```
-KnightGlobal/
+Knight_InfoTek/
 ├── client/                 # Frontend React application
 │   ├── src/
 │   │   ├── components/     # Reusable UI components

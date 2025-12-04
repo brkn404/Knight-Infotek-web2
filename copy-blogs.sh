@@ -2,7 +2,7 @@
 # Copy all blog posts to content/blog directory
 
 SOURCE="/Volumes/evo4TB/kit/KGE/docs/products/blogs/blog"
-DEST="/Volumes/evo4TB/kit/KGE/KnightGlobal/content/blog"
+DEST="/Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/blog"
 
 echo "Copying blog posts..."
 for file in "$SOURCE"/*.md; do

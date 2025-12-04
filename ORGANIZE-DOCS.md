@@ -24,7 +24,7 @@ content/docs/
 To copy all documentation files from the source to the website, run:
 
 ```bash
-cd /Volumes/evo4TB/kit/KGE/KnightGlobal
+cd /Volumes/evo4TB/kit/KGE/Knight_InfoTek
 node script/copy-documentation.mjs
 ```
 

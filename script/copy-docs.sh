@@ -3,7 +3,7 @@
 # Script to copy product documentation to website content directory
 
 SOURCE_BASE="/Volumes/evo4TB/kit/KGE/docs/products"
-DEST_BASE="/Volumes/evo4TB/kit/KGE/KnightGlobal/content/docs"
+DEST_BASE="/Volumes/evo4TB/kit/KGE/Knight_InfoTek/content/docs"
 
 # Create destination directories
 mkdir -p "$DEST_BASE/blockchain-dna"
