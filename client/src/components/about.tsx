@@ -8,26 +8,75 @@ export function About() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-              FROM CONSULTING TO <br />
-              <span className="text-primary">GLOBAL INFRASTRUCTURE</span>
+              TWO ENTITIES. <br />
+              <span className="text-primary">ONE MISSION.</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
+              <strong className="text-white">Invent. License. Implement. Scale.</strong>
+            </p>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Knight Global Enterprises invents and owns the technology. We build products and IP that others license or acquire to build their own companies. 
               Knight InfoTek provides implementation support, transition services, and helps companies take over products as their own.
             </p>
           </div>
 
+          <div className="grid md:grid-cols-2 gap-16 items-start mb-16">
+            <div className="bg-card/50 rounded-xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold font-display mb-6 text-white flex items-center gap-3">
+                <Globe className="w-6 h-6 text-primary" /> KGE (Ireland)
+              </h3>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">Owns all patents, IP, behavioral engines, software frameworks</strong></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Conducts advanced R&D and product development</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Licenses core technologies to enterprises, governments, incubators, and accelerators</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-card/50 rounded-xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold font-display mb-6 text-white flex items-center gap-3">
+                <Building2 className="w-6 h-6 text-primary" /> Knight InfoTek LLC (USA)
+              </h3>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">Implements and operationalizes KGE technology</strong></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Provides enterprise integration services</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Delivers 12–36 month transition contracts</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Offers extended support, product takeover, and custom feature development</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="text-center mb-16">
+            <p className="text-xl text-primary font-medium italic">
+              Together, we turn foundational IP into scalable products.
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
             <div>
               <h3 className="text-2xl font-bold font-display mb-6 text-white">
-                Our Mission
+                What We Provide
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                <strong>KGE (Ireland)</strong> invents and owns all intellectual property—patents, software frameworks, and behavioral intelligence technologies. We conduct R&D and develop products that others can license or acquire to build their own companies.
-              </p>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                <strong>Knight InfoTek LLC (USA)</strong> provides implementation support, transition services, and helps companies take over products as their own. We offer 12-36 months of transitional support after acquisitions, plus optional extended support, IP consulting, and feature development.
-              </p>
               
               <div className="space-y-4">
                 {[
@@ -78,10 +127,16 @@ export function About() {
             <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10">
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-4xl font-bold font-display mb-4 text-white">
-                  FOUNDER PROFILE: <span className="text-primary">BRIAN KNIGHT</span>
+                  FOUNDER & CHIEF ARCHITECT: <span className="text-primary">BRIAN KNIGHT</span>
                 </h3>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  U.S. Marine Corps veteran with 30+ years in IT, cybersecurity, and AI innovation
+                  U.S. Marine Corps veteran with 30+ years in cybersecurity, systems architecture, Unix/Linux engineering, blockchain infrastructure, and AI behavioral modeling.
+                </p>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+                  Brian has architected enterprise systems, led cybersecurity operations, and pioneered behavioral integrity engines that fuse AI, cyber, and blockchain into a unified intelligence layer.
+                </p>
+                <p className="text-base text-primary/80 max-w-3xl mx-auto mt-2 italic">
+                  Today, he leads both the engineering direction and creative innovation behind KGE's patent portfolio.
                 </p>
               </div>
               
@@ -123,31 +178,31 @@ export function About() {
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>30+ years systems architecture</span>
+                        <span>30+ Years Systems Architecture</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>Advanced cybersecurity expertise</span>
+                        <span>Advanced Cybersecurity Expertise</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>AI/ML model development & training</span>
+                        <span>AI/ML Model Development & Training</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>Blockchain development & architecture</span>
+                        <span>Blockchain Development & Architecture</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>Cryptocurrency mining operations</span>
+                        <span>Cryptocurrency Mining Operations</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>Red team operations & penetration testing</span>
+                        <span>Red Team Operations & Penetration Testing</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>Custom security software development</span>
+                        <span>Custom Security Software Development</span>
                       </li>
                     </ul>
                   </div>
@@ -355,20 +410,7 @@ export function About() {
             <h3 className="text-2xl md:text-3xl font-bold font-display mb-8 text-center">
               THE <span className="text-primary">BEHAVIORAL TRUST</span> VISION
             </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-background/50 border-white/10">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-white">
-                    <Building2 className="w-5 h-5 text-primary" /> The Challenge
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Traditional trust mechanisms—passwords, certificates, time-based audits, and rule-based compliance—are no longer sufficient in a world of AI agents, autonomous systems, and instant-settlement financial rails.
-                  </p>
-                </CardContent>
-              </Card>
-
+            <div className="grid md:grid-cols-2 gap-6">
               <Card className="bg-background/50 border-white/10">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-white">

@@ -33,21 +33,30 @@ export function Hero() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight font-display">
-              THE GLOBAL LEDGER <br />
+              Building the Future of <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300 text-glow">
-                OF TRUTH
+                AI, Cybersecurity & Blockchain Infrastructure
               </span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl leading-relaxed">
-              Knight Global Enterprises invents and owns the IP. We build products and technologies that others license or acquire to build their own companies. 
-              Knight InfoTek provides implementation support and transition services.
+            <p className="text-xl text-muted-foreground mb-2 max-w-2xl leading-relaxed">
+              <strong className="text-white">Patent-Backed Technologies. Enterprise-Grade Implementation. Global Impact.</strong>
+            </p>
+            
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl leading-relaxed">
+              Knight Global Enterprises (KGE) invents and owns the next generation of behavioral intelligence, cybersecurity, and blockchain systems.
+              <br /><br />
+              Knight InfoTek is the exclusive U.S. partner — delivering implementation, migration, integration, and long-term support.
+            </p>
+            
+            <p className="text-sm text-primary/80 mb-6 max-w-2xl italic">
+              → The technology foundation behind tomorrow's AI-powered companies.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#products">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-display text-lg h-12 px-8">
-                  Explore Solutions <ArrowRight className="ml-2 w-5 h-5" />
+                  Explore Technologies <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
               <a href="#contact">

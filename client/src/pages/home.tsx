@@ -2,6 +2,10 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Products } from "@/components/products";
 import { About } from "@/components/about";
+import { Services } from "@/components/services";
+import { WhyWorkWithUs } from "@/components/why-work-with-us";
+import { HowToEngage } from "@/components/how-to-engage";
+import { ClosingCTA } from "@/components/closing-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { useEffect } from "react";
@@ -35,8 +39,12 @@ export default function Home() {
       <Navbar />
       <main className="pt-20 md:pt-24">
         <Hero />
-        <Products />
         <About />
+        <Services />
+        <Products />
+        <WhyWorkWithUs />
+        <HowToEngage />
+        <ClosingCTA />
         <Contact />
       </main>
       <Footer />

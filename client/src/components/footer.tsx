@@ -11,8 +11,13 @@ export function Footer() {
                 KNIGHT<span className="text-primary">INFOTEK</span>
               </span>
             </div>
-            <p className="text-muted-foreground max-w-md mb-6">
-              The US Reseller for Knight Global Enterprises. Building the trust layer for the autonomous future.
+            <p className="text-muted-foreground max-w-md mb-4">
+              <strong className="text-white">Knight InfoTek LLC (USA)</strong><br />
+              Implementation • Migration • Support • Engineering • Acquisition Partnerships
+            </p>
+            <p className="text-muted-foreground max-w-md mb-6 text-sm">
+              <strong className="text-white">Knight Global Enterprises (Ireland)</strong><br />
+              R&D • Patents • Product Development • IP Ownership
             </p>
             <a 
               href="https://www.linkedin.com/in/brian-knight2k" 
@@ -47,8 +52,14 @@ export function Footer() {
         </div>
         
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Knight InfoTek LLC. All rights reserved.</p>
-          <p>Partnered with Knight Global Enterprises (Ireland)</p>
+          <p>&copy; {new Date().getFullYear()} Knight Global Enterprises — All Rights Reserved</p>
+          <div className="flex gap-4">
+            <a href="/#products" className="hover:text-primary transition-colors">Products</a>
+            <a href="/#about" className="hover:text-primary transition-colors">About</a>
+            <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href="/blog" className="hover:text-primary transition-colors">Blog</a>
+            <a href="/#services" className="hover:text-primary transition-colors">Services</a>
+          </div>
         </div>
       </div>
     </footer>
