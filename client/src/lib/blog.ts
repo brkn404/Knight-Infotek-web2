@@ -45,18 +45,38 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
     
     // Try to load full content from markdown file
     // Files may have date prefixes (YYYY-MM-DD-) or no prefix
-    // Try common date patterns first, then slug-only
+    // Use the post's date to determine the most likely filename first
     
-    // Generate possible filenames based on common patterns
+    // Generate possible filenames based on the post's date
     const possibleFilenames: string[] = [];
     
-    // Add date-prefixed versions (common patterns from blog posts)
-    const datePrefixes = ['2025-01-15-', '2025-01-22-', '2025-02-01-', '2025-02-10-', '2025-02-20-', '2025-02-27-', '2025-02-28-', '2025-12-24-', '2025-12-25-'];
+    // Extract date from post.date (format: "December 24, 2025" or "March 20, 2025")
+    // Convert to YYYY-MM-DD format for filename matching
+    if (post.date) {
+      try {
+        const dateObj = new Date(post.date);
+        if (!isNaN(dateObj.getTime())) {
+          const year = dateObj.getFullYear();
+          const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+          const day = String(dateObj.getDate()).padStart(2, '0');
+          const datePrefix = `${year}-${month}-${day}-`;
+          // Try the post's specific date first (most likely match)
+          possibleFilenames.push(`${datePrefix}${slug}.md`);
+        }
+      } catch (e) {
+        console.debug('Could not parse date from post:', e);
+      }
+    }
+    
+    // Add other common date prefixes as fallback
+    const datePrefixes = ['2025-12-24-', '2025-12-25-', '2025-01-15-', '2025-01-22-', '2025-02-01-', '2025-02-10-', '2025-02-20-', '2025-02-27-', '2025-02-28-'];
     datePrefixes.forEach(prefix => {
-      possibleFilenames.push(`${prefix}${slug}.md`);
+      if (!possibleFilenames.includes(`${prefix}${slug}.md`)) {
+        possibleFilenames.push(`${prefix}${slug}.md`);
+      }
     });
     
-    // Add slug-only version
+    // Add slug-only version as last resort
     possibleFilenames.push(`${slug}.md`);
     
     // Try each filename
