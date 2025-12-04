@@ -13,7 +13,8 @@ module.exports = {
       exec_mode: 'fork',
       env: {
         NODE_ENV: 'production',
-        PORT: 5000, // Default port - change to match your existing Nginx config
+        PORT: 5000, // Default port - DO NOT CHANGE: VPS runs multiple sites with fixed ports
+        // Port is managed via PM2 environment or Nginx config, not here
       },
       error_file: './logs/pm2-error.log',
       out_file: './logs/pm2-out.log',

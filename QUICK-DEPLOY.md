@@ -47,9 +47,13 @@ npm install
 # Build the application
 npm run build
 
-# Start with PM2
+# Start with PM2 (port is already configured, don't change it)
 pm2 start ecosystem.config.js
 pm2 save
+
+# Verify it started correctly
+pm2 status knightinfotek
+pm2 logs knightinfotek --lines 20
 ```
 
 ### 3. Configure Nginx (if not already done)
@@ -76,16 +80,32 @@ cd /var/www/knightinfotek.com
 git pull origin main
 npm install
 npm run build
-pm2 restart knightinfotek
+pm2 restart knightinfotek  # Port stays the same, no changes needed
 ```
 
-## Important Notes
+## Important Notes - Multi-Site VPS Setup
 
-- **Port**: The app runs on port 3000 (change in ecosystem.config.js if needed)
+⚠️ **CRITICAL: Your VPS runs multiple sites. DO NOT change port numbers in ecosystem.config.js.**
+
+- **Port Configuration**: The port is already configured for your multi-site setup. The site runs on the port already set in your PM2/Nginx configuration.
 - **PM2 Name**: Process is named "knightinfotek"
-- **Nginx**: Make sure your existing knightinfotek.com config proxies to localhost:3000
-- **Other Sites**: This won't affect your other sites in /var/www/
+- **Nginx**: Your existing knightinfotek.com config already proxies to the correct port
+- **Other Sites**: This deployment only affects knightinfotek.com - other sites remain unchanged
+- **Port Changes**: If you need to change the port, check with other sites first, then update via PM2 environment variables, NOT in ecosystem.config.js
 - **Git Remote**: The `origin` remote tells git where to pull from (stored in `.git/config`)
+
+### Checking Current Port Configuration
+
+```bash
+# Check what port PM2 is using
+pm2 show knightinfotek | grep PORT
+
+# Check Nginx proxy configuration
+grep -r "proxy_pass" /etc/nginx/sites-available/knightinfotek.com
+
+# Check what ports are in use
+netstat -tlnp | grep -E ":(5000|5001|3000)"
+```
 
 ## Check Status
 
