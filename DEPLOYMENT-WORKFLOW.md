@@ -281,6 +281,45 @@ sudo systemctl restart nginx
 sudo tail -f /var/log/nginx/knightinfotek.com-error.log
 ```
 
+## Multi-Site VPS Configuration
+
+⚠️ **IMPORTANT: Your VPS runs multiple sites. Ports are pre-configured and should NOT be changed.**
+
+### Port Configuration
+
+The port for knightinfotek.com is already configured in your multi-site setup. To check the current port:
+
+```bash
+# Check PM2 process port
+pm2 show knightinfotek | grep PORT
+
+# Check Nginx proxy configuration
+grep -r "proxy_pass" /etc/nginx/sites-available/knightinfotek.com
+
+# Check what ports are in use
+netstat -tlnp | grep -E ":(5000|5001|3000)"
+```
+
+### DO NOT Change Ports
+
+- **ecosystem.config.js**: The PORT value is a default only. The actual port is managed by your VPS configuration.
+- **PM2**: If you need to change the port (rare), use PM2 environment variables, but check with other sites first.
+- **Nginx**: Your Nginx config already points to the correct port for this site.
+
+### Restarting After Deployment
+
+When restarting the application, the port stays the same:
+
+```bash
+# Standard restart (port unchanged)
+pm2 restart knightinfotek
+
+# If you need to check/update port (only if necessary):
+pm2 show knightinfotek
+# Then restart with same configuration
+pm2 restart knightinfotek
+```
+
 ## Quick Reference Commands
 
 ### Local Development
