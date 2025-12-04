@@ -48,7 +48,8 @@ npm install
 npm run build
 
 # Start with PM2 (port is already configured, don't change it)
-pm2 start ecosystem.config.js
+# Note: Must use .cjs extension because package.json has "type": "module"
+pm2 start ecosystem.config.cjs
 pm2 save
 
 # Verify it started correctly

@@ -87,9 +87,8 @@ cd /var/www/knightinfotek.com
 git pull origin main
 npm install
 npm run build
-rm -rf /var/www/knightinfotek.com/html/*
-cp -r dist/public/* /var/www/knightinfotek.com/html/
-chown -R www-data:www-data /var/www/knightinfotek.com/html
+pm2 restart knightinfotek || pm2 start ecosystem.config.cjs --name knightinfotek
+pm2 save
 echo "✅ Deployment complete!"
 EOF
 
@@ -97,6 +96,8 @@ chmod +x /var/www/knightinfotek.com/deploy.sh
 ```
 
 Then just run: `./deploy.sh`
+
+**Note:** The config file is `ecosystem.config.cjs` (not `.js`) because package.json has `"type": "module"`.
 
 ## Updating Blog Posts
 
