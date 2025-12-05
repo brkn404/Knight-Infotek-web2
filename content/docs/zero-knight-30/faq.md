@@ -364,30 +364,22 @@ Recovery history is available through:
 4. Configure protected paths
 5. Start monitoring
 
-See the [Installation Guide](../03-deployment/installation.md) for detailed steps.
+Contact support for detailed installation steps and guidance.
 
 ### Where can I find documentation?
 
-- **Technical Documentation**: [Architecture Docs](../01-architecture/)
-- **Implementation Guides**: [Implementation Docs](../02-implementation/)
-- **Deployment Guides**: [Deployment Docs](../03-deployment/)
-- **API Reference**: [API Docs](../02-implementation/api-reference.md)
+Contact support to access technical documentation, implementation guides, deployment guides, and API references.
 
 ### How do I contact support?
 
-- **Email**: support@zeroknight30.com
-- **Website**: https://zeroknight30.com
-- **Documentation**: [Knowledge Base](./README.md)
+- **Support**: Contact our support team for assistance
+- **Documentation**: Contact support to access our documentation
 
 ---
 
 ## Additional Resources
 
-- [Product Specification Sheet](./product-spec-sheet.md)
-- [Architecture Diagram](./architecture-diagram.md)
-- [Technical Whitepaper](../01-architecture/technical-whitepaper.md)
-- [Installation Guide](../03-deployment/installation.md)
-- [API Reference](../02-implementation/api-reference.md)
+Contact support to access product specification sheets, architecture diagrams, technical whitepapers, installation guides, and API references.
 
 ---
 

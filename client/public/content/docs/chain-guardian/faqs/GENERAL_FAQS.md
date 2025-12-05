@@ -166,7 +166,7 @@ ChainGuardian integrates with mining pools through:
 - **WebSocket**: Real-time transaction monitoring
 - **Mining Software Integration**: Direct integration with mining software
 
-See [Miner Integration Guide](../documentation/MINER_INTEGRATION_GUIDE.md) for details.
+Contact support for detailed miner integration instructions.
 
 ### What are the system requirements?
 
@@ -330,9 +330,7 @@ QSBA (Quantum Syndrome Behavioral Analysis) is planned for **Phase 3 (Q3 2025)**
 
 ### Where can I find documentation?
 
-- **Technical Documentation**: [Documentation](../documentation/)
-- **API Reference**: [API Documentation](../documentation/API_DOCUMENTATION.md)
-- **Integration Guides**: [Integration Guides](../documentation/)
+Contact support to access technical documentation, API references, and integration guides.
 
 ### How do I report a bug?
 

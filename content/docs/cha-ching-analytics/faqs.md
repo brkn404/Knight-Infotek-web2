@@ -328,11 +328,11 @@ CCA supports **multi-blockchain monitoring** including:
 - **Exchanges & DeFi**: Chain-swap guardrails, sanctions compliance, fraud detection
 - **Regulators**: Transparent dashboards, standardized proofs, automated reporting
 
-**See**: [Resources](./resources.md) for detailed case studies
+**Case Studies**: Contact support for detailed case studies and use case examples.
 
 ---
 
-**Have more questions?** Contact us at support@cha-chinganalytics.com or visit our [Knowledge Base](./knowledge-base.md) for more information.
+**Have more questions?** Contact our support team for more information.
 
 ---
 
