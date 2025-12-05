@@ -78,7 +78,7 @@ export function Contact() {
               GET IN <span className="text-primary">TOUCH</span>
             </h2>
             <p className="text-muted-foreground mb-8 text-lg">
-              Interested in licensing or acquiring KGE technologies? Contact our team to discuss IP licensing, product acquisition, or implementation support services.
+              Interested in licensing or acquiring Knight Global Enterprises technologies? Contact our team to discuss IP licensing, product acquisition, or implementation support services.
             </p>
             
             <div className="space-y-6">

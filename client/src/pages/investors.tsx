@@ -168,7 +168,7 @@ export default function Investors() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Best long-term model. Get full usage rights, rebranding, and product building capabilities. KGE retains IP ownership.
+                    Best long-term model. Get full usage rights, rebranding, and product building capabilities. Knight Global Enterprises retains IP ownership.
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground mb-4">
                     <li className="flex items-start gap-2">
@@ -198,7 +198,7 @@ export default function Investors() {
             {/* Why Invest */}
             <div className="mb-16 bg-card/50 rounded-xl p-8 md:p-12 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold font-display mb-8 text-center">
-                Why Invest in <span className="text-primary">KGE Technologies</span>
+                Why Invest in <span className="text-primary">Knight Global Enterprises Technologies</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -347,7 +347,7 @@ export default function Investors() {
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Startups can license or acquire KGE IP to build products faster</span>
+                      <span>Startups can license or acquire Knight Global Enterprises IP to build products faster</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />

@@ -7,7 +7,7 @@ export function ClosingCTA() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-            Build Your Next Breakthrough on <span className="text-primary">KGE Technology</span>
+            Build Your Next Breakthrough on <span className="text-primary">Knight Global Enterprises Technology</span>
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">

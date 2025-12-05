@@ -63,7 +63,7 @@ export function Hero() {
             {/* Description */}
             <div className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto space-y-3">
               <p>
-                Knight Global Enterprises (KGE) invents and owns the next generation of behavioral intelligence, cybersecurity, and blockchain systems.
+                Knight Global Enterprises invents and owns the next generation of behavioral intelligence, cybersecurity, and blockchain systems.
               </p>
               <p>
                 Knight InfoTek is the exclusive U.S. partner — delivering implementation, migration, integration, and long-term support.

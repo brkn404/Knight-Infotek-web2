@@ -29,7 +29,7 @@ export function HowToEngage() {
       title: "For Investors & Incubators",
       items: [
         "Acquire entire product lines",
-        "Build startups on top of KGE IP",
+        "Build startups on top of Knight Global Enterprises IP",
         "Operate with built-in technical leadership and transition support"
       ],
       link: "/investors"

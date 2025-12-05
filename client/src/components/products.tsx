@@ -61,7 +61,7 @@ export function Products() {
             CORE <span className="text-primary">TECHNOLOGIES</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Advanced technologies and IP available for licensing or acquisition. Build your own company on KGE's behavioral trust infrastructure.
+            Advanced technologies and IP available for licensing or acquisition. Build your own company on Knight Global Enterprises' behavioral trust infrastructure.
           </p>
         </div>
 

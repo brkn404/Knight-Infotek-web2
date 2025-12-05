@@ -82,7 +82,7 @@ export default function Enterprises() {
                 Why Enterprises Choose <span className="text-primary">Knight InfoTek</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center leading-relaxed">
-                Knight Global Enterprises (KGE) has developed foundational IP in behavioral intelligence, AI-driven cybersecurity, and blockchain infrastructure. As the exclusive U.S. partner, Knight InfoTek helps enterprises license, acquire, and integrate these technologies into their existing platforms—reducing development time from years to months.
+                Knight Global Enterprises has developed foundational IP in behavioral intelligence, AI-driven cybersecurity, and blockchain infrastructure. As the exclusive U.S. partner, Knight InfoTek helps enterprises license, acquire, and integrate these technologies into their existing platforms—reducing development time from years to months.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export default function Enterprises() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    License KGE's core technologies to build your own products while KGE retains IP ownership. Ideal for long-term partnerships and recurring revenue models.
+                    License Knight Global Enterprises' core technologies to build your own products while Knight Global Enterprises retains IP ownership. Ideal for long-term partnerships and recurring revenue models.
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                     <li className="flex items-start gap-2">

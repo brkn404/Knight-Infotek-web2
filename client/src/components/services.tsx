@@ -19,7 +19,7 @@ export function Services() {
     {
       icon: Building2,
       title: "Product Takeover & Migration",
-      description: "We help organizations seamlessly absorb KGE-developed technologies into their own teams — with or without internal engineering.",
+      description: "We help organizations seamlessly absorb Knight Global Enterprises-developed technologies into their own teams — with or without internal engineering.",
       link: "#contact"
     },
     {

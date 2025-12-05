@@ -21,7 +21,7 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-16 items-start mb-16">
             <div className="bg-card/50 rounded-xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold font-display mb-6 text-white flex items-center gap-3">
-                <Globe className="w-6 h-6 text-primary" /> KGE (Ireland)
+                <Globe className="w-6 h-6 text-primary" /> Knight Global Enterprises (Ireland)
               </h3>
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
@@ -46,7 +46,7 @@ export function About() {
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-white">Implements and operationalizes KGE technology</strong></span>
+                  <span><strong className="text-white">Implements and operationalizes Knight Global Enterprises technology</strong></span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -383,7 +383,7 @@ export function About() {
                   OUR <span className="text-primary">BUSINESS MODEL</span>
                 </h3>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  KGE invents the technology. Others license or acquire it to build their own companies.
+                  Knight Global Enterprises invents the technology. Others license or acquire it to build their own companies.
                 </p>
               </div>
               
@@ -428,7 +428,7 @@ export function About() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      Best long-term model. Buyer gets full usage rights, rebranding, and product building capabilities. KGE retains IP ownership, licensing fees, and royalties.
+                      Best long-term model. Buyer gets full usage rights, rebranding, and product building capabilities. Knight Global Enterprises retains IP ownership, licensing fees, and royalties.
                     </p>
                     <p className="text-xs text-primary font-medium">
                       Recurring revenue — IP ownership retained
@@ -453,7 +453,7 @@ export function About() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    <strong>Identity through behavior. Integrity through provenance. Trust through continuous verification.</strong> KGE delivers a unified behavioral trust platform powered by GenomeX.
+                    <strong>Identity through behavior. Integrity through provenance. Trust through continuous verification.</strong> Knight Global Enterprises delivers a unified behavioral trust platform powered by GenomeX.
                   </p>
                 </CardContent>
               </Card>
