@@ -7,16 +7,14 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-              TWO ENTITIES. <br />
-              <span className="text-primary">ONE MISSION.</span>
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">
+              WHO WE ARE
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
-              <strong className="text-white">Invent. License. Implement. Scale.</strong>
+            <p className="text-2xl md:text-3xl font-semibold text-primary mb-2">
+              Two Entities. One Mission.
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Knight Global Enterprises invents and owns the technology. We build products and IP that others license or acquire to build their own companies. 
-              Knight InfoTek provides implementation support, transition services, and helps companies take over products as their own.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Invent. License. Implement. Scale.
             </p>
           </div>
 
@@ -127,28 +125,44 @@ export function About() {
             <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10">
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-4xl font-bold font-display mb-4 text-white">
-                  FOUNDER & CHIEF ARCHITECT: <span className="text-primary">BRIAN KNIGHT</span>
+                  FOUNDER PROFILE: <span className="text-primary">BRIAN KNIGHT</span>
                 </h3>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  U.S. Marine Corps veteran with 30+ years in cybersecurity, systems architecture, Unix/Linux engineering, blockchain infrastructure, and AI behavioral modeling.
-                </p>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
-                  Brian has architected enterprise systems, led cybersecurity operations, and pioneered behavioral integrity engines that fuse AI, cyber, and blockchain into a unified intelligence layer.
-                </p>
-                <p className="text-base text-primary/80 max-w-3xl mx-auto mt-2 italic">
-                  Today, he leads both the engineering direction and creative innovation behind KGE's patent portfolio.
+                  U.S. Marine Corps Veteran • AI & Cybersecurity Innovator • 30+ Years Technical Leadership
                 </p>
               </div>
               
               <div className="grid lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">
                   <div className="bg-background/50 rounded-lg p-6 border border-white/10">
-                    <h4 className="text-xl font-bold text-white mb-4">Professional Overview</h4>
+                    <h4 className="text-xl font-bold text-white mb-4">Professional Overview <span className="text-sm font-normal text-muted-foreground">(Investor-Focused)</span></h4>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
-                      Brian Knight is a U.S. Marine Corps veteran, systems architect, cybersecurity expert, and AI innovator with deep expertise in blockchain and cryptocurrency mining operations. His career spans over three decades, combining military precision with cutting-edge technical innovation across Unix/Linux systems, cybersecurity operations, AI development, and blockchain infrastructure.
+                      Brian Knight is a seasoned technology founder with over 30 years of hands-on leadership in AI engineering, cybersecurity architecture, and large-scale systems design. His background combines deep technical mastery with operational discipline, shaped by his service as a U.S. Marine Corps veteran and decades spent architecting resilient, high-performance computing environments.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Today, as the founder and creative lead of Knight InfoTek, Brian is fusing AI, cybersecurity, and blockchain technology into something entirely new.
+                    
+                    <h5 className="text-lg font-semibold text-white mb-3 mt-6">Brian's core strengths include:</h5>
+                    
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span><strong className="text-white">AI/ML Systems Architecture:</strong> Designing multi-agent AI frameworks, behavioral engines, and advanced automation pipelines for cybersecurity and blockchain intelligence.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span><strong className="text-white">Cybersecurity Strategy & Operations:</strong> Three decades securing mission-critical systems, specializing in behavioral threat detection, autonomous defense, and zero-trust architectures.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span><strong className="text-white">Blockchain Infrastructure & Compliance:</strong> Expertise in blockchain forensics, decentralized systems, smart-contract validation, and enterprise-grade blockchain-AI integrations.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span><strong className="text-white">Unix/Linux Engineering & Distributed Systems:</strong> 30+ years deploying and optimizing technical infrastructure for scale, reliability, and resilience.</span>
+                      </li>
+                    </ul>
+                    
+                    <p className="text-muted-foreground mt-6 leading-relaxed">
+                      As the founder and creative force behind Knight InfoTek, Brian fuses AI, cybersecurity, and blockchain technologies into a unified innovation engine building platforms designed to solve the next decade of digital risk. His military precision, engineering depth, and long-range vision drive the company's strategy, product execution, and intellectual property development.
                     </p>
                   </div>
                 </div>
@@ -191,6 +205,26 @@ export function About() {
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                         <span>Blockchain Development & Architecture</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Behavioral Intelligence & Anomaly Detection</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Real-Time Compliance & Regulatory Frameworks</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Blockchain Forensics & Content Analysis</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Multi-Jurisdiction Regulatory Compliance</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>Autonomous Defense & Self-Healing Systems</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />

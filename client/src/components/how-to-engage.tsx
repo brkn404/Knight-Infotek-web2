@@ -12,7 +12,7 @@ export function HowToEngage() {
         "Integrate behavioral intelligence into your existing platforms",
         "Launch new AI-driven products faster"
       ],
-      link: "#contact"
+      link: "/enterprises"
     },
     {
       icon: Shield,
@@ -22,7 +22,7 @@ export function HowToEngage() {
         "Blockchain intelligence & compliance",
         "Cyber defense modernization"
       ],
-      link: "#contact"
+      link: "/governments"
     },
     {
       icon: TrendingUp,
@@ -32,7 +32,7 @@ export function HowToEngage() {
         "Build startups on top of KGE IP",
         "Operate with built-in technical leadership and transition support"
       ],
-      link: "#contact"
+      link: "/investors"
     }
   ];
 

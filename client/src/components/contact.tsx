@@ -1,9 +1,72 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Globe } from "lucide-react";
+import { Mail, MapPin, Phone, Globe, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    interest: "General Inquiry",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear status when user starts typing again
+    if (submitStatus !== "idle") {
+      setSubmitStatus("idle");
+      setErrorMessage("");
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitStatus("success");
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          interest: "General Inquiry",
+          message: "",
+        });
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(data.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-bottom-right" />
@@ -70,26 +133,53 @@ export function Contact() {
           </div>
           
           <div className="bg-card p-8 rounded-2xl border border-white/10">
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white">First Name</label>
-                  <Input placeholder="Jane" className="bg-background/50 border-white/10" />
+                  <Input
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="Jane"
+                    className="bg-background/50 border-white/10"
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white">Last Name</label>
-                  <Input placeholder="Doe" className="bg-background/50 border-white/10" />
+                  <Input
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Doe"
+                    className="bg-background/50 border-white/10"
+                    required
+                  />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white">Work Email</label>
-                <Input type="email" placeholder="jane@company.com" className="bg-background/50 border-white/10" />
+                <Input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="jane@company.com"
+                  className="bg-background/50 border-white/10"
+                  required
+                />
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white">Interest</label>
-                <select className="flex h-10 w-full rounded-md border border-white/10 bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-white">
+                <select
+                  name="interest"
+                  value={formData.interest}
+                  onChange={handleChange}
+                  className="flex h-10 w-full rounded-md border border-white/10 bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-white"
+                >
                   <option>General Inquiry</option>
                   <option>IP Licensing Inquiry</option>
                   <option>Product Acquisition</option>
@@ -104,11 +194,44 @@ export function Contact() {
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white">Message</label>
-                <Textarea placeholder="Tell us about your project needs..." className="bg-background/50 border-white/10 min-h-[120px]" />
+                <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Tell us about your project needs..."
+                  className="bg-background/50 border-white/10 min-h-[120px]"
+                  required
+                />
               </div>
+
+              {/* Status Messages */}
+              {submitStatus === "success" && (
+                <div className="flex items-center gap-2 p-3 rounded-md bg-green-500/20 border border-green-500/30 text-green-400">
+                  <CheckCircle2 className="w-5 h-5" />
+                  <span className="text-sm">Thank you! Your message has been sent successfully.</span>
+                </div>
+              )}
+
+              {submitStatus === "error" && (
+                <div className="flex items-center gap-2 p-3 rounded-md bg-red-500/20 border border-red-500/30 text-red-400">
+                  <AlertCircle className="w-5 h-5" />
+                  <span className="text-sm">{errorMessage}</span>
+                </div>
+              )}
               
-              <Button type="submit" className="w-full bg-primary text-primary-foreground font-display font-bold tracking-wide hover:bg-primary/90">
-                SEND MESSAGE
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary text-primary-foreground font-display font-bold tracking-wide hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    SENDING...
+                  </>
+                ) : (
+                  "SEND MESSAGE"
+                )}
               </Button>
             </form>
           </div>

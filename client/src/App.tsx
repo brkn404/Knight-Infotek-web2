@@ -8,6 +8,9 @@ import BlockchainDNA from "@/pages/blockchain-dna";
 import ChaChingAnalytics from "@/pages/cha-ching-analytics";
 import ZeroKnight30 from "@/pages/zero-knight-30";
 import ChainGuardian from "@/pages/chain-guardian";
+import Enterprises from "@/pages/enterprises";
+import Governments from "@/pages/governments";
+import Investors from "@/pages/investors";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import Docs from "@/pages/docs";
@@ -24,6 +27,9 @@ function Router() {
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
       <Route path="/zero-knight-30" component={ZeroKnight30} />
       <Route path="/chain-guardian" component={ChainGuardian} />
+      <Route path="/enterprises" component={Enterprises} />
+      <Route path="/governments" component={Governments} />
+      <Route path="/investors" component={Investors} />
       <Route path="/docs" component={DocsIndex} />
       <Route path="/docs/:product/*" component={Docs} />
       <Route path="/docs/:filename" component={Docs} />
