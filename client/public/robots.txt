@@ -1,0 +1,27 @@
+# robots.txt for knightinfotek.com
+# Controls what search engines and crawlers can access
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.env
+Disallow: /.git
+Disallow: /node_modules
+Disallow: /attached_assets
+Disallow: /gpt
+Disallow: /zk30
+Disallow: /CCA
+Disallow: /server
+Disallow: /script
+Disallow: /*.json$
+Disallow: /*.md$  # Block markdown files in root
+
+# Allow important public pages
+Allow: /docs/
+Allow: /blog/
+Allow: /faq
+Allow: /support
+
+# Sitemap (update with your actual sitemap URL)
+# Sitemap: https://knightinfotek.com/sitemap.xml
+

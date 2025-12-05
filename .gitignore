@@ -4,3 +4,33 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Security: Sensitive files and directories
+.env
+.env.local
+.env.*.local
+*.log
+*.pem
+*.key
+*.cert
+
+# Internal documentation (not for public)
+attached_assets/
+gpt/
+zk30/
+CCA/
+
+# Build artifacts
+*.map
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store

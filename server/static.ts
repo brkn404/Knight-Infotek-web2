@@ -10,7 +10,19 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  // Serve static files with directory listing disabled
+  app.use(express.static(distPath, {
+    dotfiles: "deny", // Deny access to dotfiles (.env, .git, etc.)
+    index: false, // Disable directory listing
+  }));
+
+  // Serve robots.txt if it exists
+  const robotsPath = path.join(distPath, "robots.txt");
+  if (fs.existsSync(robotsPath)) {
+    app.get("/robots.txt", (_req, res) => {
+      res.sendFile(robotsPath);
+    });
+  }
 
   // fall through to index.html if the file doesn't exist
   app.use("*", (_req, res) => {
