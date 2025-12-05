@@ -65,7 +65,7 @@ Yes, BlockchainDNA supports both real-time and batch analysis. Real-time analysi
 1. Sign up for an account
 2. Generate an API key from the dashboard
 3. Use our SDK or make direct API calls
-4. See our [API Documentation](../api/) for details
+4. Review our API documentation for details
 
 ### What SDKs are available?
 
@@ -149,8 +149,7 @@ Usage is billed based on:
 ### How do I contact support?
 
 - **Email**: support@blockchaindna.io
-- **Documentation**: [Knowledge Base](../README.md)
-- **GitHub**: Issues and discussions
+- **Support**: Contact our support team for assistance
 
 ---
 
@@ -164,7 +163,7 @@ Common causes:
 - Invalid request format
 - Service temporarily unavailable
 
-Check the error response for specific details. See [Troubleshooting Guide](../troubleshooting/) for more help.
+Check the error response for specific details. Contact support if you need additional assistance.
 
 ### Why is analysis slow?
 
@@ -186,7 +185,7 @@ Try:
 2. Verify API key is valid
 3. Review request/response logs
 4. Test with our SDK examples
-5. See [Troubleshooting Guide](../troubleshooting/) for detailed steps
+5. Contact support for detailed troubleshooting assistance
 
 ---
 
@@ -202,7 +201,7 @@ Yes, risk thresholds can be customized via API configuration or dashboard settin
 
 ### How do I integrate with Chainlink?
 
-See our [Chainlink Integration Guide](../integrations/chainlink.md) for detailed instructions.
+Chainlink integration is supported. Contact support for detailed integration instructions.
 
 ### Can I analyze historical data?
 
@@ -212,10 +211,8 @@ Yes, you can analyze historical transaction data. Use the batch processing API o
 
 ## Still Have Questions?
 
-- **Documentation**: Browse our [full documentation](../README.md)
-- **API Reference**: Check the [API documentation](../api/)
-- **Support**: Contact support@blockchaindna.io
-- **Community**: Join our GitHub discussions
+- **Support**: Contact support@blockchaindna.io for assistance
+- **Documentation**: Contact support to access our documentation
 
 ---
 
