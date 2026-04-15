@@ -22,11 +22,17 @@ fi
 
 # Pull latest changes
 echo -e "${YELLOW}📥 Pulling latest changes from git...${NC}"
-git pull
+git pull origin main
 
 # Install/update dependencies
 echo -e "${YELLOW}📦 Installing dependencies...${NC}"
 npm install
+
+# Optional typecheck (set SKIP_CHECK=1 to skip)
+if [ -z "${SKIP_CHECK}" ]; then
+    echo -e "${YELLOW}🔍 Typecheck...${NC}"
+    npm run check
+fi
 
 # Build the application
 echo -e "${YELLOW}🔨 Building application...${NC}"
@@ -45,6 +51,9 @@ fi
 
 echo -e "${GREEN}✅ Build successful!${NC}"
 
+# PM2 log directory (ecosystem.config.cjs writes under ./logs)
+mkdir -p logs
+
 # Restart PM2 process if it exists
 if command -v pm2 &> /dev/null; then
     echo -e "${YELLOW}🔄 Restarting PM2 process...${NC}"
@@ -53,8 +62,8 @@ if command -v pm2 &> /dev/null; then
         echo -e "${GREEN}✅ Application restarted${NC}"
     else
         echo -e "${YELLOW}⚠️  PM2 process 'knightinfotek' not found. Starting it...${NC}"
-        if [ -f "ecosystem.config.js" ]; then
-            pm2 start ecosystem.config.js
+        if [ -f "ecosystem.config.cjs" ]; then
+            pm2 start ecosystem.config.cjs
             pm2 save
         else
             echo -e "${RED}❌ ecosystem.config.js not found${NC}"

@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 import { ArrowLeft } from "lucide-react";
 import { Link, useParams, useLocation } from "wouter";
 import { useEffect, useState } from "react";
@@ -259,7 +260,7 @@ export default function DocsPage() {
   const productNames: Record<string, string> = {
     'blockchain-dna': 'BlockchainDNA',
     'cha-ching-analytics': 'Cha-Ching Analytics',
-    'zero-knight-30': 'ZeroKnight30',
+    'zero-knight-30': 'AgentGX',
     'chain-guardian': 'ChainGuardian',
   };
 
@@ -268,6 +269,11 @@ export default function DocsPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <PageSeo
+          title="Documentation"
+          description="Knight InfoTek product documentation: APIs, architecture, integrations, and operations."
+          path={location}
+        />
         <Navbar />
         <div className="pt-20 md:pt-24 min-h-screen flex items-center justify-center">
           <div className="text-center">
@@ -282,6 +288,12 @@ export default function DocsPage() {
   if (error || !content) {
     return (
       <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <PageSeo
+          title="Documentation not found"
+          description="The requested documentation page could not be loaded."
+          path={location}
+          noindex
+        />
         <Navbar />
         <div className="pt-20 md:pt-24 min-h-screen flex items-center justify-center">
           <div className="text-center max-w-2xl mx-auto px-4">
@@ -300,6 +312,11 @@ export default function DocsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title={`${productName} documentation`}
+        description={`Technical documentation for ${productName}: guides, APIs, and reference material.`}
+        path={location}
+      />
       <Navbar />
 
       {/* Header */}
@@ -311,7 +328,7 @@ export default function DocsPage() {
               <Link 
                 href={product === 'blockchain-dna' ? '/blockchain-dna' : 
                       product === 'cha-ching-analytics' ? '/cha-ching-analytics' :
-                      product === 'zero-knight-30' ? '/zero-knight-30' :
+                      product === 'zero-knight-30' ? '/agent-gx' :
                       product === 'chain-guardian' ? '/chain-guardian' : '/'}
                 className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
               >

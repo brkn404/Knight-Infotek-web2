@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 
 import architectureImg from "@assets/generated_images/blockchaindna_architecture_diagram_visualization.png";
 import genomexImg from "@assets/generated_images/genomex_behavioral_intelligence_visualization.png";
@@ -15,6 +16,11 @@ import heroBg from "@assets/generated_images/digital_dna_strand_made_of_blockcha
 export default function BlockchainDNA() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="BlockchainDNA"
+        description="Universal identity, provenance, and behavioral trust for blockchain and digital assets. GenomeX behavioral intelligence and enterprise-grade governance."
+        path="/blockchain-dna"
+      />
       <Navbar />
       
       {/* Hero Section */}
@@ -271,7 +277,8 @@ export default function BlockchainDNA() {
                   { 
                     title: "GenID", 
                     desc: "Universal Behavioral Identity Registry for 9 entity classes: Human, Wallet, Smart Contract, AI Agent, DAO, Stablecoin Issuer, RWA Issuer, Financial Institution, and Autonomous System. Behavior-first, not credential-first identity.", 
-                    icon: Shield 
+                    icon: Shield,
+                    link: "/gen-id",
                   },
                   { 
                     title: "ChainLedger", 
@@ -308,9 +315,18 @@ export default function BlockchainDNA() {
                     <div className="p-2 rounded bg-primary/10 text-primary mt-1">
                       <item.icon className="w-5 h-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h4 className="font-bold text-white">{item.title}</h4>
                       <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      {"link" in item && item.link ? (
+                        <Link
+                          href={item.link}
+                          className="text-xs text-primary mt-2 inline-flex items-center gap-1 hover:underline font-medium"
+                        >
+                          Product page
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      ) : null}
                     </div>
                   </div>
                 ))}

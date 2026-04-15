@@ -15,7 +15,7 @@ This blog post explores the Ordinals phenomenon, the legal and ethical challenge
 
 ### What Are Ordinals?
 
-Ordinals is a protocol that enables inscribing arbitrary data—images, text, videos, and other content—directly onto Bitcoin's blockchain. Each inscription is assigned a unique ordinal number, creating a system for "digital artifacts" on Bitcoin.
+Ordinals is a protocol that enables inscribing arbitrary data, images, text, videos, and other content, directly onto Bitcoin's blockchain. Each inscription is assigned a unique ordinal number, creating a system for "digital artifacts" on Bitcoin.
 
 The protocol works by:
 
@@ -48,7 +48,7 @@ The immutable nature of Bitcoin's blockchain means that once illegal content is 
 
 ### The Scale
 
-While exact statistics are difficult to obtain, security researchers have documented instances of illegal content in Ordinals inscriptions. The problem is not theoretical—it is a present and growing concern that threatens both the Ordinals ecosystem and the broader Bitcoin network.
+While exact statistics are difficult to obtain, security researchers have documented instances of illegal content in Ordinals inscriptions. The problem is not theoretical, it is a present and growing concern that threatens both the Ordinals ecosystem and the broader Bitcoin network.
 
 ### Legal Implications
 

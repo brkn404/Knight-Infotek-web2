@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
@@ -35,7 +36,7 @@ export default function FAQPage() {
     },
     {
       product: 'zero-knight-30',
-      productName: 'ZeroKnight30',
+      productName: 'AgentGX',
       icon: <Shield className="w-5 h-5" />,
       content: null,
       loading: true,
@@ -123,6 +124,11 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="FAQ"
+        description="Frequently asked questions for BlockchainDNA, Cha-Ching Analytics, AgentGX, and ChainGuardian."
+        path="/faq"
+      />
       <Navbar />
 
       {/* Hero Section */}

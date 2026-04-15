@@ -36,10 +36,10 @@ At the same time:
 
 ZeroKnight30 is designed to address this gap.
 
-Instead of focusing on static indicators and known bads, it focuses on how your environment changes over time—and gives you a way to detect abnormal behavior early and surgically roll back damage without taking everything down.
+Instead of focusing on static indicators and known bads, it focuses on how your environment changes over time, and gives you a way to detect abnormal behavior early and surgically roll back damage without taking everything down.
 Where Traditional Security Falls Short
 
-Most of what you run today—EDR, AV, IDS/IPS, email gateways, backups—is necessary. ZeroKnight30 is not a replacement for those. It's built to cover the places they can't easily reach.
+Most of what you run today, EDR, AV, IDS/IPS, email gateways, backups, is necessary. ZeroKnight30 is not a replacement for those. It's built to cover the places they can't easily reach.
 
 Three structural limitations show up again and again:
 1. Late to every new technique
@@ -50,7 +50,7 @@ Most tools still depend on some combination of:
     Heuristics/rules
     Cloud reputation and threat intel
 
-New techniques show up in the wild, get written up, turned into rules or detections, then rolled out. During that gap—often weeks—attackers have time to do real damage.
+New techniques show up in the wild, get written up, turned into rules or detections, then rolled out. During that gap, often weeks, attackers have time to do real damage.
 2. No full story around changes
 
 A typical alert might tell you:
@@ -79,7 +79,7 @@ What ZeroKnight30 Actually Does
 At a practical level, ZeroKnight30 is an autonomous AI defense and recovery platform that gives you three capabilities:
 
     Behavioral understanding of change
-    It learns how your systems normally behave—how files, processes, and users interact over time—and continuously tracks deviations.
+    It learns how your systems normally behave, how files, processes, and users interact over time, and continuously tracks deviations.
 
     AI-driven decisions based on behavior, not just indicators
     It looks at chains of activity (who did what, when, and in what order) and decides whether that looks like routine operations, a configuration mistake, or a likely attack.
@@ -88,11 +88,11 @@ At a practical level, ZeroKnight30 is an autonomous AI defense and recovery plat
     When damage occurs, it can roll back only the affected files to cryptographically verified clean states in seconds, with an immutable audit trail of what changed and why.
 
 Put simply:
-ZeroKnight30 watches how your environment evolves, flags and contains abnormal behavior quickly, and then helps you heal just what's damaged—without dragging down everything else.
+ZeroKnight30 watches how your environment evolves, flags and contains abnormal behavior quickly, and then helps you heal just what's damaged, without dragging down everything else.
 Pillar 1: Behavioral Analysis and Understanding
 BehaviorPrint: A Story of Every Important Change
 
-Every time a significant file change occurs, ZeroKnight30 creates a BehaviorPrint—a behavioral fingerprint of that event.
+Every time a significant file change occurs, ZeroKnight30 creates a BehaviorPrint, a behavioral fingerprint of that event.
 
 Instead of a bare "hash before / hash after," a BehaviorPrint includes:
 
@@ -342,7 +342,7 @@ In a typical ransomware incident, security and IT teams are racing to answer:
 
 With ZeroKnight30:
 
-    The encryption pattern itself—rapid, systematic modification of many files by an abnormal process—is flagged as malicious behavior.
+    The encryption pattern itself, rapid, systematic modification of many files by an abnormal process, is flagged as malicious behavior.
     ORACLE identifies which files are being encrypted and correlates them to their last known-good snapshots.
     Instead of planning a volume-level or system-level restore, you can:
         Restore only the affected files
@@ -528,7 +528,7 @@ False Negatives (Missed Events)
 
 If ORACLE misses something:
 
-    Existing controls—EDR, network defenses, backups—remain in place.
+    Existing controls, EDR, network defenses, backups, remain in place.
     ZeroKnight30 is designed as another layer of defense and recovery, not a single point of failure.
 
 Ledger or Infrastructure Issues
@@ -608,11 +608,11 @@ ZeroKnight30 is built to provide:
 
     Better visibility into how environments actually change
     Faster, more informed decisions when behavior goes sideways
-    A precise recovery mechanism that lets organizations roll back only what's damaged—with proof it's clean
+    A precise recovery mechanism that lets organizations roll back only what's damaged, with proof it's clean
 
 It doesn't replace endpoints, backups, or SIEM systems. It sits alongside them and fills a critical gap:
 
     When something slips through, how do we see it early and heal only what's hurt, without stopping the heart of the business?
 
-For organizations facing sophisticated threats, operating under tight regulatory scrutiny, or simply tired of "all-or-nothing" recovery, ZeroKnight30 offers a new layer of defense—one that understands systems' behavior and helps them recover on their own terms.
+For organizations facing sophisticated threats, operating under tight regulatory scrutiny, or simply tired of "all-or-nothing" recovery, ZeroKnight30 offers a new layer of defense, one that understands systems' behavior and helps them recover on their own terms.
 

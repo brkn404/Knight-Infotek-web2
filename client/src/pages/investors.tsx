@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link, useLocation } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 import { useEffect } from "react";
 import heroBg from "@assets/generated_images/abstract_financial_analytics_visualization.png";
 
@@ -33,6 +34,11 @@ export default function Investors() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="Investors"
+        description="Knight InfoTek Global IP, product portfolio, and US go-to-market through Knight InfoTek LLC. Overview for strategic and institutional investors."
+        path="/investors"
+      />
       <Navbar />
       
       {/* Hero Section */}
@@ -82,7 +88,7 @@ export default function Investors() {
                 Build on <span className="text-primary">Proven IP</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center leading-relaxed">
-                Knight Global Enterprises has developed patent-backed technologies in behavioral intelligence, AI cybersecurity, and blockchain infrastructure. As an investor or incubator, you can acquire complete product lines, license core IP, or build new companies on top of proven technology—with full transition support from the original architects.
+                Knight InfoTek Global has developed patent-backed technologies in behavioral intelligence, AI cybersecurity, and blockchain infrastructure. As an investor or incubator, you can acquire complete product lines, license core IP, or build new companies on top of proven technology—with full transition support from the original architects.
               </p>
             </div>
 
@@ -168,7 +174,7 @@ export default function Investors() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Best long-term model. Get full usage rights, rebranding, and product building capabilities. Knight Global Enterprises retains IP ownership.
+                    Best long-term model. Get full usage rights, rebranding, and product building capabilities. Knight InfoTek Global retains IP ownership.
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground mb-4">
                     <li className="flex items-start gap-2">
@@ -198,7 +204,7 @@ export default function Investors() {
             {/* Why Invest */}
             <div className="mb-16 bg-card/50 rounded-xl p-8 md:p-12 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold font-display mb-8 text-center">
-                Why Invest in <span className="text-primary">Knight Global Enterprises Technologies</span>
+                Why Invest in <span className="text-primary">Knight InfoTek Global Technologies</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -298,15 +304,15 @@ export default function Investors() {
 
                 <Card className="bg-background/50 border-white/10 hover:border-primary/50 transition-all">
                   <CardHeader>
-                    <CardTitle className="text-xl font-display text-white">ZeroKnight30 (ZK30)</CardTitle>
-                    <p className="text-sm text-muted-foreground mt-2">Autonomous Defense Platform</p>
+                    <CardTitle className="text-xl font-display text-white">AgentGX</CardTitle>
+                    <p className="text-sm text-muted-foreground mt-2">Licensed Responsible Party Platform</p>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
-                      AI-first threat detection and self-healing integrity platform. Air-gapped operation, perfect for classified environments.
+                      Governed AI agents for regulated professionals—GenomeX behavioral intelligence, runtime policy enforcement, and Proof-of-Behavior compliance.
                     </p>
                     <div className="flex gap-2">
-                      <Link href="/zero-knight-30">
+                      <Link href="/agent-gx">
                         <Button variant="outline" size="sm">
                           Learn More <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
@@ -347,7 +353,7 @@ export default function Investors() {
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Startups can license or acquire Knight Global Enterprises IP to build products faster</span>
+                      <span>Startups can license or acquire Knight InfoTek Global IP to build products faster</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />

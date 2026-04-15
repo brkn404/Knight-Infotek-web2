@@ -68,15 +68,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
       }
     }
     
-    // Add other common date prefixes as fallback
-    const datePrefixes = ['2025-12-24-', '2025-12-25-', '2025-01-15-', '2025-01-22-', '2025-02-01-', '2025-02-10-', '2025-02-20-', '2025-02-27-', '2025-02-28-'];
-    datePrefixes.forEach(prefix => {
-      if (!possibleFilenames.includes(`${prefix}${slug}.md`)) {
-        possibleFilenames.push(`${prefix}${slug}.md`);
-      }
-    });
-    
-    // Add slug-only version as last resort
+    // Undated filename (some legacy posts)
     possibleFilenames.push(`${slug}.md`);
     
     // Try each filename

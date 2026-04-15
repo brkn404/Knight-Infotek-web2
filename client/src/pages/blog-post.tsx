@@ -6,6 +6,7 @@ import { Link, useParams } from "wouter";
 import { useEffect, useState } from "react";
 import { getBlogPost, BlogPost } from "@/lib/blog";
 import { renderMarkdown } from "@/lib/markdown";
+import { PageSeo, trimMetaDescription } from "@/components/page-seo";
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -78,6 +79,11 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title={post.title}
+        description={trimMetaDescription(post.excerpt)}
+        path={`/blog/${post.slug}`}
+      />
       <Navbar />
 
       {/* Hero Section */}

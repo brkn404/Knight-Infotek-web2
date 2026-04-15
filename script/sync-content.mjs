@@ -1,3 +1,8 @@
+/**
+ * Canonical product docs and blog markdown live under /content.
+ * This script copies them to client/public/content for Vite dev and local preview.
+ * Production builds also copy /content into dist/public (see script/build.ts).
+ */
 import { readdir, copyFile, mkdir, stat, cp, rm } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';

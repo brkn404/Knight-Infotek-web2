@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+# Blog index JSON (used by the SPA; allow if you want crawlers to fetch it)
+Allow: /content/blog/blog-posts.json
 Disallow: /api/
 Disallow: /.env
 Disallow: /.git
@@ -22,6 +24,5 @@ Allow: /blog/
 Allow: /faq
 Allow: /support
 
-# Sitemap (update with your actual sitemap URL)
-# Sitemap: https://knightinfotek.com/sitemap.xml
+Sitemap: https://www.knightinfotek.com/sitemap.xml
 

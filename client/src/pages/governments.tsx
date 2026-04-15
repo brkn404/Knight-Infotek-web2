@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link, useLocation } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 import { useEffect } from "react";
 import heroBg from "@assets/generated_images/futuristic_zero_trust_security_concept.png";
 
@@ -33,6 +34,11 @@ export default function Governments() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="Governments"
+        description="Knight InfoTek for public sector and critical infrastructure: zero-trust aligned behavioral security, compliance, and sovereign deployment models."
+        path="/governments"
+      />
       <Navbar />
       
       {/* Hero Section */}
@@ -82,7 +88,7 @@ export default function Governments() {
                 Sovereign Technology for <span className="text-primary">National Security</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center leading-relaxed">
-                Knight Global Enterprises provides governments with behavioral intelligence, blockchain compliance, and autonomous cyber defense technologies designed for sovereign control, air-gapped operation, and mission-critical infrastructure protection.
+                Knight InfoTek Global provides governments with behavioral intelligence, blockchain compliance, and autonomous cyber defense technologies designed for sovereign control, air-gapped operation, and mission-critical infrastructure protection.
               </p>
             </div>
 

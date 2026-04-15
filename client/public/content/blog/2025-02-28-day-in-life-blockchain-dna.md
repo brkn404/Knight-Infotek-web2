@@ -18,7 +18,7 @@ You've got:
 You already know attackers move faster than your existing controls. You also know regulators are catching up and starting to ask questions you can't answer cleanly with just logs and a block explorer.
 
 Here's what a normal (busy) day looks like with BlockchainDNA in your environment.
-08:15 – Morning standup: "Why is this wallet behaving like that?"
+08:15: Morning standup: "Why is this wallet behaving like that?"
 
 Security, compliance, and risk are on the daily standup. Overnight, a few alerts came in:
 
@@ -37,7 +37,7 @@ With BlockchainDNA, the conversation looks different.
 Your risk lead pulls up the RiskMonitor dashboard:
 
     That institutional wallet is already in GenID:
-        Labeled as "Institutional – KYC Complete – 18 months clean behavior"
+        Labeled as "Institutional, KYC Complete: 18 months clean behavior"
         Has a 32‑dimensional behavioral DNA profile and baseline
 
 Overnight:
@@ -66,7 +66,7 @@ Decision:
 
 Why this matters:
 Instead of arguing about whether 0xABC… is "new" or "bad," you're reviewing behavioral change against a known identity and baseline, with all the context in one place.
-10:30 – Legal ping: "Regulator wants a provenance story"
+10:30: Legal ping: "Regulator wants a provenance story"
 
 Legal drops a message:
 
@@ -118,7 +118,7 @@ You answered "what happened, under which rules, and with what controls" without:
     Hoping regulators don't ask, "How do we know you didn't edit this?"
 
 BlockchainDNA gives you a single, tamper‑evident provenance and policy view to stand behind.
-13:00 – Lunch gets interrupted: "Did our AI just go rogue?"
+13:00: Lunch gets interrupted: "Did our AI just go rogue?"
 
 Early afternoon, your engineering lead messages:
 
@@ -184,7 +184,7 @@ You answered:
     Where did policy and implementation diverge?
 
 That's exactly what boards and regulators will ask in the AI + blockchain world.
-15:45 – Risk committee prep: "Show us we're in control"
+15:45: Risk committee prep: "Show us we're in control"
 
 Later in the day you have a risk committee meeting. They want:
 
@@ -194,25 +194,25 @@ Later in the day you have a risk committee meeting. They want:
 
 You pull a short deck, mostly screenshots and summaries from BlockchainDNA:
 
-    Top entity risk overview – RiskMonitor
+    Top entity risk overview: RiskMonitor
         Top 10 entities by current risk score
         For each:
             GenID label (retail, institutional, DAO, AI agent, etc.)
             Behavior drift chart over last 90 days
             Key events (e.g., governance changes, strategy shifts)
 
-    Provenance and identity for critical assets – ChainLedger + GenID
+    Provenance and identity for critical assets: ChainLedger + GenID
         A tokenized asset you listed:
             Clear chain-of-custody from issuance to current holders
             No unexplained detours into high‑risk addresses
             Cross‑chain flows summarized, not hand‑waved
 
-    Policy vs. behavior – RuleEngine + ChainLedger
+    Policy vs. behavior: RuleEngine + ChainLedger
         A couple of concrete examples:
             "On this date, we changed policy X; ChainLedger shows how behavior adjusted."
             "Here's where a policy blocked an anomalous transaction, with evidence in ProofHub."
 
-    AI governance snapshot – AuthorityChain
+    AI governance snapshot: AuthorityChain
         Count and types of AI agents in production
         Which humans / teams they roll up to
         Confirmation that no agent is operating with "orphaned" authority
@@ -220,11 +220,11 @@ You pull a short deck, mostly screenshots and summaries from BlockchainDNA:
 You walk the committee through:
 
     Not just "we have tools" but how identity, provenance, behavior, and policy are wired together.
-    Teams can show that when something changes, they see it—and when something misbehaves, they can trace it.
+    Teams can show that when something changes, they see it, and when something misbehaves, they can trace it.
 
 Why this matters:
 The goal isn't just to keep the bad stuff out; it's to prove organizations are operating with discipline in a very new environment. BlockchainDNA provides artifacts, not opinions.
-18:10 – End of day: "What keeps me up at night?"
+18:10: End of day: "What keeps me up at night?"
 
 You skim one more view before you log off:
 
@@ -267,7 +267,7 @@ A day in the life with BlockchainDNA isn't about chasing fewer alerts. It's abou
 
     To: "we have a clear registry for agent identity, delegation, and conduct over time."
 
-If you're moving into tokenization, multi‑chain, or AI‑driven operations, that shift—from raw data to behavioral identity + provenance + accountability—is what will separate "we tried our best" from "we can prove we're in control."
+If you're moving into tokenization, multi‑chain, or AI‑driven operations, that shift, from raw data to behavioral identity + provenance + accountability, is what will separate "we tried our best" from "we can prove we're in control."
 
 BlockchainDNA is built to provide that layer, so the "day in the life" looks more like structured risk management, and less like constant archaeology.
 

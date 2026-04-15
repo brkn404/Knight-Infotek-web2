@@ -1,5 +1,55 @@
 [
   {
+    "id": 27,
+    "title": "OT/ICS Security at Machine Speed: Why “AI Assistants” Are Not the Whole Answer",
+    "excerpt": "Critical infrastructure teams are adopting AI for visibility and analyst productivity, but most offerings still assume human-in-the-loop response. This post summarizes Knight InfoTek research on the OT/ICS threat landscape, standards pressure, and the gap between copilots and governed, safety-aware autonomous defense.",
+    "date": "April 2, 2026",
+    "category": "Cybersecurity",
+    "readTime": "8 min read",
+    "slug": "ot-ics-ai-from-copilot-to-autonomous-defense",
+    "published": true
+  },
+  {
+    "id": 26,
+    "title": "From Governance to Memory: What Comes After Behavioral Oversight for AI Agents",
+    "excerpt": "A preview of Knight InfoTek's technical report on the journey from AgentGX behavioral governance to ContextGX institutional memory for regulated AI agents. Why oversight alone is not enough, and where to go for the full architecture without the blog giving away implementation detail.",
+    "date": "March 28, 2026",
+    "category": "AI",
+    "readTime": "6 min read",
+    "slug": "from-governance-to-institutional-memory",
+    "published": true
+  },
+  {
+    "id": 23,
+    "title": "Beyond the Model: Four Infrastructure Primitives for Production AI Agents",
+    "excerpt": "Connecting an LLM to tools is enough for a demo. Production agents need tool registries, layered permissions, durable workflow state, and token and cost controls. Here is how leading frameworks and cloud platforms approach those four primitives.",
+    "date": "March 27, 2026",
+    "category": "AI",
+    "readTime": "9 min read",
+    "slug": "production-ai-agent-infrastructure-primitives",
+    "published": true
+  },
+  {
+    "id": 24,
+    "title": "When Agents Stall: Reliability, Streaming, and Observability in Production",
+    "excerpt": "Agents fail in production with hangs, duplicate side effects, and context rot. This post covers checkpointing and durable execution, streaming UX, structured logging, evaluation strategies, and context compaction patterns teams use to operate agents safely.",
+    "date": "March 20, 2026",
+    "category": "AI",
+    "readTime": "9 min read",
+    "slug": "ai-agent-reliability-observability",
+    "published": true
+  },
+  {
+    "id": 25,
+    "title": "What Major AI Platforms Agree On for Enterprise Agents",
+    "excerpt": "OpenAI, Google Cloud, Microsoft, and Anthropic differ in packaging, but their production guidance converges on layered security, persistent state, integrated observability, and built-in cost and abuse controls. Here is a vendor-neutral checklist.",
+    "date": "March 13, 2026",
+    "category": "AI",
+    "readTime": "8 min read",
+    "slug": "enterprise-ai-agent-platform-convergence",
+    "published": true
+  },
+  {
     "id": 21,
     "title": "A Day in the Life With BlockchainDNA",
     "excerpt": "Let's imagine you're responsible for security, compliance, or risk management at a large exchange / bank / crypto-native institution. Here's what a normal (busy) day looks like with BlockchainDNA in your environment.",

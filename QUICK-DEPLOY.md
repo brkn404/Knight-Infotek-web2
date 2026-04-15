@@ -1,6 +1,8 @@
 # Quick Deploy Guide for knightinfotek.com
 
-**📖 For complete documentation, see: `VPS-SETUP-DOCUMENTATION.md`**
+**Canonical procedure:** [`PRODUCTION-DEPLOY.md`](./PRODUCTION-DEPLOY.md) (Nginx → PM2 → Node on port **5001**).
+
+**📖 Older / supplemental:** `VPS-SETUP-DOCUMENTATION.md` (if present)
 
 Since you already have the directory at `/var/www/knightinfotek.com`, here's the quick setup:
 

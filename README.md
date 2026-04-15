@@ -1,6 +1,6 @@
 # Knight InfoTek Website
 
-Official website for **Knight InfoTek LLC** - The premier US reseller for Knight Global Enterprises.
+Official website for **Knight InfoTek LLC** - The premier US reseller for Knight InfoTek Global.
 
 ## 🌐 Website
 
@@ -12,7 +12,7 @@ This is a modern, responsive website built with React, TypeScript, and Vite. It 
 
 - **Cha-Ching Analytics (CCA)** - Autonomous Compliance Infrastructure
 - **BlockchainDNA (BDNA)** - Universal Identity & Provenance
-- **ZeroKnight30 (ZK30)** - Advanced Threat Prevention
+- **AgentGX** - Trusted AI Agent Operations (Licensed Responsible Party platform)
 - **ChainGuardian** - Pre-Block Content Safety
 
 ## 🛠️ Tech Stack
@@ -44,7 +44,7 @@ Knight_InfoTek/
 │   │   │   ├── home.tsx
 │   │   │   ├── blockchain-dna.tsx
 │   │   │   ├── cha-ching-analytics.tsx
-│   │   │   ├── zero-knight-30.tsx
+│   │   │   ├── agent-gx.tsx
 │   │   │   └── chain-guardian.tsx
 │   │   ├── hooks/         # Custom React hooks
 │   │   ├── lib/           # Utilities and configurations
@@ -93,6 +93,7 @@ Visit `http://localhost:5000` to view the website.
 
 ## 📚 Documentation
 
+- **PRODUCTION-DEPLOY.md** - **Production deploy procedure** (Git → VPS → PM2 / Nginx)
 - **DEPLOYMENT-WORKFLOW.md** - Complete deployment guide and update workflows
 - **BLOG-UPDATE-WORKFLOW.md** - How to update blog posts
 - **README-DEPLOYMENT.md** - Quick deployment reference
@@ -131,7 +132,7 @@ The website uses a dark cyber-enterprise theme with:
 1. **Home** (`/`) - Landing page with hero, products overview, about, and contact
 2. **BlockchainDNA** (`/blockchain-dna`) - Platform specification and architecture
 3. **Cha-Ching Analytics** (`/cha-ching-analytics`) - Compliance infrastructure details
-4. **ZeroKnight30** (`/zero-knight-30`) - Threat prevention platform
+4. **AgentGX** (`/agent-gx`) - Licensed Responsible Party platform for governed AI agents; legacy URL `/zero-knight-30` redirects here
 5. **ChainGuardian** (`/chain-guardian`) - Content safety for miners and pools
 
 ## 🔧 Configuration
@@ -212,5 +213,5 @@ Copyright © 2025 Knight InfoTek LLC. All rights reserved.
 
 ---
 
-**Built with ❤️ for Knight Global Enterprises**
+**Built with ❤️ for Knight InfoTek Global**
 

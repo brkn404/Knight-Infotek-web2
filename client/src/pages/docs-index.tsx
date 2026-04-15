@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Book, FileText, Code, HelpCircle, Layers, Shield, Activity } from "lucide-react";
@@ -41,8 +42,8 @@ export default function DocsIndex() {
     },
     {
       id: 'zero-knight-30',
-      name: 'ZeroKnight30',
-      description: 'Air-Gapped Security & Integrity Monitoring',
+      name: 'AgentGX',
+      description: 'Trusted AI Agent Operations & Licensed Responsible Party Governance',
       icon: Shield,
       color: 'text-destructive',
       docs: [
@@ -71,6 +72,11 @@ export default function DocsIndex() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="Product documentation"
+        description="Technical documentation, APIs, integrations, and FAQs for BlockchainDNA, Cha-Ching Analytics, AgentGX, and ChainGuardian."
+        path="/docs"
+      />
       <Navbar />
 
       {/* Hero Section */}

@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 
 import firewallImg from "@assets/generated_images/mempool_monitoring_firewall_visualization.png";
 import hashImg from "@assets/generated_images/hash-only_verification_concept.png";
@@ -14,6 +15,11 @@ import heroBg from "@assets/generated_images/cross-chain_security_shield.png"; /
 export default function ChainGuardian() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="ChainGuardian"
+        description="Hash-only, privacy-preserving content compliance for Bitcoin miners, pools, and nodes. Jurisdiction-aware policies without ingesting raw inscription content."
+        path="/chain-guardian"
+      />
       <Navbar />
       
       {/* Hero Section */}
@@ -129,7 +135,7 @@ export default function ChainGuardian() {
               </div>
               
               <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
-                <strong className="text-white">Key Differentiator:</strong> First and only product focused on pre-mining content filtering with hash-only verification (never views actual content). Powered by Knight Global Enterprises' GenomeX behavioral intelligence platform.
+                <strong className="text-white">Key Differentiator:</strong> First and only product focused on pre-mining content filtering with hash-only verification (never views actual content). Powered by Knight InfoTek Global's GenomeX behavioral intelligence platform.
               </p>
             </div>
 

@@ -9,7 +9,7 @@
 
 Bitcoin mining has evolved from a hobbyist activity to a multi-billion dollar industry, with mining pools processing thousands of transactions daily. However, a critical legal vulnerability has emerged that threatens miners, mining pools, and node operators: the potential for criminal and civil liability when mining blocks containing illegal content.
 
-This issue has gained prominence as Bitcoin's blockchain has become a vehicle for embedding various types of content through OP_RETURN outputs, witness data, and the Ordinals protocol. While these technologies enable legitimate use cases, they also create pathways for bad actors to embed illegal content—including child sexual abuse material (CSAM), terrorism-related content, and other prohibited materials—directly into the immutable blockchain.
+This issue has gained prominence as Bitcoin's blockchain has become a vehicle for embedding various types of content through OP_RETURN outputs, witness data, and the Ordinals protocol. While these technologies enable legitimate use cases, they also create pathways for bad actors to embed illegal content, including child sexual abuse material (CSAM), terrorism-related content, and other prohibited materials, directly into the immutable blockchain.
 
 ## The Legal Landscape
 
@@ -49,7 +49,7 @@ These mechanisms are legitimate technologies with valid use cases, but they also
 
 ### The Scale of the Problem
 
-While exact statistics are difficult to obtain due to the privacy-preserving nature of hash-based detection, security researchers have identified instances of illegal content embedded in Bitcoin transactions. The problem is not theoretical—it is a present and growing concern for the Bitcoin mining industry.
+While exact statistics are difficult to obtain due to the privacy-preserving nature of hash-based detection, security researchers have identified instances of illegal content embedded in Bitcoin transactions. The problem is not theoretical, it is a present and growing concern for the Bitcoin mining industry.
 
 ## Regulatory Response
 
@@ -76,7 +76,7 @@ Regulatory bodies are increasingly requiring:
 
 ### Pre-Mining Content Filtering
 
-ChainGuardian addresses this legal vulnerability by providing **pre-mining content filtering**—the first and only solution designed specifically for Bitcoin miners, pools, and node operators. Unlike post-transaction blockchain analytics tools, ChainGuardian operates at the mempool stage, analyzing transactions before they are included in blocks.
+ChainGuardian addresses this legal vulnerability by providing **pre-mining content filtering**, the first and only solution designed specifically for Bitcoin miners, pools, and node operators. Unlike post-transaction blockchain analytics tools, ChainGuardian operates at the mempool stage, analyzing transactions before they are included in blocks.
 
 This pre-mining approach is critical because:
 
@@ -165,7 +165,7 @@ As Bitcoin continues to grow and evolve, the industry must address the challenge
 
 The legal risks associated with illegal content on Bitcoin's blockchain are real and growing. Miners, mining pools, and node operators cannot afford to ignore these risks. ChainGuardian provides the first comprehensive solution designed specifically to address these challenges, enabling responsible mining practices while protecting operators from legal liability.
 
-The question is not whether illegal content will be embedded in Bitcoin transactions—it already has been. The question is whether miners will take proactive steps to protect themselves and comply with regulatory requirements. ChainGuardian provides the tools necessary to do so, ensuring that Bitcoin mining can continue to grow and evolve while maintaining legal and ethical standards.
+The question is not whether illegal content will be embedded in Bitcoin transactions, it already has been. The question is whether miners will take proactive steps to protect themselves and comply with regulatory requirements. ChainGuardian provides the tools necessary to do so, ensuring that Bitcoin mining can continue to grow and evolve while maintaining legal and ethical standards.
 
 As the industry matures, responsible mining practices will become increasingly important. ChainGuardian enables miners to be part of the solution, protecting themselves while contributing to a safer and more compliant Bitcoin ecosystem.
 

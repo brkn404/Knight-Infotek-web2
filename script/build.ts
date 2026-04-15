@@ -1,6 +1,6 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile, cp } from "fs/promises";
+import { rm, readFile, writeFile, cp } from "fs/promises";
 import { existsSync } from "fs";
 import path from "path";
 
@@ -34,8 +34,61 @@ const allowlist = [
   "zod-validation-error",
 ];
 
+const SITE_ORIGIN = "https://www.knightinfotek.com";
+
+async function writeSitemapXml() {
+  const staticPaths = [
+    "/",
+    "/blockchain-dna",
+    "/cha-ching-analytics",
+    "/agent-gx",
+    "/gen-id",
+    "/chain-guardian",
+    "/enterprises",
+    "/governments",
+    "/blog",
+    "/faq",
+    "/privacy",
+    "/terms",
+  ];
+  const solutionSlugs = [
+    "artificial-intelligence",
+    "cybersecurity-identity",
+    "fintech",
+    "industrial-autonomous",
+  ];
+  const solutionPaths = solutionSlugs.map((s) => `/solutions/${s}`);
+
+  const blogJsonPath = path.join(process.cwd(), "content/blog/blog-posts.json");
+  let blogPaths: string[] = [];
+  try {
+    const raw = await readFile(blogJsonPath, "utf-8");
+    const posts = JSON.parse(raw) as { slug: string; published?: boolean }[];
+    blogPaths = posts
+      .filter((p) => p.published !== false && p.slug)
+      .map((p) => `/blog/${p.slug}`);
+  } catch {
+    console.warn("Could not read blog-posts.json for sitemap; skipping blog URLs");
+  }
+
+  const urls = [...staticPaths, ...solutionPaths, ...blogPaths];
+  const lastmod = new Date().toISOString().split("T")[0];
+  const body = urls
+    .map((u) => {
+      const priority = u === "/" ? "1.0" : u.startsWith("/blog/") ? "0.7" : "0.85";
+      return `  <url>\n    <loc>${SITE_ORIGIN}${u}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+    })
+    .join("\n");
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+  const outPath = path.join(process.cwd(), "client/public/sitemap.xml");
+  await writeFile(outPath, xml, "utf-8");
+  console.log("✓ sitemap written to client/public/sitemap.xml");
+}
+
 async function buildAll() {
   await rm("dist", { recursive: true, force: true });
+
+  await writeSitemapXml();
 
   console.log("building client...");
   await viteBuild();

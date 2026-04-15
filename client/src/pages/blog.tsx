@@ -6,6 +6,7 @@ import { Calendar, ArrowRight, Tag } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
 import { getBlogPosts, BlogPost } from "@/lib/blog";
+import { PageSeo } from "@/components/page-seo";
 
 export default function Blog() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
@@ -28,6 +29,11 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="Blog & Insights"
+        description="Articles on behavioral trust, blockchain compliance, AI governance, cybersecurity, and Knight InfoTek solutions."
+        path="/blog"
+      />
       <Navbar />
       
       {/* Hero Section */}

@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link, useLocation } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 import { useEffect } from "react";
 import heroBg from "@assets/generated_images/abstract_high-tech_enterprise_blockchain_background.png";
 
@@ -33,6 +34,11 @@ export default function Enterprises() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="Enterprises"
+        description="Knight InfoTek for enterprises: behavioral trust, compliance, AI governance, and solution stacks tailored to regulated and high-assurance environments."
+        path="/enterprises"
+      />
       <Navbar />
       
       {/* Hero Section */}
@@ -82,7 +88,7 @@ export default function Enterprises() {
                 Why Enterprises Choose <span className="text-primary">Knight InfoTek</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center leading-relaxed">
-                Knight Global Enterprises has developed foundational IP in behavioral intelligence, AI-driven cybersecurity, and blockchain infrastructure. As the exclusive U.S. partner, Knight InfoTek helps enterprises license, acquire, and integrate these technologies into their existing platforms—reducing development time from years to months.
+                Knight InfoTek Global has developed foundational IP in behavioral intelligence, AI-driven cybersecurity, and blockchain infrastructure. As the exclusive U.S. partner, Knight InfoTek helps enterprises license, acquire, and integrate these technologies into their existing platforms—reducing development time from years to months.
               </p>
             </div>
 
@@ -99,7 +105,7 @@ export default function Enterprises() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    License Knight Global Enterprises' core technologies to build your own products while Knight Global Enterprises retains IP ownership. Ideal for long-term partnerships and recurring revenue models.
+                    License Knight InfoTek Global's core technologies to build your own products while Knight InfoTek Global retains IP ownership. Ideal for long-term partnerships and recurring revenue models.
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                     <li className="flex items-start gap-2">
@@ -298,13 +304,13 @@ export default function Enterprises() {
 
                 <Card className="bg-background/50 border-white/10 hover:border-primary/50 transition-all">
                   <CardHeader>
-                    <CardTitle className="text-xl font-display text-white">ZeroKnight30 (ZK30)</CardTitle>
+                    <CardTitle className="text-xl font-display text-white">AgentGX</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
-                      AI-first autonomous defense and self-healing integrity platform for enterprise infrastructure.
+                      Trusted AI agent operations with licensed oversight, behavioral monitoring, and immutable attestations for regulated industries.
                     </p>
-                    <Link href="/zero-knight-30">
+                    <Link href="/agent-gx">
                       <Button variant="outline" size="sm" className="w-full">
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>

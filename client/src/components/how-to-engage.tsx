@@ -29,10 +29,10 @@ export function HowToEngage() {
       title: "For Investors & Incubators",
       items: [
         "Acquire entire product lines",
-        "Build startups on top of Knight Global Enterprises IP",
+        "Build startups on top of Knight InfoTek Global IP",
         "Operate with built-in technical leadership and transition support"
       ],
-      link: "/investors"
+      link: "/#contact"
     }
   ];
 
@@ -50,8 +50,8 @@ export function HowToEngage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {audiences.map((audience, index) => (
-              <Link href={audience.link} key={index}>
+            {audiences.map((audience, index) => {
+              const card = (
                 <Card className="bg-background/50 border-white/10 hover:border-primary/50 transition-all duration-300 h-full cursor-pointer group">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
@@ -78,8 +78,18 @@ export function HowToEngage() {
                     </div>
                   </CardContent>
                 </Card>
-              </Link>
-            ))}
+              );
+              const isHashContact = audience.link.startsWith("/#");
+              return isHashContact ? (
+                <a key={index} href={audience.link} className="block text-inherit no-underline">
+                  {card}
+                </a>
+              ) : (
+                <Link key={index} href={audience.link} className="block text-inherit no-underline">
+                  {card}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import { HowToEngage } from "@/components/how-to-engage";
 import { ClosingCTA } from "@/components/closing-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
@@ -36,6 +37,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="Knight InfoTek"
+        description="US partner for Knight InfoTek Global. Behavioral trust infrastructure: Cha-Ching Analytics, BlockchainDNA, AgentGX, ChainGuardian, and enterprise solution stacks."
+        path="/"
+      />
       <Navbar />
       <main className="pt-20 md:pt-24">
         <Hero />

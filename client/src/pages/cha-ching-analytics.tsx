@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageSeo } from "@/components/page-seo";
 
 import genomeImg from "@assets/generated_images/behavioral_genome_hashing_visualization.png";
 import dashboardImg from "@assets/generated_images/real-time_compliance_dashboard_interface.png";
@@ -15,6 +16,11 @@ import heroBg from "@assets/generated_images/abstract_financial_analytics_visual
 export default function ChaChingAnalytics() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <PageSeo
+        title="Cha-Ching Analytics"
+        description="Real-time compliance and behavioral intelligence for digital assets and tokenized operations. Sub-four-second policy feedback for high-velocity environments."
+        path="/cha-ching-analytics"
+      />
       <Navbar />
       
       {/* Hero Section */}

@@ -78,30 +78,66 @@ export function Contact() {
               GET IN <span className="text-primary">TOUCH</span>
             </h2>
             <p className="text-muted-foreground mb-8 text-lg">
-              Interested in licensing or acquiring Knight Global Enterprises technologies? Contact our team to discuss IP licensing, product acquisition, or implementation support services.
+              Interested in licensing or acquiring Knight InfoTek Global technologies? Reach us in the{" "}
+              <strong className="text-white">United States</strong> or{" "}
+              <strong className="text-white">Ireland</strong> — same email and web presence worldwide.
             </p>
-            
+
+            <div className="grid sm:grid-cols-2 gap-8 mb-8">
+              <div className="rounded-xl border border-white/10 bg-card/30 p-5 space-y-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary">United States</p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded bg-primary/10 text-primary shrink-0">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">Address</h4>
+                    <p className="text-muted-foreground">Santa Ana, CA USA</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded bg-primary/10 text-primary shrink-0">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">Phone</h4>
+                    <p className="text-muted-foreground">
+                      <a href="tel:+17144664121" className="hover:text-primary transition-colors">
+                        +1 (714) 466-4121
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-card/30 p-5 space-y-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary">Ireland</p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded bg-primary/10 text-primary shrink-0">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">Address</h4>
+                    <p className="text-muted-foreground">County Tipperary, Ireland</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded bg-primary/10 text-primary shrink-0">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">Phone</h4>
+                    <p className="text-muted-foreground">
+                      <a href="tel:+353857799753" className="hover:text-primary transition-colors">
+                        +353 (85) 779 9753
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded bg-primary/10 text-primary">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-white">Address</h4>
-                  <p className="text-muted-foreground">Santa Ana, CA USA</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded bg-primary/10 text-primary">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-white">Phone</h4>
-                  <p className="text-muted-foreground">714-466-4121</p>
-                </div>
-              </div>
-              
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded bg-primary/10 text-primary">
                   <Mail className="w-6 h-6" />
@@ -113,9 +149,10 @@ export function Contact() {
                       contact@knightinfotek.com
                     </a>
                   </p>
+                  <p className="text-xs text-muted-foreground/80 mt-1">US &amp; Ireland inquiries</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded bg-primary/10 text-primary">
                   <Globe className="w-6 h-6" />
@@ -185,7 +222,7 @@ export function Contact() {
                   <option>Product Acquisition</option>
                   <option>Cha-Ching Analytics (CCA) - Licensing</option>
                   <option>BlockchainDNA (BDNA) - Licensing</option>
-                  <option>ZeroKnight30 (ZK30) - Licensing</option>
+                  <option>AgentGX - Licensing</option>
                   <option>ChainGuardian - Licensing</option>
                   <option>Implementation & Support Services</option>
                   <option>Transition Support Contract</option>

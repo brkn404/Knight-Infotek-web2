@@ -1,4 +1,4 @@
-# Knight Global Enterprises (KGE)
+# Knight InfoTek Global (KGE)
 
 ## Behavioral Trust Infrastructure for AI, Blockchain, and Autonomous Systems
 
@@ -18,7 +18,7 @@ The global technology landscape is undergoing a fundamental shift. Systems once 
 
 In this environment, traditional trust mechanisms—passwords, certificates, time‑based audits, and rule-based compliance—are no longer sufficient. What matters now is **behavior**.
 
-**Knight Global Enterprises (KGE)** was created to solve the unifying challenge of the modern era:
+**Knight InfoTek Global (KGE)** was created to solve the unifying challenge of the modern era:
 
 > **Identity through behavior. Integrity through provenance. Trust through continuous verification.**
 

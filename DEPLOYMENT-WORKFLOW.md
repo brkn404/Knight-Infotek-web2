@@ -1,10 +1,13 @@
 # Knight InfoTek Website - Deployment Workflow
 
-Complete guide for deploying and updating the Knight InfoTek website.
+> **Use [`PRODUCTION-DEPLOY.md`](./PRODUCTION-DEPLOY.md) as the authoritative procedure.**  
+> Production serves the SPA via **PM2 + Node (port 5001)** behind Nginx, not plain static `html/` for the main site.
 
-## Overview
+Complete guide for deploying and updating the Knight InfoTek website (legacy notes below).
 
-The website is deployed as **static files** served by Nginx. The workflow is:
+## Overview (legacy / alternative)
+
+The site **can** be deployed as **static files** under Nginx `root`, but the **current** `nginx-knightinfotek.conf` proxies to Node. The workflow below is:
 1. Make changes locally
 2. Build the site
 3. Push to GitHub

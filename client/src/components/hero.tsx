@@ -43,7 +43,7 @@ export function Hero() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
                 </span>
-                Official US Partner of Knight Global Enterprises
+                Official US Partner of Knight InfoTek Global
               </div>
             </div>
 
@@ -63,7 +63,7 @@ export function Hero() {
             {/* Description */}
             <div className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto space-y-3">
               <p>
-                Knight Global Enterprises invents and owns the next generation of behavioral intelligence, cybersecurity, and blockchain systems.
+                Knight InfoTek Global invents and owns the next generation of behavioral intelligence, cybersecurity, and blockchain systems.
               </p>
               <p>
                 Knight InfoTek is the exclusive U.S. partner — delivering implementation, migration, integration, and long-term support.
