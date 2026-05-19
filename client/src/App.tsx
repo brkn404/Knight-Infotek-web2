@@ -10,6 +10,7 @@ import AgentGX from "@/pages/agent-gx";
 import GenId from "@/pages/gen-id";
 import SolutionStackPage from "@/pages/solution-stack";
 import ChainGuardian from "@/pages/chain-guardian";
+import GxRa from "@/pages/gx-ra";
 import Enterprises from "@/pages/enterprises";
 import Governments from "@/pages/governments";
 import Investors from "@/pages/investors";
@@ -36,6 +37,7 @@ function Router() {
         {() => <RedirectPage to="/agent-gx" />}
       </Route>
       <Route path="/chain-guardian" component={ChainGuardian} />
+      <Route path="/gx-ra" component={GxRa} />
       <Route path="/enterprises" component={Enterprises} />
       <Route path="/governments" component={Governments} />
       <Route path="/investors" component={Investors} />

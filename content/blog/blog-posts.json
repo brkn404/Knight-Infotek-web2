@@ -1,5 +1,15 @@
 [
   {
+    "id": 28,
+    "title": "Beyond Backups: Why the Cyber Recovery Market Still Has an Assurance Gap",
+    "excerpt": "Enterprises invest heavily in backup and immutable recovery — yet boards and insurers still ask whether a restore is truly safe. An industry-wide look at the assurance gap, regulation, and the shift from data integrity to provable resilience.",
+    "date": "May 18, 2026",
+    "category": "Cybersecurity",
+    "readTime": "7 min read",
+    "slug": "beyond-backups-recovery-assurance-gap",
+    "published": true
+  },
+  {
     "id": 27,
     "title": "OT/ICS Security at Machine Speed: Why “AI Assistants” Are Not the Whole Answer",
     "excerpt": "Critical infrastructure teams are adopting AI for visibility and analyst productivity, but most offerings still assume human-in-the-loop response. This post summarizes Knight InfoTek research on the OT/ICS threat landscape, standards pressure, and the gap between copilots and governed, safety-aware autonomous defense.",
