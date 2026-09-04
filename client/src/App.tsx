@@ -21,6 +21,10 @@ import DocsIndex from "@/pages/docs-index";
 import FAQPage from "@/pages/faq";
 import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
+import EnterpriseAssuranceHub from "@/pages/enterprise-assurance";
+import WhenDataBecomesInfrastructure from "@/pages/when-data-becomes-infrastructure";
+import GenomeXAssurancePlatform from "@/pages/genomex-assurance-platform";
+import ProductWhitepaper from "@/pages/product-whitepaper";
 import NotFound from "@/pages/not-found";
 import RedirectPage from "@/pages/redirect";
 
@@ -28,6 +32,19 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route
+        path="/enterprise-assurance/when-data-becomes-infrastructure"
+        component={WhenDataBecomesInfrastructure}
+      />
+      <Route
+        path="/enterprise-assurance/genomex-assurance-platform"
+        component={GenomeXAssurancePlatform}
+      />
+      <Route
+        path="/enterprise-assurance/product-whitepaper"
+        component={ProductWhitepaper}
+      />
+      <Route path="/enterprise-assurance" component={EnterpriseAssuranceHub} />
       <Route path="/blockchain-dna" component={BlockchainDNA} />
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
       <Route path="/agent-gx" component={AgentGX} />

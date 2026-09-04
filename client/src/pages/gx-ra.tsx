@@ -22,7 +22,7 @@ const valueCards = [
   {
     icon: FileCheck,
     title: "Confidence before restore",
-    body: "Move from hoping a backup is safe to having defensible evidence that a recovery point reflects a trustworthy system state.",
+    body: "Move from hoping a backup is safe to having operational evidence that a recovery chain reflects a trustworthy system state.",
   },
   {
     icon: History,
@@ -37,7 +37,7 @@ const valueCards = [
   {
     icon: Building2,
     title: "Built for scrutiny",
-    body: "Retainable artifacts for board, regulator, and insurer conversations — with honest limits on what capture-time behavior can and cannot prove.",
+    body: "Retainable artifacts for board, regulator, and underwriter conversations — with honest limits on what capture-time behavior can and cannot prove.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function GxRa() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
         title="GX-RA — GenomeX Recovery Assurance"
-        description="Recovery assurance for enterprise resilience — behavioral proof that backup and restore decisions are trustworthy. Part of the Knight InfoTek Global security portfolio."
+        description="GenomeX Recovery Assurance for enterprise resilience — measure whether a recovery chain can be trusted before restore. Part of Enterprise Assurance."
         path="/gx-ra"
       />
       <Navbar />
@@ -71,7 +71,7 @@ export default function GxRa() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm font-medium mb-6">
                 <ShieldCheck className="w-4 h-4" />
-                Recovery assurance
+                Enterprise Assurance · Recovery domain
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-display">
@@ -83,9 +83,10 @@ export default function GxRa() {
               </p>
 
               <p className="text-lg text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-                GX-RA is the assurance layer between your backup vault and your restore button —
-                behavioral context at capture, optional post-backup scan enrichment from tools you
-                already use, and an allow / deny / confirm decision with artifacts you can retain.
+                GX-RA is the recovery-domain surface of GenomeX Enterprise Assurance —
+                the question is whether a <strong className="text-white">recovery chain</strong>{" "}
+                can be trusted before restore, with ALLOW / DENY / CONFIRM and retainable
+                evidence. Overlay for the backup platforms you already run.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -96,7 +97,16 @@ export default function GxRa() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="font-display border-white/20">
-                  <Link href="/#products">View all products</Link>
+                  <a
+                    href="/resources/Knight-InfoTek_GX-RA_Product-Brochure_2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download brochure
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="font-display border-white/20">
+                  <Link href="/enterprise-assurance">Enterprise Assurance hub</Link>
                 </Button>
               </div>
             </motion.div>
@@ -137,7 +147,7 @@ export default function GxRa() {
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   {[
-                    "Binds recovery points to behavioral context at backup time",
+                    "Binds recovery chains (environment + assets) to behavioral context at backup time",
                     "Gates restore with allow / deny / confirm before execution",
                     "Accepts post-backup scan signals from your existing SOC stack",
                     "Produces retainable artifacts for risk, compliance, and executives",
@@ -177,8 +187,8 @@ export default function GxRa() {
 
           <p className="text-lg text-muted-foreground leading-relaxed text-center">
             <strong className="text-white">Core idea:</strong> recovery is not only a data
-            problem — it is a trust problem. GX-RA is built to make that trust measurable and
-            defensible when it matters most.
+            problem — it is a trust problem. GX-RA asks whether the recovery chain can be
+            trusted before use, with evidence suitable for audit review.
           </p>
         </div>
       </section>
@@ -238,7 +248,12 @@ export default function GxRa() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild variant="link" className="text-rose-400 p-0 h-auto font-display">
-                  <Link href="/blog/beyond-backups-recovery-assurance-gap">Read the industry brief →</Link>
+                  <Link href="/enterprise-assurance">Enterprise Assurance hub →</Link>
+                </Button>
+                <Button asChild variant="link" className="text-rose-400/80 p-0 h-auto font-display">
+                  <Link href="/enterprise-assurance/genomex-assurance-platform">
+                    GenomeX architecture →
+                  </Link>
                 </Button>
                 <Button asChild variant="link" className="text-rose-400/80 p-0 h-auto font-display">
                   <Link href="/agent-gx">Explore AgentGX →</Link>
@@ -259,8 +274,17 @@ export default function GxRa() {
             design partnerships. Share your environment and compliance context — we will align
             on the right next step.
           </p>
-          <Button asChild size="lg" className="font-display">
+          <Button asChild size="lg" className="font-display mr-3">
             <a href="/#contact">Contact Knight InfoTek</a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="font-display border-white/20">
+            <a
+              href="/resources/Knight-InfoTek_GX-RA_Product-Brochure_2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download brochure
+            </a>
           </Button>
         </div>
       </section>

@@ -1,6 +1,8 @@
 # Production deployment (Knight InfoTek website)
 
-Single source of truth for shipping **Knight-Infotek-web2** to the VPS. Older notes in `QUICK-DEPLOY.md` and `DEPLOYMENT-WORKFLOW.md` may repeat details; follow this doc when they conflict.
+Single source of truth for shipping **Knight-Infotek-web2** to the VPS. This is the codebase behind **https://www.knightinfotek.com** (Vite + Express SPA on PM2 port 5001). Do not confuse with the separate Next.js tree at `../knightinfotek.com/`.
+
+Older notes in `QUICK-DEPLOY.md` and `DEPLOYMENT-WORKFLOW.md` may repeat details; follow this doc when they conflict.
 
 ## How production works today
 

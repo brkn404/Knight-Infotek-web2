@@ -111,11 +111,11 @@ export const solutionStacks: SolutionStack[] = [
         title: "GX-RA",
         subtitle: "GenomeX Recovery Assurance",
         description:
-          "Recovery assurance for enterprise resilience — behavioral proof that restore decisions are trustworthy, built on the ZeroKnight30 lineage.",
+          "Recovery-domain surface of Enterprise Assurance — measure whether a recovery chain can be trusted before restore, with ALLOW / DENY / CONFIRM and retainable evidence.",
         link: "/gx-ra",
         icon: ShieldCheck,
         imageKey: "gxra",
-        features: ["Recovery assurance", "Behavioral proof", "Partner-ready"],
+        features: ["Recovery chain", "ALLOW / DENY / CONFIRM", "Partner-ready"],
       },
     ],
   },

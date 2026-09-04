@@ -126,7 +126,7 @@ export default function FAQPage() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
         title="FAQ"
-        description="Frequently asked questions for BlockchainDNA, Cha-Ching Analytics, AgentGX, and ChainGuardian."
+        description="Frequently asked questions for BlockchainDNA, Cha-Ching Analytics, AgentGX, ChainGuardian, and related products. For Enterprise Assurance and GenomeX papers, see the Assurance hub."
         path="/faq"
       />
       <Navbar />

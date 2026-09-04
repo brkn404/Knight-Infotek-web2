@@ -45,6 +45,7 @@ export function Footer() {
             <h4 className="font-bold text-white mb-3 mt-6">Products</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="/agent-gx" className="hover:text-primary transition-colors">AgentGX</a></li>
+              <li><a href="/gx-ra" className="hover:text-primary transition-colors">GX-RA</a></li>
               <li><a href="/gen-id" className="hover:text-primary transition-colors">GenID</a></li>
               <li><a href="/blockchain-dna" className="hover:text-primary transition-colors">BlockchainDNA</a></li>
               <li><a href="/cha-ching-analytics" className="hover:text-primary transition-colors">Cha-Ching Analytics</a></li>
@@ -55,6 +56,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-white mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><a href="/enterprise-assurance" className="hover:text-primary transition-colors">Enterprise Assurance</a></li>
               <li><a href="/#about" className="hover:text-primary transition-colors">About Us</a></li>
               <li><a href="/#contact" className="hover:text-primary transition-colors">Contact</a></li>
               <li><a href="/faq" className="hover:text-primary transition-colors">FAQ</a></li>
@@ -67,11 +69,11 @@ export function Footer() {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Knight InfoTek Global - All Rights Reserved</p>
           <div className="flex gap-4">
+            <a href="/enterprise-assurance" className="hover:text-primary transition-colors">Assurance</a>
             <a href="/#products" className="hover:text-primary transition-colors">Products</a>
             <a href="/#about" className="hover:text-primary transition-colors">About</a>
             <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
             <a href="/blog" className="hover:text-primary transition-colors">Blog</a>
-            <a href="/#services" className="hover:text-primary transition-colors">Services</a>
           </div>
         </div>
       </div>

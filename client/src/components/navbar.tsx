@@ -40,6 +40,12 @@ export function Navbar() {
 
   const NavItems = () => (
     <>
+      <Link
+        href="/enterprise-assurance"
+        className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+      >
+        Enterprise Assurance
+      </Link>
       <a
         href="/#products"
         onClick={(e) => handleHashClick(e, "products")}
@@ -105,6 +111,13 @@ export function Navbar() {
 
   const MobileNavItems = () => (
     <>
+      <Link
+        href="/enterprise-assurance"
+        className="text-base font-medium text-gray-200"
+        onClick={() => setIsOpen(false)}
+      >
+        Enterprise Assurance
+      </Link>
       <a
         href="/#products"
         onClick={(e) => {

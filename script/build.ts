@@ -39,11 +39,16 @@ const SITE_ORIGIN = "https://www.knightinfotek.com";
 async function writeSitemapXml() {
   const staticPaths = [
     "/",
+    "/enterprise-assurance",
+    "/enterprise-assurance/when-data-becomes-infrastructure",
+    "/enterprise-assurance/genomex-assurance-platform",
+    "/enterprise-assurance/product-whitepaper",
     "/blockchain-dna",
     "/cha-ching-analytics",
     "/agent-gx",
     "/gen-id",
     "/chain-guardian",
+    "/gx-ra",
     "/enterprises",
     "/governments",
     "/blog",

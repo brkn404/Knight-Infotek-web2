@@ -83,8 +83,8 @@ export default function AgentGX() {
                 </strong>
                 . GenomeX oversight, AgentGX-ARE runtime policy enforcement, and
                 immutable Proof-of-Behavior attestations let you delegate with
-                confidence and prove compliance under supervision, safety, and
-                audit requirements.
+                confidence and produce evidence suitable for audit review under
+                supervision, safety, and oversight requirements.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -92,7 +92,12 @@ export default function AgentGX() {
                   <a href="#contact">Talk to Knight InfoTek</a>
                 </Button>
                 <Button asChild variant="outline" className="font-display border-white/20">
-                  <Link href="/docs/zero-knight-30/README">Product documentation</Link>
+                  <Link href="/enterprise-assurance">Enterprise Assurance</Link>
+                </Button>
+                <Button asChild variant="outline" className="font-display border-white/20">
+                  <Link href="/enterprise-assurance/genomex-assurance-platform">
+                    GenomeX architecture
+                  </Link>
                 </Button>
               </div>
             </motion.div>
