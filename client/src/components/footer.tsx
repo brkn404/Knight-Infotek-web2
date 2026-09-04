@@ -45,7 +45,7 @@ export function Footer() {
             <h4 className="font-bold text-white mb-3 mt-6">Products</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="/agent-gx" className="hover:text-primary transition-colors">AgentGX</a></li>
-              <li><a href="/gx-ra" className="hover:text-primary transition-colors">GX-RA</a></li>
+              <li><a href="/enterprise-assurance" className="hover:text-primary transition-colors">GenomeX Assurance</a></li>
               <li><a href="/gen-id" className="hover:text-primary transition-colors">GenID</a></li>
               <li><a href="/blockchain-dna" className="hover:text-primary transition-colors">BlockchainDNA</a></li>
               <li><a href="/cha-ching-analytics" className="hover:text-primary transition-colors">Cha-Ching Analytics</a></li>

@@ -10,7 +10,6 @@ import AgentGX from "@/pages/agent-gx";
 import GenId from "@/pages/gen-id";
 import SolutionStackPage from "@/pages/solution-stack";
 import ChainGuardian from "@/pages/chain-guardian";
-import GxRa from "@/pages/gx-ra";
 import Enterprises from "@/pages/enterprises";
 import Governments from "@/pages/governments";
 import Investors from "@/pages/investors";
@@ -24,7 +23,6 @@ import TermsPage from "@/pages/terms";
 import EnterpriseAssuranceHub from "@/pages/enterprise-assurance";
 import WhenDataBecomesInfrastructure from "@/pages/when-data-becomes-infrastructure";
 import GenomeXAssurancePlatform from "@/pages/genomex-assurance-platform";
-import ProductWhitepaper from "@/pages/product-whitepaper";
 import NotFound from "@/pages/not-found";
 import RedirectPage from "@/pages/redirect";
 
@@ -40,10 +38,9 @@ function Router() {
         path="/enterprise-assurance/genomex-assurance-platform"
         component={GenomeXAssurancePlatform}
       />
-      <Route
-        path="/enterprise-assurance/product-whitepaper"
-        component={ProductWhitepaper}
-      />
+      <Route path="/enterprise-assurance/product-whitepaper">
+        {() => <RedirectPage to="/enterprise-assurance" />}
+      </Route>
       <Route path="/enterprise-assurance" component={EnterpriseAssuranceHub} />
       <Route path="/blockchain-dna" component={BlockchainDNA} />
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
@@ -54,7 +51,9 @@ function Router() {
         {() => <RedirectPage to="/agent-gx" />}
       </Route>
       <Route path="/chain-guardian" component={ChainGuardian} />
-      <Route path="/gx-ra" component={GxRa} />
+      <Route path="/gx-ra">
+        {() => <RedirectPage to="/enterprise-assurance" />}
+      </Route>
       <Route path="/enterprises" component={Enterprises} />
       <Route path="/governments" component={Governments} />
       <Route path="/investors" component={Investors} />

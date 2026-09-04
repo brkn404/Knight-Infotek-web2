@@ -1,15 +1,8 @@
 import { Link } from "wouter";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { solutionStacks } from "@/data/solution-stacks";
 import logo from "@assets/knight-infotek-logo.png";
 
 export function Navbar() {
@@ -40,12 +33,6 @@ export function Navbar() {
 
   const NavItems = () => (
     <>
-      <Link
-        href="/enterprise-assurance"
-        className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-      >
-        Enterprise Assurance
-      </Link>
       <a
         href="/#products"
         onClick={(e) => handleHashClick(e, "products")}
@@ -53,29 +40,6 @@ export function Navbar() {
       >
         Products
       </a>
-
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <button
-            type="button"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 outline-none"
-          >
-            Solutions
-            <ChevronDown className="w-4 h-4 opacity-70" />
-          </button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          align="start"
-          className="bg-card border-white/10 text-foreground min-w-[14rem]"
-        >
-          {solutionStacks.map((s) => (
-            <DropdownMenuItem key={s.slug} asChild className="focus:bg-white/10 cursor-pointer">
-              <Link href={`/solutions/${s.slug}`}>{s.title}</Link>
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
-
       <a
         href="/#about"
         onClick={(e) => handleHashClick(e, "about")}
@@ -111,13 +75,6 @@ export function Navbar() {
 
   const MobileNavItems = () => (
     <>
-      <Link
-        href="/enterprise-assurance"
-        className="text-base font-medium text-gray-200"
-        onClick={() => setIsOpen(false)}
-      >
-        Enterprise Assurance
-      </Link>
       <a
         href="/#products"
         onClick={(e) => {
@@ -128,17 +85,6 @@ export function Navbar() {
       >
         Products
       </a>
-      <p className="text-xs uppercase tracking-wider text-muted-foreground pt-2">Solutions</p>
-      {solutionStacks.map((s) => (
-        <Link
-          key={s.slug}
-          href={`/solutions/${s.slug}`}
-          className="block pl-2 text-base font-medium text-gray-200 hover:text-primary"
-          onClick={() => setIsOpen(false)}
-        >
-          {s.title}
-        </Link>
-      ))}
       <a
         href="/#about"
         onClick={(e) => {

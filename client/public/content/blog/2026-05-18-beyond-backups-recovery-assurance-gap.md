@@ -81,11 +81,11 @@ No single product category owns those outcomes yet, and not every vendor claimin
 
 ## Where Knight InfoTek is focused
 
-Knight InfoTek Global is building **GX-RA (GenomeX Recovery Assurance)** in this space — an assurance layer between your backup vault and your restore button, aligned with the behavioral-security lineage of the ZeroKnight30 family. The goal is defensible restore decisions and retainable evidence, not another rip-and-replace backup platform.
+Knight InfoTek Global is building the **GenomeX Assurance Platform** in this space — with **GX-GRA** as the recovery domain that asks whether a recovery chain can be trusted before restore. The goal is retainable evidence for restore decisions, not another rip-and-replace backup platform.
 
 We are careful with words like “provable”: what can be demonstrated today is **binding, behavioral context at capture, policy-gated authorization, and artifacts you can keep** — not an absolute guarantee that every environment was uncompromised before the snapshot. Pre-snapshot attacker presence and compromised backup credentials are limits any serious program must acknowledge alongside the product.
 
-We are not publishing implementation detail in a blog post. For operational resilience, cyber insurance readiness, or OEM-style assurance, see the [GX-RA overview](/gx-ra) or **contact us** for pilots, licensing, and technical depth under NDA.
+We are not publishing implementation detail in a blog post. For operational resilience, cyber insurance readiness, or OEM-style assurance, see the [Enterprise Assurance hub](/enterprise-assurance) or **contact us** for pilots, licensing, and technical depth under NDA.
 
 The industry direction is clear: **backups are the vault; the next layer is defensible evidence and decisions before you pull from it.** Organizations that close the assurance gap will recover faster and separate themselves from competitors still hoping restore-and-scan alone is enough.
 
@@ -102,4 +102,4 @@ The industry direction is clear: **backups are the vault; the next layer is defe
 
 ---
 
-**Related reading on this site**: [The Ransomware Recovery Revolution](/blog/ransomware-recovery-revolution) · [Zero-day defense and behavioral analysis](/blog/zero-day-defense-behavioral-analysis) · [GX-RA product overview](/gx-ra)
+**Related reading on this site**: [When Data Becomes Infrastructure](/blog/when-data-becomes-infrastructure) · [Trust before use across five domains](/blog/trust-before-use-five-assurance-domains) · [The Ransomware Recovery Revolution](/blog/ransomware-recovery-revolution) · [Enterprise Assurance](/enterprise-assurance)

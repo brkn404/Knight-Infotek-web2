@@ -27,7 +27,7 @@ export default function SolutionStackPage() {
         <div className="flex-1 container mx-auto px-4 pt-32 pb-24 text-center">
           <h1 className="text-3xl font-display font-bold text-white mb-4">Solution not found</h1>
           <p className="text-muted-foreground mb-8">
-            Choose a stack from the home page or Solutions menu.
+            Choose a stack from the Products section on the home page.
           </p>
           <Button asChild variant="outline">
             <Link href="/">Back home</Link>

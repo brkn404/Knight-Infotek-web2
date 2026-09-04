@@ -6,7 +6,6 @@ import dnaImg from "@assets/generated_images/digital_dna_strand_made_of_blockcha
 import agentgxImg from "@assets/generated_images/futuristic_zero_trust_security_concept.png";
 import cgImg from "@assets/generated_images/mempool_monitoring_firewall_visualization.png";
 import cyberHeroImg from "@assets/generated_images/active_defense_system_visualization.png";
-import zeroknightImg from "@assets/generated_images/futuristic_zero_trust_security_concept.png";
 import gxraImg from "@assets/generated_images/hash-only_verification_concept.png";
 import industrialImg from "@assets/generated_images/genomex_behavioral_intelligence_visualization.png";
 
@@ -16,7 +15,6 @@ export type StackImageKey =
   | "agentgx"
   | "cg"
   | "cyber"
-  | "zeroknight"
   | "gxra"
   | "industrial"
   | "genid";
@@ -27,7 +25,6 @@ export const productCardImages: Record<StackImageKey, string> = {
   agentgx: agentgxImg,
   cg: cgImg,
   cyber: cyberHeroImg,
-  zeroknight: zeroknightImg,
   gxra: gxraImg,
   industrial: industrialImg,
   genid: dnaImg,

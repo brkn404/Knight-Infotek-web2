@@ -75,12 +75,12 @@ export const solutionStacks: SolutionStack[] = [
     badge: "Endpoint · identity continuity · recovery",
     badgeIcon: Shield,
     intro:
-      "A behavior-driven layer that detects, contains, and recovers based on how systems and identities behave — not signatures alone. Aligned with ZeroKnight30-style endpoint resilience and GenID-style behavior-derived identity.",
+      "A behavior-driven layer that detects, contains, and recovers based on how systems and identities behave — not signatures alone. GenID for behavior-derived identity; GenomeX Assurance for trust-before-use across recovery and related domains.",
     whyTitle: "Why it's key",
     whyBullets: [
       "AI-driven attacks bypass signature-only security.",
       "Identity compromise is often behavioral, not just credential theft.",
-      "Recovery speed matters as much as detection.",
+      "Recovery trust matters as much as recovery speed.",
       "Knight InfoTek Global unifies these themes with the same behavioral DNA as AgentGX.",
     ],
     products: [
@@ -96,26 +96,15 @@ export const solutionStacks: SolutionStack[] = [
         features: ["9 entity types", "Cross-chain", "Behavior-first", "ERC-8004 aligned"],
       },
       {
-        id: "zeroknight30",
-        title: "ZeroKnight30",
-        subtitle: "Autonomous AI defense · BSR",
+        id: "genomex-assurance",
+        title: "GenomeX Assurance Platform",
+        subtitle: "Enterprise Assurance control plane",
         description:
-          "zk30-Gladiator: behavioral endpoint detection, blockchain-anchored snapshot recovery, and autonomous response — the defense stack GX-RA extends.",
-        link: "/agent-gx",
-        icon: Shield,
-        imageKey: "zeroknight",
-        features: ["Behavioral EDR", "BSR", "Zero-day resilience"],
-      },
-      {
-        id: "gx-ra",
-        title: "GX-RA",
-        subtitle: "GenomeX Recovery Assurance",
-        description:
-          "Recovery-domain surface of Enterprise Assurance — measure whether a recovery chain can be trusted before restore, with ALLOW / DENY / CONFIRM and retainable evidence.",
-        link: "/gx-ra",
+          "Measure trust before use across recovery, knowledge, ML, agents, and software — ALLOW / DENY / CONFIRM with retainable evidence. Recovery domain: GX-GRA.",
+        link: "/enterprise-assurance",
         icon: ShieldCheck,
         imageKey: "gxra",
-        features: ["Recovery chain", "ALLOW / DENY / CONFIRM", "Partner-ready"],
+        features: ["Five domains", "ALLOW / DENY / CONFIRM", "platform_genome_128"],
       },
     ],
   },

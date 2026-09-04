@@ -2,7 +2,7 @@ export type ResourceId =
   | "category-paper"
   | "architecture-paper"
   | "product-whitepaper"
-  | "gx-ra-brochure";
+  | "platform-brochure";
 
 export interface AssuranceResource {
   id: ResourceId;
@@ -40,20 +40,20 @@ export const assuranceResources: AssuranceResource[] = [
   },
   {
     id: "product-whitepaper",
-    title: "GenomeX Assurance Platform Product Whitepaper",
+    title: "GenomeX Assurance Platform Whitepaper",
     subtitle:
-      "Buyer-facing view of product surfaces, domain gates, receipts, deployment, and maturity — inheriting the platform architecture.",
+      "Buyer-facing product view of domain gates, evidence, and deployment — inheriting the platform architecture.",
     cta: "Download the whitepaper",
-    href: "/enterprise-assurance/product-whitepaper",
-    pdfHref: "/resources/Knight-InfoTek_GenomeX-Assurance-Platform_Product-Whitepaper_2026.pdf",
-    dateLabel: "September 2026 · Version 3.0",
+    href: "/resources/Knight-InfoTek_GenomeX-Assurance-Platform_Whitepaper_2026.pdf",
+    pdfHref: "/resources/Knight-InfoTek_GenomeX-Assurance-Platform_Whitepaper_2026.pdf",
+    dateLabel: "September 2026 · Version 2",
     kind: "Product whitepaper",
   },
   {
-    id: "gx-ra-brochure",
-    title: "GX-RA Product Brochure",
+    id: "platform-brochure",
+    title: "GenomeX Assurance Platform Brochure",
     subtitle:
-      "Short sales overview of GenomeX Recovery Assurance: measure trust before use across the recovery chain.",
+      "Short sales overview: measure trust before use across five domains, with GX-GRA for the recovery chain.",
     cta: "Download the brochure",
     href: "/resources/Knight-InfoTek_GX-RA_Product-Brochure_2026.pdf",
     pdfHref: "/resources/Knight-InfoTek_GX-RA_Product-Brochure_2026.pdf",

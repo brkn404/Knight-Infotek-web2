@@ -9,7 +9,6 @@ import { getAssuranceResource } from "@/lib/resources";
 export default function EnterpriseAssuranceHub() {
   const category = getAssuranceResource("category-paper");
   const architecture = getAssuranceResource("architecture-paper");
-  const whitepaper = getAssuranceResource("product-whitepaper");
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -74,19 +73,19 @@ export default function EnterpriseAssuranceHub() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={whitepaper.href}
+              href={architecture.href}
               className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2 justify-center"
             >
-              Download the product whitepaper
+              GenomeX architecture overview
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link
-              href="/gx-ra"
+            <a
+              href="/#contact"
               className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2 justify-center"
             >
-              GX-RA product page
+              Talk to Knight InfoTek
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

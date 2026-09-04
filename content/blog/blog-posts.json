@@ -1,5 +1,35 @@
 [
   {
+    "id": 31,
+    "title": "AI Agents in the Wild: Recent Incidents and the Case for Controlled Agency",
+    "excerpt": "2026 framework CVEs plus reported supply-chain and field cases: LiteLLM, Hugging Face, ClawHavoc, Semantic Kernel, and more. Why controlled agency needs GX-GSA, GX-GKA, GX-GAA, and AgentGX — not patching alone.",
+    "date": "September 4, 2026",
+    "category": "AI",
+    "readTime": "15 min read",
+    "slug": "ai-agents-in-the-wild-controlled-agency",
+    "published": true
+  },
+  {
+    "id": 30,
+    "title": "Trust Before Use: One Assurance Model Across Five Domains",
+    "excerpt": "How the GenomeX Assurance Platform organizes Enterprise Assurance: an overlay on existing stacks, one processing spine, five domain gates, and ALLOW / DENY / CONFIRM with retainable evidence.",
+    "date": "September 4, 2026",
+    "category": "AI",
+    "readTime": "8 min read",
+    "slug": "trust-before-use-five-assurance-domains",
+    "published": true
+  },
+  {
+    "id": 29,
+    "title": "When Data Becomes Infrastructure",
+    "excerpt": "In the AI-native enterprise, knowledge, models, agents, software provenance, and recovery state behave like operational infrastructure. Why availability is not assurance, and what Enterprise Assurance must answer before use.",
+    "date": "September 4, 2026",
+    "category": "Technology",
+    "readTime": "7 min read",
+    "slug": "when-data-becomes-infrastructure",
+    "published": true
+  },
+  {
     "id": 28,
     "title": "Beyond Backups: Why the Cyber Recovery Market Still Has an Assurance Gap",
     "excerpt": "Enterprises invest heavily in backup and immutable recovery — yet boards and insurers still ask whether a restore is truly safe. An industry-wide look at the assurance gap, regulation, and the shift from data integrity to provable resilience.",

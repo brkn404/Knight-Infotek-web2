@@ -148,10 +148,10 @@ export default function GenomeXAssurancePlatform() {
             </a>
           </Button>
           <Link
-            href="/enterprise-assurance/product-whitepaper"
+            href="/enterprise-assurance"
             className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium"
           >
-            Product whitepaper
+            Enterprise Assurance hub
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

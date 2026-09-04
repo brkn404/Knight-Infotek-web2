@@ -27,8 +27,8 @@ export function ResourceLadder({ variant = "full", className = "" }: Props) {
             Discover · Understand · Evaluate · Share
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Start with the category thesis, then the GenomeX architecture, then the product
-            whitepaper. GX-RA brochure for recovery-domain conversations.
+            Start with the category thesis, then the GenomeX architecture and whitepaper.
+            Brochure for short sales and recovery-domain conversations.
           </p>
         </div>
 
@@ -57,7 +57,11 @@ export function ResourceLadder({ variant = "full", className = "" }: Props) {
           className={`grid gap-6 ${variant === "strip" ? "md:grid-cols-3" : "md:grid-cols-2"}`}
         >
           {resources.map((r) => (
-            <ResourceCard key={r.id} resource={r} preferPdf={r.id === "gx-ra-brochure"} />
+            <ResourceCard
+              key={r.id}
+              resource={r}
+              preferPdf={r.id === "platform-brochure" || r.id === "product-whitepaper"}
+            />
           ))}
         </div>
 
@@ -71,12 +75,12 @@ export function ResourceLadder({ variant = "full", className = "" }: Props) {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href={getAssuranceResource("gx-ra-brochure").pdfHref}
+              href={getAssuranceResource("platform-brochure").pdfHref}
               className="text-sm text-muted-foreground hover:text-white"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GX-RA brochure PDF
+              Assurance brochure PDF
             </a>
           </div>
         )}
