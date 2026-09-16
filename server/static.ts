@@ -24,6 +24,16 @@ export function serveStatic(app: Express) {
     });
   }
 
+  const gxApIndex = path.join(distPath, "genomex-assurance-platform", "index.html");
+  if (fs.existsSync(gxApIndex)) {
+    app.get("/gx-ap", (_req, res) => {
+      res.redirect(301, "/genomex-assurance-platform");
+    });
+    app.get(["/genomex-assurance-platform", "/genomex-assurance-platform/"], (_req, res) => {
+      res.sendFile(gxApIndex);
+    });
+  }
+
   // fall through to index.html if the file doesn't exist
   app.use("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));

@@ -332,11 +332,11 @@ export default function Investors() {
                       Vendor-agnostic trust overlay across recovery, knowledge, ML, agents, and software — ALLOW / DENY / CONFIRM with retainable evidence.
                     </p>
                     <div className="flex gap-2">
-                      <Link href="/enterprise-assurance">
+                      <a href="/genomex-assurance-platform">
                         <Button variant="outline" size="sm">
                           Learn More <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
-                      </Link>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>

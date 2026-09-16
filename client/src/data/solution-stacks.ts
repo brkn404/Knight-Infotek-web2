@@ -96,8 +96,8 @@ export const solutionStacks: SolutionStack[] = [
         title: "GenomeX Assurance Platform",
         subtitle: "Enterprise Assurance control plane",
         description:
-          "One processing spine, five domain gates, and proof-before-use decisions — papers, architecture, and brochure on the Assurance hub.",
-        link: "/enterprise-assurance",
+          "One control plane, five domain gates, and ALLOW / DENY / CONFIRM with portable receipts — interactive product overview and papers.",
+        link: "/genomex-assurance-platform",
         icon: ShieldCheck,
         imageKey: "gxra",
         features: ["Five domains", "ALLOW / DENY / CONFIRM", "platform_genome_128"],

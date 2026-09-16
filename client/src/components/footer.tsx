@@ -53,7 +53,7 @@ export function Footer() {
             <h4 className="font-bold text-white mb-3 mt-6">Products</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="/agent-gx" className="hover:text-primary transition-colors">AgentGX</a></li>
-              <li><a href="/enterprise-assurance" className="hover:text-primary transition-colors">GenomeX Assurance</a></li>
+              <li><a href="/genomex-assurance-platform" className="hover:text-primary transition-colors">GenomeX Assurance</a></li>
               <li>
                 <a
                   href={PRODUCT_SITES.blockchainDna}

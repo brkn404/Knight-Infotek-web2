@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="GenomeX Assurance Platform: Enterprise Assurance control plane. Measure trust before restore, index, train, deploy, or act — with ALLOW, DENY, CONFIRM and a portable receipt." />
+  <meta name="theme-color" content="#050814" />
+  <meta property="og:title" content="GenomeX Assurance Platform — Trust before use" />
+  <meta property="og:description" content="One control plane, five domain gates, one 128D Behavioral Genome. Vendor-agnostic overlay for recovery, knowledge, ML, agents, and software." />
+  <title>GenomeX Assurance Platform — Enterprise Assurance before use</title>
+  <link rel="stylesheet" href="./landing.css" />
+  <script type="module" src="./landing.js"></script>
+</head>
+<body>
+  <div class="public-home">
+    <header class="public-nav">
+      <a class="public-brand" href="https://www.knightinfotek.com/">
+        <svg viewBox="0 0 64 78" aria-hidden="true">
+          <path d="M18 4 C49 19,49 59,18 74" fill="none" stroke="#39c7ff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M46 4 C15 19,15 59,46 74" fill="none" stroke="#3567ff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M20 18 H44 M16 31 H48 M16 47 H48 M20 61 H44" stroke="#58d8ff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+        </svg>
+        <span>
+          <strong>GenomeX Assurance Platform</strong>
+          <small>Enterprise Assurance · Powered by GenomeX</small>
+        </span>
+      </a>
+      <nav>
+        <a href="#architecture">Architecture</a>
+        <a href="#domains">Domain gates</a>
+        <a href="#spine">Processing spine</a>
+        <a href="#boundary">What it is not</a>
+        <a href="#ecosystem">GenomeX family</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="public-nav-actions">
+        <a class="text-link" href="mailto:contact@knightinfotek.com?subject=GenomeX%20Assurance%20Platform%20demo%20request">Request a demo</a>
+        <a class="primary" href="https://www.knightinfotek.com/#contact">Talk to Knight InfoTek</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="gxap-live-hero" id="stage" aria-label="GenomeX Assurance Platform overview">
+        <header class="gxap-live-heading">
+          <div>
+            <p class="eyebrow">Enterprise Assurance control plane</p>
+            <h1>Backup proves it was copied. <span>We prove whether it should be used.</span></h1>
+            <p>
+              GenomeX Assurance Platform is not five products. It is one control plane, five shared engines,
+              and five domain gates. It sits above backup, EDR, CI/CD, and AI stacks — converting their
+              signals into a governed <em>ALLOW / DENY / CONFIRM</em> decision, with a receipt you can verify offline.
+            </p>
+            <div class="quote-block">
+              Can this digital asset be trusted before the enterprise uses it — and can that decision be proven?
+            </div>
+          </div>
+          <div class="public-hero-actions">
+            <a class="primary public-cta" href="mailto:contact@knightinfotek.com?subject=GenomeX%20Assurance%20Platform%20demo%20request">Request a demo</a>
+            <a class="secondary" href="#architecture">See the architecture</a>
+          </div>
+        </header>
+
+        <div class="gxap-kpis" aria-label="Platform facts">
+          <article>
+            <span>Assurance model</span>
+            <strong>One genome</strong>
+            <small>128D Behavioral Genome · 8 blocks × 16 slots</small>
+          </article>
+          <article>
+            <span>Domain gates</span>
+            <strong>5</strong>
+            <small>Recovery · Knowledge · ML · Agents · Software</small>
+          </article>
+          <article>
+            <span>Decision language</span>
+            <strong>3</strong>
+            <small>ALLOW · DENY · CONFIRM — escalate only</small>
+          </article>
+          <article>
+            <span>Deployment posture</span>
+            <strong>Overlay</strong>
+            <small>Vendor-agnostic · no rip-and-replace</small>
+          </article>
+        </div>
+
+        <section class="gxap-command" id="architecture" aria-label="Platform architecture">
+          <header class="gxap-command-header">
+            <div>
+              <p class="eyebrow">How the product is organized</p>
+              <h2>DAB is the librarian. The engines are the inspectors. The domains are the gates.</h2>
+              <p>Domains differ in policy objects, buyer questions, and receipts — not in duplicated worker fleets.</p>
+            </div>
+            <div class="gxap-command-status">
+              <span><i class="is-live"></i><b>Trust before use</b></span>
+              <span>Proof after decision</span>
+            </div>
+          </header>
+
+          <div class="gxap-stage" id="gxap-stage">
+            <svg class="gxap-flow" viewBox="0 0 1000 580" preserveAspectRatio="none" aria-hidden="true">
+              <g class="gxap-flow-in" data-lane="0"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.4s" repeatCount="indefinite" /></circle></g>
+              <g class="gxap-flow-in" data-lane="1"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.4s" begin="-0.4s" repeatCount="indefinite" /></circle></g>
+              <g class="gxap-flow-in" data-lane="2"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.1s" repeatCount="indefinite" /></circle></g>
+              <g class="gxap-flow-in" data-lane="3"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.4s" begin="-0.8s" repeatCount="indefinite" /></circle></g>
+              <g class="gxap-flow-in" data-lane="4"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.4s" begin="-1.2s" repeatCount="indefinite" /></circle></g>
+              <g class="gxap-flow-out" data-out="0"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.6s" repeatCount="indefinite" /></circle></g>
+              <g class="gxap-flow-out" data-out="1"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.4s" begin="-0.5s" repeatCount="indefinite" /></circle></g>
+              <g class="gxap-flow-out" data-out="2"><path class="gxap-flow-pipe" /><path class="gxap-flow-dash" /><circle class="gxap-flow-packet" r="4"><animateMotion dur="2.7s" begin="-1s" repeatCount="indefinite" /></circle></g>
+            </svg>
+
+            <div class="gxap-lanes" id="gxap-lanes" role="tablist" aria-label="Domain gates"></div>
+
+            <div class="gxap-core" aria-label="Shared control plane and engines">
+              <div class="gxap-core-visual">
+                <div class="gxap-genome-wrap" aria-label="128D behavioral genome fingerprint">
+                  <div class="gxap-genome-scan" aria-hidden="true"></div>
+                  <div class="gxap-genome-ingest" id="gxap-genome-ingest" aria-hidden="true"></div>
+                  <div class="gxap-genome-grid" id="gxap-genome-grid"></div>
+                  <p class="gxap-genome-caption">128D Behavioral Genome · 8 blocks × 16 slots</p>
+                </div>
+              </div>
+              <div class="gxap-core-meta">
+                <p class="gxap-core-title">GenomeX Assurance Platform</p>
+                <p class="gxap-core-sub">Policy · Authorize · Fusion · Audit · Console</p>
+                <ol class="gxap-core-flow">
+                  <li><b>Discover-Aligned Bridge</b><small>GX-DAB</small></li>
+                  <li><b>Sequence Engine</b><small>GX-SEQ</small></li>
+                  <li><b>Signature Engine</b><small>GX-SIG</small></li>
+                  <li><b>Behavior Engine</b><small>GX-BE</small></li>
+                  <li><b>Assurance Ledger</b><small>GX-AL</small></li>
+                </ol>
+                <small>One spine · five domain gates</small>
+              </div>
+            </div>
+
+            <article class="gxap-gate" id="gxap-gate">
+              <div class="gxap-gate-dock" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="gxap-gate-body">
+                <p class="eyebrow" id="gate-eyebrow">Before-use gate</p>
+                <p class="gxap-gate-question" id="gate-question"></p>
+                <strong id="gate-artifact"></strong>
+                <p id="gate-detail"></p>
+                <div class="gxap-gate-meta">
+                  <div>
+                    <span>Policy object</span>
+                    <b id="gate-policy"></b>
+                  </div>
+                  <div>
+                    <span>Receipt</span>
+                    <b id="gate-receipt"></b>
+                  </div>
+                </div>
+              </div>
+              <div class="gxap-decisions" aria-label="Decision outcomes">
+                <div class="gxap-decision allow"><strong>ALLOW</strong><small>Receipt minted</small></div>
+                <div class="gxap-decision deny"><strong>DENY</strong><small>Block the use</small></div>
+                <div class="gxap-decision confirm"><strong>CONFIRM</strong><small>Human review</small></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="gxap-focus-bar">
+            <span>Same spine. Different before-use moment.</span>
+            <strong id="focus-bar-title"></strong>
+            <small id="focus-bar-detail"></small>
+          </div>
+        </section>
+
+        <div class="public-proof" aria-label="Platform spine">
+          <div>
+            <span>Discover</span>
+            <strong>Discover-Aligned Bridge</strong>
+            <small>GX-DAB · catalog what exists and what may proceed</small>
+          </div>
+          <div>
+            <span>Materialize</span>
+            <strong>Sequence Engine</strong>
+            <small>GX-SEQ · open truth far enough for an explainable decision</small>
+          </div>
+          <div>
+            <span>Evaluate</span>
+            <strong>Behavior Engine</strong>
+            <small>GX-BE · 128D genome · drift · confidence</small>
+          </div>
+          <div>
+            <span>Prove</span>
+            <strong>Assurance Ledger</strong>
+            <small>GX-AL · local-first receipt · Merkle · ledger anchor</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="public-section" id="problem">
+        <header class="public-section-header">
+          <p class="eyebrow">The assurance gap</p>
+          <h2>Data has become infrastructure. Trust has not.</h2>
+          <p>
+            Recovery points, corpora, training sets, releases, and agent actions now participate in operations.
+            Existing tools answer availability, detection, and vulnerability — not whether the asset should
+            proceed at the moment of use.
+          </p>
+        </header>
+        <div class="public-grid-3">
+          <article class="public-card">
+            <h3>Re-infection fear</h3>
+            <p>A hardened repository can faithfully preserve ransomware. A clean recovery point can sit on a drifted backup platform.</p>
+          </article>
+          <article class="public-card">
+            <h3>Validation does not scale</h3>
+            <p>Physical clean rooms work for one critical workload. They do not rank hundreds of recovery points after an incident.</p>
+          </article>
+          <article class="public-card">
+            <h3>No portable proof</h3>
+            <p>DORA, HIPAA, cyber insurance, and internal audit need artifacts — not an administrator's opinion.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="public-section" id="spine">
+        <header class="public-section-header">
+          <p class="eyebrow">One processing spine</p>
+          <h2>Every governed asset follows the same discipline.</h2>
+          <p>The asset changes. The before-use moment changes. Fusion and proof stay consistent.</p>
+        </header>
+        <div class="spine-row">
+          <article class="spine-step">
+            <div class="num">1</div>
+            <div class="engine">Asset</div>
+            <div class="verb">Identify</div>
+            <p>Recovery point, corpus, dataset, release, or agent action.</p>
+          </article>
+          <article class="spine-step">
+            <div class="num">2</div>
+            <div class="engine">GX-DAB</div>
+            <div class="verb">Discover</div>
+            <p>Catalog what exists and which subset may proceed.</p>
+          </article>
+          <article class="spine-step">
+            <div class="num">3</div>
+            <div class="engine">GX-SEQ</div>
+            <div class="verb">Open</div>
+            <p>Materialize truth far enough for an explainable decision.</p>
+          </article>
+          <article class="spine-step">
+            <div class="num">4</div>
+            <div class="engine">GX-SIG</div>
+            <div class="verb">Sign</div>
+            <p>Known-bad signatures and IOCs on materialized content.</p>
+          </article>
+          <article class="spine-step">
+            <div class="num">5</div>
+            <div class="engine">GX-BE</div>
+            <div class="verb">Evaluate</div>
+            <p>Behavior, drift, confidence on the 128D genome.</p>
+          </article>
+          <article class="spine-step">
+            <div class="num">6</div>
+            <div class="engine">GX-AL</div>
+            <div class="verb">Prove</div>
+            <p>Local-first receipt, Merkle binding, ledger anchor.</p>
+          </article>
+          <article class="spine-step policy">
+            <div class="num">7</div>
+            <div class="engine">Policy</div>
+            <div class="verb">Decide</div>
+            <p>ALLOW, DENY, or CONFIRM with evidence attached.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="public-section" id="domains">
+        <header class="public-section-header">
+          <p class="eyebrow">Five domain gates</p>
+          <h2>Same assurance model. Different before-use moment.</h2>
+          <p>Enter through the domain where risk is most concrete. The platform underneath is the same.</p>
+        </header>
+        <div class="public-grid-5">
+          <article class="public-card domain-card">
+            <span class="code">GX-GRA</span>
+            <h3>Recovery Assurance</h3>
+            <p class="question">Can this recovery chain be trusted before restore?</p>
+            <div class="artifact">Restore Authority · PoS-B
+              <span>Recovery Environment Genome + Recovery Asset Genome → ALLOW / CONFIRM / DENY</span>
+            </div>
+          </article>
+          <article class="public-card domain-card">
+            <span class="code">GX-GKA</span>
+            <h3>Knowledge Assurance</h3>
+            <p class="question">Can this knowledge be trusted before it is indexed?</p>
+            <div class="artifact">Pre-index gate · KAR
+              <span>Provenance, hidden instructions, ingestion drift before embed</span>
+            </div>
+          </article>
+          <article class="public-card domain-card">
+            <span class="code">GX-GMA</span>
+            <h3>ML Assurance</h3>
+            <p class="question">Can this dataset or ML asset be trusted before training?</p>
+            <div class="artifact">Training gate · ML-BOM
+              <span>Dataset hash, schema hash, training-gate decision</span>
+            </div>
+          </article>
+          <article class="public-card domain-card">
+            <span class="code">GX-GAA</span>
+            <h3>Agent Assurance</h3>
+            <p class="question">Can this agent be trusted before it acts?</p>
+            <div class="artifact">Action gate · AAR
+              <span>Tool calls, delegations, runtime behavior vs family baseline</span>
+            </div>
+          </article>
+          <article class="public-card domain-card">
+            <span class="code">GX-GSA</span>
+            <h3>Software Assurance</h3>
+            <p class="question">Can this release be trusted before deploy?</p>
+            <div class="artifact">Release gate · SBOM / CBOM
+              <span>Provenance, lineage, dependency posture — CVE is input, not the decision</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="public-section" id="evidence">
+        <header class="public-section-header">
+          <p class="eyebrow">Evidence that leaves with you</p>
+          <h2>Decisions without receipts do not survive audit.</h2>
+          <p>
+            Every domain gate can mint a portable assurance receipt: platform genome, fusion lanes,
+            policy version, and — for recovery — dual genomes in an offline-verifiable exit pack.
+          </p>
+        </header>
+        <div class="public-grid-4">
+          <article class="public-card">
+            <h3>Fusion lanes</h3>
+            <p>Behavioral, materialized content, anomaly, signature, and integrity — fused into one decision, not a decorative score.</p>
+          </article>
+          <article class="public-card">
+            <h3>Industry views</h3>
+            <p>Same receipts, different lens: CISO posture, GRC audit pack, insurance cohort, MSSP tenant rollup.</p>
+          </article>
+          <article class="public-card">
+            <h3>Escalate only</h3>
+            <p>Policy never silently downgrades risk. CONFIRM is a first-class state, not a failure mode.</p>
+          </article>
+          <article class="public-card">
+            <h3>Exit pack</h3>
+            <p>Receipt + both genomes + fusion + policy — verifiable without the GenomeX API or your original host.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="public-section" id="boundary">
+        <header class="public-section-header">
+          <p class="eyebrow">Evidence boundary</p>
+          <h2>Overlay, not replacement. Honest about what we measure.</h2>
+        </header>
+        <div class="boundary-grid">
+          <article class="public-card yes">
+            <h3>What GenomeX adds</h3>
+            <ul>
+              <li>Trust decision before restore, index, train, deploy, or act</li>
+              <li>128D Behavioral Genome shared across all domains</li>
+              <li>ALLOW / DENY / CONFIRM with confidence and attribution</li>
+              <li>Portable receipts for audit, insurance, and board scrutiny</li>
+              <li>Vendor-agnostic connectors — Veeam, Cohesity, GitHub, SharePoint, agent frameworks</li>
+            </ul>
+          </article>
+          <article class="public-card no">
+            <h3>What GenomeX is not</h3>
+            <ul>
+              <li>Not a backup platform — consumes backup state as evidence</li>
+              <li>Not EDR / XDR — governs cold content at backup scale</li>
+              <li>Not an AppSec scanner — fuses SCA/SBOM into release trust</li>
+              <li>Not a runtime LLM firewall — governs upstream corpora and agents</li>
+              <li>Not immunity, guaranteed clean, or weeks-to-hours patch SLA</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="public-section">
+        <header class="public-section-header">
+          <p class="eyebrow">Who enters first</p>
+          <h2>The first buyer varies. The platform does not.</h2>
+        </header>
+        <div class="audience-grid">
+          <article class="public-card audience-card">
+            <div class="role">CISO</div>
+            <div class="aud">Security leadership</div>
+            <p>Intervention rate, CONFIRM queue, domain posture after ransomware planning.</p>
+          </article>
+          <article class="public-card audience-card">
+            <div class="role">Backup / DR</div>
+            <div class="aud">Infrastructure</div>
+            <p>Restore Authority: environment genome + asset genome before any actuator runs.</p>
+          </article>
+          <article class="public-card audience-card">
+            <div class="role">AI platform</div>
+            <div class="aud">Knowledge &amp; agents</div>
+            <p>Gate corpora before RAG, datasets before training, agents before tool execution.</p>
+          </article>
+          <article class="public-card audience-card">
+            <div class="role">Insurer / MSSP</div>
+            <div class="aud">Evidence consumers</div>
+            <p>Cohort posture and exportable receipts — not questionnaire attestation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="public-section" id="ecosystem">
+        <header class="public-section-header">
+          <p class="eyebrow">GenomeX family</p>
+          <h2>Same behavioral engine. Different operational surface.</h2>
+          <p>
+            GenomeX Assurance Platform is the enterprise control plane. Sibling products apply the
+            same 128-dimensional behavioral model to other markets — without duplicating the engine.
+          </p>
+        </header>
+        <div class="ecosystem-grid">
+          <a class="eco-card current" href="https://www.knightinfotek.com/genomex-assurance-platform">
+            <div class="tagline">You are here</div>
+            <h3>GenomeX Assurance Platform</h3>
+            <p>Enterprise Assurance before restore, index, train, deploy, or act. Five domain gates, one receipt model.</p>
+          </a>
+          <a class="eco-card" href="https://www.blockchain-dna.com/" target="_blank" rel="noopener">
+            <div class="tagline">On-chain behavioral substrate</div>
+            <h3>BlockchainDNA</h3>
+            <p>Identity, provenance, and behavioral governance for wallets, assets, and AI agents on live chains.</p>
+          </a>
+          <a class="eco-card" href="https://cha-chinganalytics.com/" target="_blank" rel="noopener">
+            <div class="tagline">Institutional named watch</div>
+            <h3>Cha-Ching Analytics</h3>
+            <p>Desk workflow on BlockchainDNA evidence — Attention, Facts, Convergence, Transact now.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="public-section" id="contact">
+        <header class="public-section-header">
+          <p class="eyebrow">Engagement</p>
+          <h2>Enterprise Assurance is implemented, not slideware.</h2>
+          <p>Pilot, lab validation, and OEM paths are available. Pricing follows deployment scope and domain entry point.</p>
+        </header>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3>Domain pilot</h3>
+            <p class="price">Lab <small>/ scoped</small></p>
+            <ul>
+              <li>Single domain gate — typically GX-GRA or GX-GSA</li>
+              <li>Connector baseline + authorize + receipt export</li>
+              <li>Shared engines under production policy objects</li>
+              <li>90-day validation with defined success criteria</li>
+            </ul>
+            <a class="secondary" href="mailto:contact@knightinfotek.com?subject=GenomeX%20Assurance%20Platform%20pilot">Discuss a pilot</a>
+          </article>
+          <article class="pricing-card featured">
+            <h3>Enterprise platform</h3>
+            <p class="price">Contact <small>/ annual</small></p>
+            <ul>
+              <li>Multi-domain control plane + industry views</li>
+              <li>MSSP / insurance evidence projections</li>
+              <li>Offline-verifiable exit packs and audit bundles</li>
+              <li>Implementation and 12–36 month transition support</li>
+            </ul>
+            <a class="primary" href="mailto:contact@knightinfotek.com?subject=GenomeX%20Assurance%20Platform%20enterprise%20inquiry">Request enterprise briefing</a>
+          </article>
+          <article class="pricing-card">
+            <h3>OEM &amp; platform</h3>
+            <p class="price">Partner <small>/ license</small></p>
+            <ul>
+              <li>Embed domain gates in backup, AppSec, or AI platforms</li>
+              <li>Receipt and genome wire under your product surface</li>
+              <li>IP licensing via Knight Global Enterprises</li>
+              <li>U.S. implementation via Knight InfoTek</li>
+            </ul>
+            <a class="secondary" href="mailto:contact@knightinfotek.com?subject=GenomeX%20Assurance%20Platform%20OEM">OEM conversation</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="public-final-cta" aria-label="Final call to action">
+        <div>
+          <h2>Tomorrow, trust will be measured — not assumed.</h2>
+          <p>
+            As digital assets become infrastructure, trust must become measurable infrastructure as well.
+            GenomeX Assurance Platform is how enterprises govern that transition.
+          </p>
+        </div>
+        <div class="public-hero-actions">
+          <a class="primary" href="mailto:contact@knightinfotek.com?subject=GenomeX%20Assurance%20Platform%20demo%20request">Request a demo</a>
+          <a class="secondary" href="https://www.knightinfotek.com/#contact">Contact Knight InfoTek</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="public-footer">
+      <div>
+        <strong>GenomeX Assurance Platform</strong><br />
+        A Knight InfoTek product · Powered by GenomeX<br />
+        Patent-backed behavioral assurance · U.S. implementation partner of Knight Global Enterprises
+      </div>
+      <div class="links">
+        <a href="https://www.knightinfotek.com/">Knight InfoTek</a>
+        <a href="https://www.blockchain-dna.com/" target="_blank" rel="noopener">BlockchainDNA</a>
+        <a href="https://cha-chinganalytics.com/" target="_blank" rel="noopener">Cha-Ching Analytics</a>
+        <a href="https://www.knightinfotek.com/#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/brian-knight2k" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -95,9 +95,7 @@ export default function AgentGX() {
                   <Link href="/enterprise-assurance">Enterprise Assurance</Link>
                 </Button>
                 <Button asChild variant="outline" className="font-display border-white/20">
-                  <Link href="/enterprise-assurance/genomex-assurance-platform">
-                    GenomeX architecture
-                  </Link>
+                  <a href="/genomex-assurance-platform">GenomeX Assurance Platform</a>
                 </Button>
               </div>
             </motion.div>

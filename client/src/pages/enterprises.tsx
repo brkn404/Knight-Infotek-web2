@@ -327,11 +327,11 @@ export default function Enterprises() {
                     <p className="text-sm text-muted-foreground mb-4">
                       Enterprise Assurance control plane — measure trust before restore, index, train, deploy, or act.
                     </p>
-                    <Link href="/enterprise-assurance">
+                    <a href="/genomex-assurance-platform">
                       <Button variant="outline" size="sm" className="w-full">
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
-                    </Link>
+                    </a>
                   </CardContent>
                 </Card>
               </div>

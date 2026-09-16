@@ -38,11 +38,18 @@ export default function EnterpriseAssuranceHub() {
             domains: Recovery · Knowledge · ML · Agents · Software.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href={category.href}
+            <a
+              href="/genomex-assurance-platform"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90 font-display"
             >
-              Read the category paper
+              Product landing
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href={category.href}
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/10 font-display"
+            >
+              Category paper
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link

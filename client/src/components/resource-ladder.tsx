@@ -67,11 +67,18 @@ export function ResourceLadder({ variant = "full", className = "" }: Props) {
 
         {variant === "strip" && (
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/enterprise-assurance"
+            <a
+              href="/genomex-assurance-platform"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium"
             >
-              Full Enterprise Assurance hub
+              GenomeX Assurance Platform
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="/enterprise-assurance"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-white font-medium"
+            >
+              Papers &amp; resources
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a

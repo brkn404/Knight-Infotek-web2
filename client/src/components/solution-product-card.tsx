@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "wouter";
 import type { StackProduct } from "@/data/solution-stacks";
 import { productCardImages } from "@/lib/stack-media";
-import { isExternalProductLink } from "@/lib/product-sites";
+import { isExternalProductLink, isStaticLandingLink } from "@/lib/product-sites";
 
 type Props = {
   product: StackProduct;
@@ -15,6 +15,7 @@ export function SolutionProductCard({ product, index }: Props) {
   const img = productCardImages[product.imageKey];
   const Icon = product.icon;
   const external = isExternalProductLink(product.link);
+  const staticLanding = isStaticLandingLink(product.link);
 
   const card = (
     <motion.div
@@ -69,6 +70,14 @@ export function SolutionProductCard({ product, index }: Props) {
   if (external) {
     return (
       <a href={product.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+        {card}
+      </a>
+    );
+  }
+
+  if (staticLanding) {
+    return (
+      <a href={product.link} className="block h-full">
         {card}
       </a>
     );

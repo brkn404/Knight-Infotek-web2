@@ -86,15 +86,15 @@ export function Hero() {
                   Read the category paper <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link href="/enterprise-assurance/genomex-assurance-platform">
+              <a href="/genomex-assurance-platform">
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-white/20 text-white hover:bg-white/10 font-display text-lg h-12 px-8"
                 >
-                  Explore GenomeX architecture
+                  GenomeX Assurance Platform
                 </Button>
-              </Link>
+              </a>
               <a href="#contact">
                 <Button
                   size="lg"
