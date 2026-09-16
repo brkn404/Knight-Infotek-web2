@@ -6,6 +6,7 @@ import { Link, useLocation } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageSeo } from "@/components/page-seo";
+import { PRODUCT_SITES } from "@/lib/product-sites";
 import { useEffect } from "react";
 import heroBg from "@assets/generated_images/abstract_financial_analytics_visualization.png";
 
@@ -274,11 +275,11 @@ export default function Investors() {
                       Complete behavioral intelligence platform for blockchain transaction analysis, fraud detection, and compliance. Production-ready with 80+ modules.
                     </p>
                     <div className="flex gap-2">
-                      <Link href="/blockchain-dna">
+                      <a href={PRODUCT_SITES.blockchainDna} target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="sm">
-                          Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                          Visit site <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
-                      </Link>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
@@ -293,11 +294,11 @@ export default function Investors() {
                       Comprehensive compliance and fraud prevention for tokenized assets, stablecoins, and DeFi. Multi-jurisdiction regulatory support.
                     </p>
                     <div className="flex gap-2">
-                      <Link href="/cha-ching-analytics">
+                      <a href={PRODUCT_SITES.chaChingAnalytics} target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="sm">
-                          Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                          Visit site <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
-                      </Link>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
@@ -323,15 +324,15 @@ export default function Investors() {
 
                 <Card className="bg-background/50 border-white/10 hover:border-primary/50 transition-all">
                   <CardHeader>
-                    <CardTitle className="text-xl font-display text-white">ChainGuardian</CardTitle>
-                    <p className="text-sm text-muted-foreground mt-2">Content Compliance System</p>
+                    <CardTitle className="text-xl font-display text-white">GenomeX Assurance</CardTitle>
+                    <p className="text-sm text-muted-foreground mt-2">Enterprise Assurance Platform</p>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Pre-mining content filter for Bitcoin. Protects miners, pools, and exchanges from legal liability. Real-time mempool scanning.
+                      Vendor-agnostic trust overlay across recovery, knowledge, ML, agents, and software — ALLOW / DENY / CONFIRM with retainable evidence.
                     </p>
                     <div className="flex gap-2">
-                      <Link href="/chain-guardian">
+                      <Link href="/enterprise-assurance">
                         <Button variant="outline" size="sm">
                           Learn More <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>

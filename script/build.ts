@@ -45,8 +45,10 @@ async function writeSitemapXml() {
     "/blockchain-dna",
     "/cha-ching-analytics",
     "/agent-gx",
-    "/gen-id",
-    "/chain-guardian",
+    "/services",
+    "/services/cybersecurity-consulting",
+    "/services/security-assessments",
+    "/services/penetration-testing",
     "/enterprises",
     "/governments",
     "/blog",
@@ -55,10 +57,9 @@ async function writeSitemapXml() {
     "/terms",
   ];
   const solutionSlugs = [
-    "artificial-intelligence",
-    "cybersecurity-identity",
     "fintech",
-    "industrial-autonomous",
+    "enterprise-assurance",
+    "artificial-intelligence",
   ];
   const solutionPaths = solutionSlugs.map((s) => `/solutions/${s}`);
 

@@ -8,7 +8,7 @@ export function trimMetaDescription(text: string, maxLen = 160): string {
 
 const SITE_URL = "https://www.knightinfotek.com";
 const DEFAULT_DESCRIPTION =
-  "Knight InfoTek delivers behavioral trust infrastructure: Cha-Ching Analytics, BlockchainDNA, AgentGX, ChainGuardian, and related solutions for enterprise and regulated environments.";
+  "Knight InfoTek delivers behavioral trust infrastructure: Cha-Ching Analytics, BlockchainDNA, GenomeX Assurance, AgentGX, and related solutions for enterprise and regulated environments.";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 type PageSeoProps = {

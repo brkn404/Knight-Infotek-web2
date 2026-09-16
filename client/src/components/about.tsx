@@ -14,7 +14,7 @@ export function About() {
               Two Entities. One Mission.
             </p>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Invent. License. Implement. Scale.
+              Build products. Secure enterprises. Prove trust before use.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Licenses core technologies to enterprises, governments, incubators, and accelerators</span>
+                  <span>Develops in-house products for behavioral trust, FinTech, and Enterprise Assurance</span>
                 </li>
               </ul>
             </div>
@@ -54,11 +54,11 @@ export function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Delivers 12–36 month transition contracts</span>
+                  <span>Delivers cybersecurity consulting, assessments, and penetration testing</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Offers extended support, product takeover, and custom feature development</span>
+                  <span>Supports product deployment and integration for enterprise customers</span>
                 </li>
               </ul>
             </div>
@@ -66,7 +66,7 @@ export function About() {
           
           <div className="text-center mb-16">
             <p className="text-xl text-primary font-medium italic">
-              Together, we turn foundational IP into scalable products.
+              Together, we build products and deliver the security services enterprises need.
             </p>
           </div>
           
@@ -78,12 +78,12 @@ export function About() {
               
               <div className="space-y-4">
                 {[
-                  "IP Licensing & Acquisition Opportunities",
-                  "12-36 Month Transitional Support Contracts",
-                  "Implementation & Integration Services",
-                  "Product Takeover & Migration Support",
-                  "Extended Support & IP Consulting",
-                  "Feature Development & Customization"
+                  "Cybersecurity consulting & architecture",
+                  "Security assessments & red teaming",
+                  "Penetration testing (external, internal, app, physical)",
+                  "In-house products: BDNA, CCA, GenomeX Assurance, AgentGX",
+                  "Product deployment & integration support",
+                  "AI / LLM security & governance advisory"
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />

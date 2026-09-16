@@ -7,9 +7,7 @@ import Home from "@/pages/home";
 import BlockchainDNA from "@/pages/blockchain-dna";
 import ChaChingAnalytics from "@/pages/cha-ching-analytics";
 import AgentGX from "@/pages/agent-gx";
-import GenId from "@/pages/gen-id";
 import SolutionStackPage from "@/pages/solution-stack";
-import ChainGuardian from "@/pages/chain-guardian";
 import Enterprises from "@/pages/enterprises";
 import Governments from "@/pages/governments";
 import Investors from "@/pages/investors";
@@ -20,6 +18,10 @@ import DocsIndex from "@/pages/docs-index";
 import FAQPage from "@/pages/faq";
 import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
+import ServicesHub from "@/pages/services-hub";
+import CybersecurityConsultingPage from "@/pages/services-cybersecurity-consulting";
+import SecurityAssessmentsPage from "@/pages/services-security-assessments";
+import PenetrationTestingPage from "@/pages/services-penetration-testing";
 import EnterpriseAssuranceHub from "@/pages/enterprise-assurance";
 import WhenDataBecomesInfrastructure from "@/pages/when-data-becomes-infrastructure";
 import GenomeXAssurancePlatform from "@/pages/genomex-assurance-platform";
@@ -41,16 +43,35 @@ function Router() {
       <Route path="/enterprise-assurance/product-whitepaper">
         {() => <RedirectPage to="/enterprise-assurance" />}
       </Route>
+      <Route path="/services/cybersecurity-consulting" component={CybersecurityConsultingPage} />
+      <Route path="/services/security-assessments" component={SecurityAssessmentsPage} />
+      <Route path="/services/penetration-testing" component={PenetrationTestingPage} />
+      <Route path="/services" component={ServicesHub} />
+      <Route path="/services/cybersecurity">
+        {() => <RedirectPage to="/services/penetration-testing" />}
+      </Route>
+      <Route path="/services/security">
+        {() => <RedirectPage to="/services/security-assessments" />}
+      </Route>
+      <Route path="/services/consulting">
+        {() => <RedirectPage to="/services/cybersecurity-consulting" />}
+      </Route>
       <Route path="/enterprise-assurance" component={EnterpriseAssuranceHub} />
       <Route path="/blockchain-dna" component={BlockchainDNA} />
       <Route path="/cha-ching-analytics" component={ChaChingAnalytics} />
       <Route path="/agent-gx" component={AgentGX} />
-      <Route path="/gen-id" component={GenId} />
+      <Route path="/gen-id">{() => <RedirectPage to="/blockchain-dna" />}</Route>
       <Route path="/solutions/:stackSlug" component={SolutionStackPage} />
+      <Route path="/solutions/cybersecurity-identity">
+        {() => <RedirectPage to="/solutions/enterprise-assurance" />}
+      </Route>
+      <Route path="/solutions/industrial-autonomous">
+        {() => <RedirectPage to="/solutions/artificial-intelligence" />}
+      </Route>
       <Route path="/zero-knight-30">
         {() => <RedirectPage to="/agent-gx" />}
       </Route>
-      <Route path="/chain-guardian" component={ChainGuardian} />
+      <Route path="/chain-guardian">{() => <RedirectPage to="/#products" />}</Route>
       <Route path="/gx-ra">
         {() => <RedirectPage to="/enterprise-assurance" />}
       </Route>

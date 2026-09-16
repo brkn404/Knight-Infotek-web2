@@ -8,8 +8,16 @@ export default function RedirectPage({ to }: { to: string }) {
   const [, setLocation] = useLocation();
   
   useEffect(() => {
-    // Immediate redirect
-    console.log(`[Redirect] Redirecting to: ${to}`);
+    const hashIndex = to.indexOf("#");
+    if (hashIndex >= 0) {
+      const path = to.slice(0, hashIndex) || "/";
+      const hash = to.slice(hashIndex + 1);
+      setLocation(path);
+      requestAnimationFrame(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+      });
+      return;
+    }
     setLocation(to);
   }, [to, setLocation]);
   

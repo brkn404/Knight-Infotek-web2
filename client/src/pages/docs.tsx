@@ -261,7 +261,6 @@ export default function DocsPage() {
     'blockchain-dna': 'BlockchainDNA',
     'cha-ching-analytics': 'Cha-Ching Analytics',
     'zero-knight-30': 'AgentGX',
-    'chain-guardian': 'ChainGuardian',
   };
 
   const productName = productNames[product || ''] || product || 'Product';
@@ -325,16 +324,29 @@ export default function DocsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <Link 
-                href={product === 'blockchain-dna' ? '/blockchain-dna' : 
-                      product === 'cha-ching-analytics' ? '/cha-ching-analytics' :
-                      product === 'zero-knight-30' ? '/agent-gx' :
-                      product === 'chain-guardian' ? '/chain-guardian' : '/'}
-                className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to {productName}
-              </Link>
+              {product === 'blockchain-dna' || product === 'cha-ching-analytics' ? (
+                <a
+                  href={
+                    product === 'blockchain-dna'
+                      ? 'https://blockchain-dna.com'
+                      : 'https://cha-chinganalytics.com'
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to {productName}
+                </a>
+              ) : (
+                <Link
+                  href={product === 'zero-knight-30' ? '/agent-gx' : '/'}
+                  className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to {productName}
+                </Link>
+              )}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
               {productName} Documentation

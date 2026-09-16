@@ -53,28 +53,13 @@ export default function DocsIndex() {
         { name: 'FAQs', path: 'faq' },
       ]
     },
-    {
-      id: 'chain-guardian',
-      name: 'ChainGuardian',
-      description: 'Mempool Monitoring & Hash Verification',
-      icon: Shield,
-      color: 'text-orange-500',
-      docs: [
-        { name: 'Overview', path: 'README' },
-        { name: 'Product Spec Sheet', path: 'PRODUCT_SPEC_SHEET' },
-        { name: 'Architecture', path: 'ARCHITECTURE_DIAGRAM' },
-        { name: 'FAQs', path: 'faqs/GENERAL_FAQS' },
-        { name: 'Documentation Index', path: 'documentation/INDEX' },
-        { name: 'Resources', path: 'resources/INDEX' },
-      ]
-    },
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
         title="Product documentation"
-        description="Technical documentation, APIs, integrations, and FAQs for BlockchainDNA, Cha-Ching Analytics, AgentGX, and ChainGuardian."
+        description="Technical documentation, APIs, integrations, and FAQs for BlockchainDNA, Cha-Ching Analytics, and AgentGX."
         path="/docs"
       />
       <Navbar />

@@ -218,14 +218,14 @@ export function Contact() {
                   className="flex h-10 w-full rounded-md border border-white/10 bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-white"
                 >
                   <option>General Inquiry</option>
-                  <option>IP Licensing Inquiry</option>
-                  <option>Product Acquisition</option>
-                  <option>Cha-Ching Analytics (CCA) - Licensing</option>
-                  <option>BlockchainDNA (BDNA) - Licensing</option>
-                  <option>AgentGX - Licensing</option>
-                  <option>ChainGuardian - Licensing</option>
-                  <option>Implementation & Support Services</option>
-                  <option>Transition Support Contract</option>
+                  <option>Cybersecurity Consulting</option>
+                  <option>Security Assessment</option>
+                  <option>Penetration Testing</option>
+                  <option>Cha-Ching Analytics (CCA)</option>
+                  <option>BlockchainDNA (BDNA)</option>
+                  <option>AgentGX</option>
+                  <option>GenomeX Assurance</option>
+                  <option>Product deployment & integration</option>
                 </select>
               </div>
               

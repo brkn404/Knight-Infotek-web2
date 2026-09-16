@@ -6,6 +6,7 @@ import { Link, useLocation } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageSeo } from "@/components/page-seo";
+import { PRODUCT_SITES } from "@/lib/product-sites";
 import { useEffect } from "react";
 import heroBg from "@assets/generated_images/abstract_high-tech_enterprise_blockchain_background.png";
 
@@ -278,11 +279,11 @@ export default function Enterprises() {
                     <p className="text-sm text-muted-foreground mb-4">
                       Behavioral intelligence platform for blockchain transaction analysis, fraud detection, and compliance.
                     </p>
-                    <Link href="/blockchain-dna">
+                    <a href={PRODUCT_SITES.blockchainDna} target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="sm" className="w-full">
-                        Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                        Visit site <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
-                    </Link>
+                    </a>
                   </CardContent>
                 </Card>
 
@@ -294,11 +295,11 @@ export default function Enterprises() {
                     <p className="text-sm text-muted-foreground mb-4">
                       Real-time compliance and fraud prevention for tokenized assets, stablecoins, and DeFi.
                     </p>
-                    <Link href="/cha-ching-analytics">
+                    <a href={PRODUCT_SITES.chaChingAnalytics} target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="sm" className="w-full">
-                        Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                        Visit site <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
-                    </Link>
+                    </a>
                   </CardContent>
                 </Card>
 
@@ -320,13 +321,13 @@ export default function Enterprises() {
 
                 <Card className="bg-background/50 border-white/10 hover:border-primary/50 transition-all">
                   <CardHeader>
-                    <CardTitle className="text-xl font-display text-white">ChainGuardian</CardTitle>
+                    <CardTitle className="text-xl font-display text-white">GenomeX Assurance</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Content compliance and liability protection for Bitcoin miners, pools, and exchanges.
+                      Enterprise Assurance control plane — measure trust before restore, index, train, deploy, or act.
                     </p>
-                    <Link href="/chain-guardian">
+                    <Link href="/enterprise-assurance">
                       <Button variant="outline" size="sm" className="w-full">
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>

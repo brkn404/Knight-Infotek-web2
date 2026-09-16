@@ -1,5 +1,6 @@
 import { Linkedin } from "lucide-react";
 import { solutionStacks } from "@/data/solution-stacks";
+import { PRODUCT_SITES } from "@/lib/product-sites";
 
 export function Footer() {
   return (
@@ -32,6 +33,13 @@ export function Footer() {
           </div>
           
           <div>
+            <h4 className="font-bold text-white mb-4">Services</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+              <li><a href="/services" className="hover:text-primary transition-colors">All services</a></li>
+              <li><a href="/services/cybersecurity-consulting" className="hover:text-primary transition-colors">Cybersecurity consulting</a></li>
+              <li><a href="/services/security-assessments" className="hover:text-primary transition-colors">Security assessments</a></li>
+              <li><a href="/services/penetration-testing" className="hover:text-primary transition-colors">Penetration testing</a></li>
+            </ul>
             <h4 className="font-bold text-white mb-4">Solution stacks</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               {solutionStacks.map((s) => (
@@ -46,10 +54,26 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="/agent-gx" className="hover:text-primary transition-colors">AgentGX</a></li>
               <li><a href="/enterprise-assurance" className="hover:text-primary transition-colors">GenomeX Assurance</a></li>
-              <li><a href="/gen-id" className="hover:text-primary transition-colors">GenID</a></li>
-              <li><a href="/blockchain-dna" className="hover:text-primary transition-colors">BlockchainDNA</a></li>
-              <li><a href="/cha-ching-analytics" className="hover:text-primary transition-colors">Cha-Ching Analytics</a></li>
-              <li><a href="/chain-guardian" className="hover:text-primary transition-colors">ChainGuardian</a></li>
+              <li>
+                <a
+                  href={PRODUCT_SITES.blockchainDna}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  BlockchainDNA
+                </a>
+              </li>
+              <li>
+                <a
+                  href={PRODUCT_SITES.chaChingAnalytics}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Cha-Ching Analytics
+                </a>
+              </li>
             </ul>
           </div>
           
@@ -69,6 +93,7 @@ export function Footer() {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Knight InfoTek Global - All Rights Reserved</p>
           <div className="flex gap-4">
+            <a href="/services" className="hover:text-primary transition-colors">Services</a>
             <a href="/enterprise-assurance" className="hover:text-primary transition-colors">Assurance</a>
             <a href="/#products" className="hover:text-primary transition-colors">Products</a>
             <a href="/#about" className="hover:text-primary transition-colors">About</a>

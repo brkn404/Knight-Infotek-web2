@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Shield, TrendingUp, ArrowRight } from "lucide-react";
+import { Building2, Shield, Target, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
 export function HowToEngage() {
@@ -8,9 +8,9 @@ export function HowToEngage() {
       icon: Building2,
       title: "For Enterprises",
       items: [
-        "License or acquire the core technology",
-        "Integrate behavioral intelligence into your existing platforms",
-        "Launch new AI-driven products faster"
+        "Deploy BlockchainDNA, CCA, GenomeX Assurance, or AgentGX",
+        "Security assessments and penetration testing",
+        "Cybersecurity consulting and architecture review"
       ],
       link: "/enterprises"
     },
@@ -18,21 +18,21 @@ export function HowToEngage() {
       icon: Shield,
       title: "For Governments",
       items: [
-        "Behavioral sovereignty solutions",
-        "Blockchain intelligence & compliance",
-        "Cyber defense modernization"
+        "Behavioral sovereignty and compliance solutions",
+        "Cyber defense modernization and assessments",
+        "Secure AI and agent governance programs"
       ],
       link: "/governments"
     },
     {
-      icon: TrendingUp,
-      title: "For Investors & Incubators",
+      icon: Target,
+      title: "Security Teams",
       items: [
-        "Acquire entire product lines",
-        "Build startups on top of Knight InfoTek Global IP",
-        "Operate with built-in technical leadership and transition support"
+        "Scoped pen tests and red-team exercises",
+        "Vulnerability and posture assessments",
+        "AI / LLM security audits and remediation guidance"
       ],
-      link: "/#contact"
+      link: "/services"
     }
   ];
 
@@ -45,13 +45,13 @@ export function HowToEngage() {
               HOW TO <span className="text-primary">ENGAGE</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Work With Knight InfoTek
+              Products we build · Security services we deliver
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {audiences.map((audience, index) => {
-              const card = (
+            {audiences.map((audience, index) => (
+              <Link key={index} href={audience.link} className="block text-inherit no-underline">
                 <Card className="bg-background/50 border-white/10 hover:border-primary/50 transition-all duration-300 h-full cursor-pointer group">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
@@ -78,22 +78,11 @@ export function HowToEngage() {
                     </div>
                   </CardContent>
                 </Card>
-              );
-              const isHashContact = audience.link.startsWith("/#");
-              return isHashContact ? (
-                <a key={index} href={audience.link} className="block text-inherit no-underline">
-                  {card}
-                </a>
-              ) : (
-                <Link key={index} href={audience.link} className="block text-inherit no-underline">
-                  {card}
-                </Link>
-              );
-            })}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
-

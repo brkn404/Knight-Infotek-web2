@@ -33,6 +33,12 @@ export function Navbar() {
 
   const NavItems = () => (
     <>
+      <Link
+        href="/services"
+        className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+      >
+        Services
+      </Link>
       <a
         href="/#products"
         onClick={(e) => handleHashClick(e, "products")}
@@ -75,6 +81,13 @@ export function Navbar() {
 
   const MobileNavItems = () => (
     <>
+      <Link
+        href="/services"
+        className="text-base font-medium text-gray-200"
+        onClick={() => setIsOpen(false)}
+      >
+        Services
+      </Link>
       <a
         href="/#products"
         onClick={(e) => {

@@ -7,12 +7,13 @@ import { Button } from "@/components/ui/button";
 import { getSolutionStack } from "@/data/solution-stacks";
 import { SolutionProductCard } from "@/components/solution-product-card";
 import { stackHeroImages } from "@/lib/stack-media";
+import { getProductGridClass } from "@/lib/stack-layout";
 import { ArrowLeft } from "lucide-react";
 
 export default function SolutionStackPage() {
   const { stackSlug } = useParams<{ stackSlug: string }>();
   const stack = getSolutionStack(stackSlug);
-  const heroImg = stackSlug ? stackHeroImages[stackSlug] : undefined;
+  const heroImg = stack ? stackHeroImages[stack.slug] : undefined;
 
   if (!stack || !heroImg) {
     return (
@@ -123,15 +124,7 @@ export default function SolutionStackPage() {
             product for full detail.
           </p>
 
-          <div
-            className={`grid gap-6 max-w-6xl mx-auto ${
-              stack.products.length === 1
-                ? "md:grid-cols-1 max-w-lg mx-auto"
-                : stack.products.length === 2
-                  ? "md:grid-cols-2"
-                  : "md:grid-cols-2 xl:grid-cols-3"
-            }`}
-          >
+          <div className={getProductGridClass(stack.products.length)}>
             {stack.products.map((p, i) => (
               <SolutionProductCard key={p.id} product={p} index={i} />
             ))}

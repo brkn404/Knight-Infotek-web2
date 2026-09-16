@@ -1,22 +1,20 @@
 import {
   Bot,
-  Shield,
   ShieldCheck,
   Landmark,
-  Factory,
   Activity,
   Dna,
-  Lock,
-  Fingerprint,
   type LucideIcon,
 } from "lucide-react";
 import type { StackImageKey } from "@/lib/stack-media";
+import { PRODUCT_SITES } from "@/lib/product-sites";
 
 export interface StackProduct {
   id: string;
   title: string;
   subtitle: string;
   description: string;
+  /** Internal path or absolute product-site URL. */
   link: string;
   icon: LucideIcon;
   imageKey: StackImageKey;
@@ -38,19 +36,87 @@ export interface SolutionStack {
 
 export const solutionStacks: SolutionStack[] = [
   {
+    slug: "fintech",
+    title: "FinTech & on-chain intelligence",
+    headline: "LIVE",
+    headlineAccent: "PRODUCTS",
+    badge: "blockchain-dna.com · cha-chinganalytics.com",
+    badgeIcon: Landmark,
+    intro:
+      "Launched product sites for the behavioral evidence store and the institutional desk that reads it — GenomeX on chain, Life Arc depth, named watch for counterparty risk.",
+    whyTitle: "Why these products lead",
+    whyBullets: [
+      "BlockchainDNA fingerprints chains; Cha-Ching Analytics reads the store for named addresses.",
+      "Desks need observation and Life Arc evidence — not another chain-scale scanner.",
+      "Knight InfoTek licensing and API tiers sit alongside the live product sites.",
+    ],
+    products: [
+      {
+        id: "blockchain-dna",
+        title: "BlockchainDNA",
+        subtitle: "Behavioral overlay & evidence store",
+        description:
+          "GenomeX behavioral intelligence on live chains — observation, freshness, coverage, and Life Arc evidence other products read.",
+        link: PRODUCT_SITES.blockchainDna,
+        icon: Dna,
+        imageKey: "dna",
+        features: ["Multi-chain store", "Life Arc", "GenomeX"],
+      },
+      {
+        id: "cha-ching",
+        title: "Cha-Ching Analytics",
+        subtitle: "Institutional named watch",
+        description:
+          "Your named counterparty list on the BlockchainDNA store — Attention, Facts, Convergence, and Transact now for desks.",
+        link: PRODUCT_SITES.chaChingAnalytics,
+        icon: Activity,
+        imageKey: "cca",
+        features: ["Named watch", "Reads store", "Desk workflow"],
+      },
+    ],
+  },
+  {
+    slug: "enterprise-assurance",
+    title: "Enterprise Assurance",
+    headline: "TRUST",
+    headlineAccent: "BEFORE USE",
+    badge: "GenomeX platform · five domains · recovery to agents",
+    badgeIcon: ShieldCheck,
+    intro:
+      "Measure trust before restore, index, train, deploy, or act — ALLOW / DENY / CONFIRM with retainable evidence across recovery, knowledge, ML, agents, and software.",
+    whyTitle: "Why assurance matters now",
+    whyBullets: [
+      "Data and digital assets behave like operational infrastructure in AI-native enterprises.",
+      "Backup, EDR, and model firewalls answer narrower questions than pre-use trust.",
+      "GenomeX is the vendor-agnostic overlay; GX-GRA is the recovery domain, not the whole platform.",
+    ],
+    products: [
+      {
+        id: "genomex-assurance",
+        title: "GenomeX Assurance Platform",
+        subtitle: "Enterprise Assurance control plane",
+        description:
+          "One processing spine, five domain gates, and proof-before-use decisions — papers, architecture, and brochure on the Assurance hub.",
+        link: "/enterprise-assurance",
+        icon: ShieldCheck,
+        imageKey: "gxra",
+        features: ["Five domains", "ALLOW / DENY / CONFIRM", "platform_genome_128"],
+      },
+    ],
+  },
+  {
     slug: "artificial-intelligence",
-    title: "Artificial Intelligence",
+    title: "AI & autonomous systems",
     headline: "AGENT",
     headlineAccent: "GOVERNANCE",
-    badge: "AgentGX family · GenomeX · proof-of-behavior",
+    badge: "AgentGX · regulated services · industrial autonomy",
     badgeIcon: Bot,
     intro:
-      "Runtime governance for autonomous AI agents — identity, permissions, behavioral policy, and cryptographic proof before execution. Built for finance, government, healthcare, enterprise automation, and industrial autonomy.",
+      "Runtime governance for autonomous AI agents — identity, permissions, behavioral policy, and cryptographic proof before execution. Licensed professionals, enterprise automation, and OT-adjacent workloads.",
     whyTitle: "Why this stack matters",
     whyBullets: [
       "Autonomous AI is entering regulated, high-liability domains.",
       "Most tools do not govern agent behavior at runtime.",
-      "Regulators and insurers expect verifiable proof — not slide decks.",
       "AgentGX makes autonomous AI governable, provable, and scalable.",
     ],
     products: [
@@ -67,134 +133,20 @@ export const solutionStacks: SolutionStack[] = [
       },
     ],
   },
-  {
-    slug: "cybersecurity-identity",
-    title: "Cybersecurity & Identity",
-    headline: "BEHAVIORAL",
-    headlineAccent: "DEFENSE",
-    badge: "Endpoint · identity continuity · recovery",
-    badgeIcon: Shield,
-    intro:
-      "A behavior-driven layer that detects, contains, and recovers based on how systems and identities behave — not signatures alone. GenID for behavior-derived identity; GenomeX Assurance for trust-before-use across recovery and related domains.",
-    whyTitle: "Why it's key",
-    whyBullets: [
-      "AI-driven attacks bypass signature-only security.",
-      "Identity compromise is often behavioral, not just credential theft.",
-      "Recovery trust matters as much as recovery speed.",
-      "Knight InfoTek Global unifies these themes with the same behavioral DNA as AgentGX.",
-    ],
-    products: [
-      {
-        id: "genid",
-        title: "GenID",
-        subtitle: "Behavior-derived universal identity",
-        description:
-          "Registry for nine entity classes — humans, wallets, contracts, AI agents, DAOs, issuers, and more. Cross-chain resolution, attestation, and behavioral verification — part of BlockchainDNA.",
-        link: "/gen-id",
-        icon: Fingerprint,
-        imageKey: "genid",
-        features: ["9 entity types", "Cross-chain", "Behavior-first", "ERC-8004 aligned"],
-      },
-      {
-        id: "genomex-assurance",
-        title: "GenomeX Assurance Platform",
-        subtitle: "Enterprise Assurance control plane",
-        description:
-          "Measure trust before use across recovery, knowledge, ML, agents, and software — ALLOW / DENY / CONFIRM with retainable evidence. Recovery domain: GX-GRA.",
-        link: "/enterprise-assurance",
-        icon: ShieldCheck,
-        imageKey: "gxra",
-        features: ["Five domains", "ALLOW / DENY / CONFIRM", "platform_genome_128"],
-      },
-    ],
-  },
-  {
-    slug: "fintech",
-    title: "FinTech",
-    headline: "BEHAVIORAL",
-    headlineAccent: "COMPLIANCE",
-    badge: "Chains · stablecoins · tokenized assets · L1 policy",
-    badgeIcon: Landmark,
-    intro:
-      "A behavioral compliance layer for blockchains, stablecoins, and tokenized assets — before, during, and after transactions. Finance is shifting from post-hoc audits to continuous compliance.",
-    whyTitle: "Why it's key",
-    whyBullets: [
-      "Stablecoins, RWAs, and L1s face increasing regulatory pressure.",
-      "Existing tools often analyze transactions — not behavior over time.",
-      "Continuous compliance needs lineage, provenance, and preventative controls.",
-    ],
-    products: [
-      {
-        id: "blockchain-dna",
-        title: "BlockchainDNA",
-        subtitle: "Universal identity & provenance",
-        description:
-          "Behavioral analysis of wallets, contracts, and flows — raw chain data becomes behavioral risk, lineage, and provenance for compliance scoring.",
-        link: "/blockchain-dna",
-        icon: Dna,
-        imageKey: "dna",
-        features: ["Identity layer", "Lineage", "Risk foundation"],
-      },
-      {
-        id: "cha-ching",
-        title: "Cha-Ching Analytics",
-        subtitle: "Autonomous compliance infrastructure",
-        description:
-          "Real-time, preventative compliance for stablecoins and RWAs — issuer behavior, minting, reserves, and drift for regulators, issuers, and exchanges.",
-        link: "/cha-ching-analytics",
-        icon: Activity,
-        imageKey: "cca",
-        features: ["Real-time scoring", "Reserve integrity", "Regulator-ready"],
-      },
-      {
-        id: "chain-guardian",
-        title: "ChainGuardian",
-        subtitle: "Pre-block content safety",
-        description:
-          "Mining-layer policy for Bitcoin and L1s — hash-only / privacy-preserving inspection before block inclusion.",
-        link: "/chain-guardian",
-        icon: Lock,
-        imageKey: "cg",
-        features: ["Mempool firewall", "Hash-only", "Liability shield"],
-      },
-    ],
-  },
-  {
-    slug: "industrial-autonomous",
-    title: "Industrial & autonomous",
-    headline: "AUTONOMOUS",
-    headlineAccent: "SYSTEMS",
-    badge: "Manufacturing · Factory 4.0 · robots · AVs · drones",
-    badgeIcon: Factory,
-    intro:
-      "Behavioral governance for cyber-physical and fully autonomous systems — safety envelopes, drift detection, and tamper-evident records for actions in the real world. Extends the AgentGX model via AutonomousGX.",
-    whyTitle: "Why it's key",
-    whyBullets: [
-      "Autonomous systems create physical-world risk, not only software errors.",
-      "Failures become safety, regulatory, and liability events.",
-      "Provable, compliant autonomy requires runtime governance and evidence.",
-    ],
-    products: [
-      {
-        id: "autonomousgx-line",
-        title: "Industrial & AutonomousGX",
-        subtitle: "Factory 4.0 · fleets · critical infrastructure",
-        description:
-          "Policy-driven control of physical actions, behavioral DNA for robots and vehicles, and cryptographic proof of safety compliance — one path from AgentGX into OT-adjacent workloads.",
-        link: "/agent-gx",
-        icon: Factory,
-        imageKey: "industrial",
-        features: ["Safety envelopes", "Drift & anomaly", "Audit evidence"],
-      },
-    ],
-  },
 ];
 
 const stackBySlug = new Map(solutionStacks.map((s) => [s.slug, s]));
 
+/** Legacy stack URLs from earlier site versions. */
+export const legacyStackRedirects: Record<string, string> = {
+  "cybersecurity-identity": "enterprise-assurance",
+  "industrial-autonomous": "artificial-intelligence",
+};
+
 export function getSolutionStack(slug: string | undefined): SolutionStack | undefined {
   if (!slug) return undefined;
-  return stackBySlug.get(slug);
+  const resolved = legacyStackRedirects[slug] ?? slug;
+  return stackBySlug.get(resolved);
 }
 
 export function getAllStackSlugs(): string[] {
