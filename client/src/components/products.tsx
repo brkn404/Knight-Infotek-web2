@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "wouter";
-import { solutionStacks } from "@/data/solution-stacks";
+import { solutionStacks, type SolutionStack } from "@/data/solution-stacks";
+
+/** Stacks whose product cards link straight to live sites — no /solutions/ overview. */
+const STACKS_WITHOUT_OVERVIEW = new Set<SolutionStack["slug"]>([
+  "fintech",
+  "enterprise-assurance",
+]);
 import { SolutionProductCard } from "@/components/solution-product-card";
 import { getProductGridClass } from "@/lib/stack-layout";
 
@@ -29,25 +35,25 @@ export function Products() {
               transition={{ duration: 0.4, delay: stackIndex * 0.05 }}
               className="rounded-2xl border border-white/10 bg-card/20 p-6 md:p-8"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6 md:mb-8">
-                <div className="max-w-2xl">
-                  <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
-                    {stack.badge}
-                  </p>
-                  <h3 className="text-2xl md:text-3xl font-bold font-display text-white mb-2">
-                    {stack.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {stack.intro}
-                  </p>
-                </div>
-                <Link
-                  href={`/solutions/${stack.slug}`}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/90 transition-colors shrink-0 pt-1"
-                >
-                  Stack overview
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
+              <div className="mb-6 md:mb-8 max-w-2xl">
+                <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
+                  {stack.badge}
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold font-display text-white mb-2">
+                  {stack.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {stack.intro}
+                </p>
+                {!STACKS_WITHOUT_OVERVIEW.has(stack.slug) && (
+                  <Link
+                    href={`/solutions/${stack.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/90 transition-colors mt-4"
+                  >
+                    Stack overview
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                )}
               </div>
 
               <div className={getProductGridClass(stack.products.length)}>
