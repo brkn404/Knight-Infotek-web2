@@ -6,30 +6,13 @@ import { Link, useLocation } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageSeo } from "@/components/page-seo";
-import { useEffect } from "react";
 import heroBg from "@assets/generated_images/futuristic_zero_trust_security_concept.png";
 
 export default function Governments() {
-  const [, setLocation] = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [, navigate] = useLocation();
 
   const navigateToSection = (sectionId: string) => {
-    setLocation('/');
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const offset = 100;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }, 200);
+    navigate(`/#${sectionId}`);
   };
 
   return (

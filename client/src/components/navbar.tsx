@@ -1,34 +1,25 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { scrollToHash } from "@/lib/scroll";
 import logo from "@assets/knight-infotek-logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [pathname, navigate] = useLocation();
 
   const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
     e.preventDefault();
-    const currentPath = window.location.pathname;
 
-    if (currentPath !== "/") {
-      window.location.href = `/#${hash}`;
-    } else {
-      setTimeout(() => {
-        const element = document.getElementById(hash);
-        if (element) {
-          const offset = 100;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth",
-          });
-        }
-      }, 10);
+    if (pathname !== "/") {
+      navigate(`/#${hash}`);
+      return;
     }
+
+    window.history.pushState(null, "", `/#${hash}`);
+    scrollToHash(hash, "smooth");
   };
 
   const NavItems = () => (
@@ -55,20 +46,7 @@ export function Navbar() {
       </a>
       <a
         href="/#contact"
-        onClick={(e) => {
-          if (window.location.pathname === "/") {
-            e.preventDefault();
-            setTimeout(() => {
-              const element = document.getElementById("contact");
-              if (element) {
-                const offset = 100;
-                const elementPosition = element.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-              }
-            }, 10);
-          }
-        }}
+        onClick={(e) => handleHashClick(e, "contact")}
         className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
       >
         Contact
@@ -112,18 +90,7 @@ export function Navbar() {
         href="/#contact"
         onClick={(e) => {
           setIsOpen(false);
-          if (window.location.pathname === "/") {
-            e.preventDefault();
-            setTimeout(() => {
-              const element = document.getElementById("contact");
-              if (element) {
-                const offset = 100;
-                const elementPosition = element.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-              }
-            }, 10);
-          }
+          handleHashClick(e, "contact");
         }}
         className="text-base font-medium text-gray-200"
       >

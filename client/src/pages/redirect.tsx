@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
+import { scrollToHash } from "@/lib/scroll";
 
 /**
  * Redirect page component that redirects to the correct /docs/ path
@@ -14,7 +15,7 @@ export default function RedirectPage({ to }: { to: string }) {
       const hash = to.slice(hashIndex + 1);
       setLocation(path);
       requestAnimationFrame(() => {
-        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+        scrollToHash(hash, "smooth");
       });
       return;
     }

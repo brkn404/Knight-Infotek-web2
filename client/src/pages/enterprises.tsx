@@ -7,30 +7,13 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageSeo } from "@/components/page-seo";
 import { PRODUCT_SITES } from "@/lib/product-sites";
-import { useEffect } from "react";
 import heroBg from "@assets/generated_images/abstract_high-tech_enterprise_blockchain_background.png";
 
 export default function Enterprises() {
-  const [, setLocation] = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [, navigate] = useLocation();
 
   const navigateToSection = (sectionId: string) => {
-    setLocation('/');
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const offset = 100;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }, 200);
+    navigate(`/#${sectionId}`);
   };
 
   return (

@@ -27,6 +27,7 @@ import WhenDataBecomesInfrastructure from "@/pages/when-data-becomes-infrastruct
 import GenomeXAssurancePlatform from "@/pages/genomex-assurance-platform";
 import NotFound from "@/pages/not-found";
 import RedirectPage from "@/pages/redirect";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 function Router() {
   return (
@@ -139,6 +140,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
+        <ScrollToTop />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>

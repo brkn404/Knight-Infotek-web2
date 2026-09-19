@@ -21,6 +21,7 @@ import { Link } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageSeo } from "@/components/page-seo";
+import { scrollToHash } from "@/lib/scroll";
 
 import heroBg from "@assets/generated_images/futuristic_zero_trust_security_concept.png";
 import defenseImg from "@assets/generated_images/active_defense_system_visualization.png";
@@ -177,7 +178,16 @@ export default function AgentGX() {
                 </a>
               </Button>
               <Button asChild variant="outline" className="font-display border-white/20">
-                <a href="#how-it-works">See how it works</a>
+                <a
+                  href="#how-it-works"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.history.pushState(null, "", "#how-it-works");
+                    scrollToHash("how-it-works", "smooth");
+                  }}
+                >
+                  See how it works
+                </a>
               </Button>
               <Button asChild variant="outline" className="font-display border-white/20">
                 <a href="/genomex-assurance-platform">GenomeX Assurance Platform</a>
