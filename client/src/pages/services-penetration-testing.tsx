@@ -6,7 +6,7 @@ export default function PenetrationTestingPage() {
     <ServicePageLayout
       title="Penetration Testing"
       eyebrow="Offensive security"
-      description="External, internal, application, and physical testing — find weaknesses before adversaries do, with clear remediation paths."
+      description="External, internal, application, and physical testing, find weaknesses before adversaries do, with clear remediation paths."
       path="/services/penetration-testing"
       blocks={penTestBlocks}
     />

@@ -79,7 +79,7 @@ const DOMAINS = [
     lane: "#20e0a0",
     question: "Can this release be trusted before deploy?",
     artifact: "Release gate",
-    detail: "Provenance, lineage, and dependency posture — CVE is input, not the decision.",
+    detail: "Provenance, lineage, and dependency posture, CVE is input, not the decision.",
     policy: "SBOM / CBOM · release gate",
     receipt: "Release gate receipt",
     focus: "Deploy trust, not vulnerability counts alone.",

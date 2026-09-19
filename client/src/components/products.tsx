@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "wouter";
 import { solutionStacks, type SolutionStack } from "@/data/solution-stacks";
 
-/** Stacks whose product cards link straight to live sites — no /solutions/ overview. */
+/** Stacks whose product cards link straight to live sites, no /solutions/ overview. */
 const STACKS_WITHOUT_OVERVIEW = new Set<SolutionStack["slug"]>([
   "fintech",
   "enterprise-assurance",

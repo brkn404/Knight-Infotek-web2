@@ -89,7 +89,7 @@ export default function Investors() {
                 Build on <span className="text-primary">Proven IP</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center leading-relaxed">
-                Knight InfoTek Global has developed patent-backed technologies in behavioral intelligence, AI cybersecurity, and blockchain infrastructure. As an investor or incubator, you can acquire complete product lines, license core IP, or build new companies on top of proven technology—with full transition support from the original architects.
+                Knight InfoTek Global has developed patent-backed technologies in behavioral intelligence, AI cybersecurity, and blockchain infrastructure. As an investor or incubator, you can acquire complete product lines, license core IP, or build new companies on top of proven technology, with full transition support from the original architects.
               </p>
             </div>
 
@@ -125,7 +125,7 @@ export default function Investors() {
                     </li>
                   </ul>
                   <p className="text-xs text-primary font-medium italic">
-                    "It's gone" — Product fully transferred
+                    "It's gone", Product fully transferred
                   </p>
                 </CardContent>
               </Card>
@@ -196,7 +196,7 @@ export default function Investors() {
                     </li>
                   </ul>
                   <p className="text-xs text-primary font-medium italic">
-                    Recurring revenue — IP ownership retained
+                    Recurring revenue, IP ownership retained
                   </p>
                 </CardContent>
               </Card>
@@ -310,7 +310,7 @@ export default function Investors() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Governed AI agents for regulated professionals—GenomeX behavioral intelligence, runtime policy enforcement, and Proof-of-Behavior compliance.
+                      Governed AI agents for regulated professionals, GenomeX behavioral intelligence, runtime policy enforcement, and Proof-of-Behavior compliance.
                     </p>
                     <div className="flex gap-2">
                       <Link href="/agent-gx">
@@ -329,7 +329,7 @@ export default function Investors() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Vendor-agnostic trust overlay across recovery, knowledge, ML, agents, and software — ALLOW / DENY / CONFIRM with retainable evidence.
+                      Vendor-agnostic trust overlay across recovery, knowledge, ML, agents, and software, ALLOW / DENY / CONFIRM with retainable evidence.
                     </p>
                     <div className="flex gap-2">
                       <a href="/genomex-assurance-platform">

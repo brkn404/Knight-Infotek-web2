@@ -2,7 +2,7 @@
   {
     "id": 31,
     "title": "AI Agents in the Wild: Recent Incidents and the Case for Controlled Agency",
-    "excerpt": "2026 framework CVEs plus reported supply-chain and field cases: LiteLLM, Hugging Face, ClawHavoc, Semantic Kernel, and more. Why controlled agency needs GX-GSA, GX-GKA, GX-GAA, and AgentGX — not patching alone.",
+    "excerpt": "2026 framework CVEs plus reported supply-chain and field cases: LiteLLM, Hugging Face, ClawHavoc, Semantic Kernel, and more. Why controlled agency needs GX-GSA, GX-GKA, GX-GAA, and AgentGX, not patching alone.",
     "date": "September 4, 2026",
     "category": "AI",
     "readTime": "15 min read",
@@ -32,7 +32,7 @@
   {
     "id": 28,
     "title": "Beyond Backups: Why the Cyber Recovery Market Still Has an Assurance Gap",
-    "excerpt": "Enterprises invest heavily in backup and immutable recovery — yet boards and insurers still ask whether a restore is truly safe. An industry-wide look at the assurance gap, regulation, and the shift from data integrity to provable resilience.",
+    "excerpt": "Enterprises invest heavily in backup and immutable recovery, yet boards and insurers still ask whether a restore is truly safe. An industry-wide look at the assurance gap, regulation, and the shift from data integrity to provable resilience.",
     "date": "May 18, 2026",
     "category": "Cybersecurity",
     "readTime": "7 min read",
@@ -102,7 +102,7 @@
   {
     "id": 22,
     "title": "A Day in the Life With ZeroKnight30",
-    "excerpt": "Let's imagine you're responsible for protecting critical systems. Here's what a normal (busy) day looks like with ZeroKnight30 in your environment—from detecting behavioral anomalies to instant selective recovery.",
+    "excerpt": "Let's imagine you're responsible for protecting critical systems. Here's what a normal (busy) day looks like with ZeroKnight30 in your environment, from detecting behavioral anomalies to instant selective recovery.",
     "date": "December 24, 2025",
     "category": "Cybersecurity",
     "readTime": "12 min read",
@@ -142,7 +142,7 @@
   {
     "id": 4,
     "title": "The AI Agent Economy: Why Identity and Governance Matter on Blockchain",
-    "excerpt": "The convergence of artificial intelligence and blockchain technology is creating unprecedented opportunities for autonomous economic agents. These AI agents—capable of making independent decisions, executing transactions, and interacting with smart contracts—represent the next evolution of blockchain applications.",
+    "excerpt": "The convergence of artificial intelligence and blockchain technology is creating unprecedented opportunities for autonomous economic agents. These AI agents, capable of making independent decisions, executing transactions, and interacting with smart contracts, represent the next evolution of blockchain applications.",
     "date": "April 22, 2025",
     "category": "AI",
     "readTime": "9 min read",
@@ -272,7 +272,7 @@
   {
     "id": 19,
     "title": "Tokenized Real-World Assets: The Compliance Challenge",
-    "excerpt": "The tokenization of real-world assets (RWAs) represents one of the most significant opportunities in the digital asset space. By converting physical assets—real estate, commodities, intellectual property, and more—into blockchain-based tokens, businesses can unlock liquidity, enable fractional ownership, and create new investment opportunities.",
+    "excerpt": "The tokenization of real-world assets (RWAs) represents one of the most significant opportunities in the digital asset space. By converting physical assets, real estate, commodities, intellectual property, and more, into blockchain-based tokens, businesses can unlock liquidity, enable fractional ownership, and create new investment opportunities.",
     "date": "November 1, 2025",
     "category": "Tokenization",
     "readTime": "8 min read",
@@ -292,7 +292,7 @@
   {
     "id": 14,
     "title": "MiCA Implementation: Navigating Multi-Jurisdiction Compliance in 2025",
-    "excerpt": "The European Union's Markets in Crypto-Assets (MiCA) regulation came into full effect in 2024, marking one of the most comprehensive regulatory frameworks for digital assets in the world. For crypto businesses operating across borders, MiCA represents both opportunity and challenge—a unified framework that promises regulatory clarity, but also complex requirements that demand sophisticated compliance infrastructure.",
+    "excerpt": "The European Union's Markets in Crypto-Assets (MiCA) regulation came into full effect in 2024, marking one of the most comprehensive regulatory frameworks for digital assets in the world. For crypto businesses operating across borders, MiCA represents both opportunity and challenge, a unified framework that promises regulatory clarity, but also complex requirements that demand sophisticated compliance infrastructure.",
     "date": "February 28, 2025",
     "category": "Compliance",
     "readTime": "9 min read",
@@ -302,7 +302,7 @@
   {
     "id": 20,
     "title": "Zero-Day Defense: Why Behavioral Analysis Beats Signature-Based Security",
-    "excerpt": "In early 2024, a zero-day vulnerability in a widely-used enterprise software platform was discovered—but not by security researchers. Instead, attackers had been exploiting it for months, using it to gain initial access, escalate privileges, and maintain persistence across hundreds of organizations.",
+    "excerpt": "In early 2024, a zero-day vulnerability in a widely-used enterprise software platform was discovered, but not by security researchers. Instead, attackers had been exploiting it for months, using it to gain initial access, escalate privileges, and maintain persistence across hundreds of organizations.",
     "date": "February 27, 2025",
     "category": "Cybersecurity",
     "readTime": "9 min read",

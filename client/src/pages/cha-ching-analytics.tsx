@@ -12,7 +12,7 @@ export default function ChaChingAnalytics() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
         title="Cha-Ching Analytics"
-        description="Institutional named watch on the BlockchainDNA store — Life Arc depth, desk workflow, and Transact now for the addresses you name."
+        description="Institutional named watch on the BlockchainDNA store, Life Arc depth, desk workflow, and Transact now for the addresses you name."
         path="/cha-ching-analytics"
       />
       <Navbar />
@@ -39,7 +39,7 @@ export default function ChaChingAnalytics() {
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
                 Cha-Ching Analytics is a desk product on top of the BlockchainDNA evidence store.
                 You name up to fifty addresses; CCA reads observation, freshness, coverage, and
-                Life Arc — it does not fingerprint chains or write genomes itself.
+                Life Arc, it does not fingerprint chains or write genomes itself.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -66,7 +66,7 @@ export default function ChaChingAnalytics() {
               <h2 className="text-lg font-bold text-white mb-2 font-display">Your named list</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Empty until you add real addresses. Institutional desks, exchange risk, and DeFi
-                ops — not a chain-scale scanner.
+                ops, not a chain-scale scanner.
               </p>
             </div>
             <div className="rounded-xl border border-white/10 bg-card/40 p-6">
@@ -101,7 +101,7 @@ export default function ChaChingAnalytics() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium"
           >
-            BlockchainDNA — the evidence store CCA reads
+            BlockchainDNA, the evidence store CCA reads
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

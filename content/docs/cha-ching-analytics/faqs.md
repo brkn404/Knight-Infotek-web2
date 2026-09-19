@@ -278,7 +278,7 @@ CCA supports **multi-blockchain monitoring** including:
 
 **Pricing Models**:
 
-1. **SaaS**: $25–50K/mo base + $0.001–0.01 per transaction
+1. **SaaS**: $25-50K/mo base + $0.001-0.01 per transaction
 2. **Hybrid**: $250K+/yr license + support
 3. **GovTech**: Multi-million annual contracts
 4. **Optional**: Issuer pays in native tokens

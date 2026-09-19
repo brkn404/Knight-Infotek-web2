@@ -6,7 +6,7 @@ export default function CybersecurityConsultingPage() {
     <ServicePageLayout
       title="Cybersecurity Consulting"
       eyebrow="Strategic guidance"
-      description="Architecture, program review, and AI governance advisory — practical guidance from practitioners who also build security products."
+      description="Architecture, program review, and AI governance advisory, practical guidance from practitioners who also build security products."
       path="/services/cybersecurity-consulting"
       blocks={consultingBlocks}
       showMethodology={false}

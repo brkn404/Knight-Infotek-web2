@@ -6,7 +6,7 @@ export default function SecurityAssessmentsPage() {
     <ServicePageLayout
       title="Security Assessments"
       eyebrow="Evaluate before you invest"
-      description="Structured assessments across vulnerability, AI/LLM risk, red-team simulation, and threat hunting — with findings you can act on."
+      description="Structured assessments across vulnerability, AI/LLM risk, red-team simulation, and threat hunting, with findings you can act on."
       path="/services/security-assessments"
       blocks={assessmentBlocks}
     />

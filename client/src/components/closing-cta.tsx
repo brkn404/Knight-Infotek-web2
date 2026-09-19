@@ -11,7 +11,7 @@ export function ClosingCTA() {
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            From GenomeX Assurance and AgentGX to veteran-led pen testing and consulting —
+            From GenomeX Assurance and AgentGX to veteran-led pen testing and consulting,
             Knight InfoTek delivers behavioral trust infrastructure and the services to protect it.
           </p>
         </div>

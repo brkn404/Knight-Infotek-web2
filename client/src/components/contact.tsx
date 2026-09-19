@@ -80,7 +80,7 @@ export function Contact() {
             <p className="text-muted-foreground mb-8 text-lg">
               Interested in licensing or acquiring Knight InfoTek Global technologies? Reach us in the{" "}
               <strong className="text-white">United States</strong> or{" "}
-              <strong className="text-white">Ireland</strong> — same email and web presence worldwide.
+              <strong className="text-white">Ireland</strong>, same email and web presence worldwide.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-8 mb-8">

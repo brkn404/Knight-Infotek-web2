@@ -89,7 +89,7 @@ export default function Enterprises() {
                 Why Enterprises Choose <span className="text-primary">Knight InfoTek</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center leading-relaxed">
-                Knight InfoTek Global has developed foundational IP in behavioral intelligence, AI-driven cybersecurity, and blockchain infrastructure. As the exclusive U.S. partner, Knight InfoTek helps enterprises license, acquire, and integrate these technologies into their existing platforms—reducing development time from years to months.
+                Knight InfoTek Global has developed foundational IP in behavioral intelligence, AI-driven cybersecurity, and blockchain infrastructure. As the exclusive U.S. partner, Knight InfoTek helps enterprises license, acquire, and integrate these technologies into their existing platforms, reducing development time from years to months.
               </p>
             </div>
 
@@ -325,7 +325,7 @@ export default function Enterprises() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Enterprise Assurance control plane — measure trust before restore, index, train, deploy, or act.
+                      Enterprise Assurance control plane, measure trust before restore, index, train, deploy, or act.
                     </p>
                     <a href="/genomex-assurance-platform">
                       <Button variant="outline" size="sm" className="w-full">

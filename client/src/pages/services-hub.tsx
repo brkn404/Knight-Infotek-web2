@@ -11,7 +11,7 @@ export default function ServicesHub() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
         title="Services"
-        description="Cybersecurity consulting, security assessments, and penetration testing from Knight InfoTek — plus in-house products for behavioral trust and Enterprise Assurance."
+        description="Cybersecurity consulting, security assessments, and penetration testing from Knight InfoTek, plus in-house products for behavioral trust and Enterprise Assurance."
         path="/services"
       />
       <Navbar />
@@ -26,7 +26,7 @@ export default function ServicesHub() {
             Cybersecurity <span className="text-primary">Services</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Veteran-led consulting, assessments, and penetration testing — alongside the
+            Veteran-led consulting, assessments, and penetration testing, alongside the
             in-house products we build for behavioral trust, FinTech, and Enterprise Assurance.
           </p>
         </div>
@@ -86,8 +86,8 @@ export default function ServicesHub() {
                 In-house products
               </h2>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                We also build and operate our own product lines — BlockchainDNA, Cha-Ching
-                Analytics, GenomeX Assurance, and AgentGX — with consulting available for
+                We also build and operate our own product lines, BlockchainDNA, Cha-Ching
+                Analytics, GenomeX Assurance, and AgentGX, with consulting available for
                 deployment and integration where it helps your team.
               </p>
               <Link
@@ -110,7 +110,7 @@ export default function ServicesHub() {
           </h2>
           <p className="text-muted-foreground mb-8 leading-relaxed">
             Knight InfoTek is a Service-Disabled Veteran-Owned Small Business with decades of
-            hands-on offensive and defensive security experience — red team, penetration testing,
+            hands-on offensive and defensive security experience, red team, penetration testing,
             and enterprise architecture.
           </p>
           <Button asChild size="lg" className="font-display">

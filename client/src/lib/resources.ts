@@ -42,7 +42,7 @@ export const assuranceResources: AssuranceResource[] = [
     id: "product-whitepaper",
     title: "GenomeX Assurance Platform Whitepaper",
     subtitle:
-      "Buyer-facing product view of domain gates, evidence, and deployment — inheriting the platform architecture.",
+      "Buyer-facing product view of domain gates, evidence, and deployment, inheriting the platform architecture.",
     cta: "Download the whitepaper",
     href: "/resources/Knight-InfoTek_GenomeX-Assurance-Platform_Whitepaper_2026.pdf",
     pdfHref: "/resources/Knight-InfoTek_GenomeX-Assurance-Platform_Whitepaper_2026.pdf",

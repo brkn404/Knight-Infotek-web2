@@ -120,7 +120,7 @@ export default function SolutionStackPage() {
             PRODUCTS IN THIS <span className="text-primary">STACK</span>
           </h2>
           <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12 text-sm md:text-base">
-            Same look and card layout as the home page — organized by domain. Open a
+            Same look and card layout as the home page, organized by domain. Open a
             product for full detail.
           </p>
 

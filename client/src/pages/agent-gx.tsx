@@ -11,6 +11,9 @@ import {
   ArrowRight,
   CheckCircle2,
   XCircle,
+  ChevronDown,
+  Layers,
+  Plug,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -52,12 +55,65 @@ const DECISIONS = [
   { label: "ALLOW", desc: "Within qualified bounds; evidence sufficient.", className: "border-green-500/30 bg-green-500/10 text-green-400" },
   { label: "CONFIRM", desc: "Human approval required before execution.", className: "border-amber-500/30 bg-amber-500/10 text-amber-400" },
   { label: "DENY", desc: "Outside qualified authority.", className: "border-red-500/30 bg-red-500/10 text-red-400" },
-  { label: "UNKNOWN", desc: "Insufficient evidence — authority withheld.", className: "border-white/20 bg-white/5 text-muted-foreground" },
+  { label: "UNKNOWN", desc: "Insufficient evidence, authority withheld.", className: "border-white/20 bg-white/5 text-muted-foreground" },
 ];
+
+function ArchitectureFlow() {
+  const decisions = ["ALLOW", "CONFIRM", "DENY", "UNKNOWN"];
+
+  return (
+    <div className="max-w-lg mx-auto">
+      <div className="rounded-2xl border border-white/15 bg-gradient-to-b from-background/90 to-background/50 px-6 py-5 text-center shadow-lg">
+        <Bot className="w-7 h-7 text-primary mx-auto mb-2" />
+        <p className="font-display font-semibold text-white text-lg">AI / LLM Agent</p>
+        <p className="text-xs text-muted-foreground mt-1">Proposes tool calls and actuation requests</p>
+      </div>
+
+      <div className="flex flex-col items-center py-4">
+        <div className="w-px h-8 bg-gradient-to-b from-white/10 via-primary/40 to-primary/60" />
+        <span className="my-2 rounded-full border border-white/10 bg-background/80 px-3 py-1 text-[11px] uppercase tracking-wider text-muted-foreground">
+          proposes action
+        </span>
+        <ChevronDown className="w-5 h-5 text-primary/80" aria-hidden />
+      </div>
+
+      <div className="relative overflow-hidden rounded-2xl border-2 border-primary/45 bg-primary/10 px-6 py-6 text-center shadow-xl shadow-primary/10">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.12),transparent_70%)]" />
+        <Layers className="relative w-7 h-7 text-primary mx-auto mb-2" />
+        <p className="relative font-display font-bold text-primary text-xl">AgentGX</p>
+        <p className="relative text-sm text-white/90 mb-4">Authority Layer</p>
+        <div className="relative flex flex-wrap justify-center gap-2">
+          {decisions.map((label) => (
+            <span
+              key={label}
+              className="rounded-md border border-white/15 bg-background/70 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-white/80"
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center py-4">
+        <div className="w-px h-8 bg-gradient-to-b from-primary/60 via-primary/30 to-white/10" />
+        <span className="my-2 rounded-full border border-white/10 bg-background/80 px-3 py-1 text-[11px] uppercase tracking-wider text-muted-foreground">
+          only if permitted
+        </span>
+        <ChevronDown className="w-5 h-5 text-primary/80" aria-hidden />
+      </div>
+
+      <div className="rounded-2xl border border-white/15 bg-gradient-to-b from-background/90 to-background/50 px-6 py-5 text-center shadow-lg">
+        <Plug className="w-7 h-7 text-primary mx-auto mb-2" />
+        <p className="font-display font-semibold text-white text-lg">Tools · APIs · OT</p>
+        <p className="text-xs text-muted-foreground mt-1">Execution surfaces the agent may reach</p>
+      </div>
+    </div>
+  );
+}
 
 const PRODUCT_LOOP = [
   { phase: "Observe", detail: "Agent telemetry, tool calls, environmental context, session evidence." },
-  { phase: "Characterize", detail: "GenomeX behavioral state, drift, trajectory — one wire across environments." },
+  { phase: "Characterize", detail: "GenomeX behavioral state, drift, trajectory, one wire across environments." },
   { phase: "Qualify", detail: "Qualification campaign → versioned GX Behavioral Passport (GXBP)." },
   { phase: "Govern", detail: "Every proposed action vs. Passport and policy before actuation." },
   { phase: "Prove", detail: "Evidence receipt: gates, bounds, passport fingerprint, operator override." },
@@ -67,7 +123,7 @@ export default function AgentGX() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
-        title="AgentGX — Behavioral Authority for Autonomous Systems"
+        title="AgentGX | Behavioral Authority for Autonomous Systems"
         description="AgentGX is an independent behavioral authority layer for AI agents and autonomous systems. Qualify deployments with evidence-backed Behavioral Passports; govern every action with ALLOW, CONFIRM, DENY, or UNKNOWN. Validated first in OT and critical infrastructure."
         path="/agent-gx"
       />
@@ -97,7 +153,7 @@ export default function AgentGX() {
             </h1>
             <blockquote className="border-l-2 border-primary pl-4 text-lg md:text-xl text-white/90 mb-6 italic max-w-2xl">
               Given what this agent is doing, what it has been qualified to do, and the
-              evidence available right now — should it be allowed to act?
+              evidence available right now, should it be allowed to act?
             </blockquote>
             <p className="text-muted-foreground mb-4 max-w-2xl leading-relaxed">
               AgentGX observes behavior through <strong className="text-white">GenomeX</strong>,
@@ -110,7 +166,7 @@ export default function AgentGX() {
             <p className="text-sm text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               Judgment stays outside the agent. Evidence stays inside the receipt. Knight
               InfoTek is proving AgentGX first in <strong className="text-white">OT, ICS, and
-              critical infrastructure</strong> — where ungoverned agent action carries the
+              critical infrastructure</strong>, where ungoverned agent action carries the
               highest consequence. The same authority model applies to enterprise, cloud, and
               robotics agents.
             </p>
@@ -136,7 +192,7 @@ export default function AgentGX() {
         <div className="container mx-auto px-4 max-w-5xl">
           <SectionHeader
             eyebrow="The problem"
-            title="Agents read, reason, and act — most tools govern users and networks"
+            title="Agents read, reason, and act | most tools govern users and networks"
             description="In OT and critical infrastructure, a wrong ALLOW can mean physical harm or outage. That is why validation starts there. The authority problem is universal."
           />
           <div className="overflow-x-auto rounded-xl border border-white/10">
@@ -150,7 +206,7 @@ export default function AgentGX() {
               <tbody className="text-muted-foreground">
                 {[
                   ["No qualification boundary", "An agent that worked in demo has no formal envelope for production."],
-                  ["Behavior without authority", "Telemetry shows what happened — not whether the next action should be permitted."],
+                  ["Behavior without authority", "Telemetry shows what happened, not whether the next action should be permitted."],
                   ["Opaque decisions", "ALLOW/DENY with no receipt means no audit, replay, or operator trust."],
                   ["Confused roles", "Process fault, attack, and unauthorized agent action treated as the same alarm."],
                 ].map(([gap, wrong]) => (
@@ -164,7 +220,7 @@ export default function AgentGX() {
           </div>
           <p className="text-center text-sm text-muted-foreground mt-6 max-w-2xl mx-auto">
             AgentGX does not replace SCADA, safety PLCs, or SIEM. It sits at the authority seam
-            — between what an agent <em>proposes</em> and what the environment <em>allows</em>.
+           , between what an agent <em>proposes</em> and what the environment <em>allows</em>.
           </p>
         </div>
       </section>
@@ -182,7 +238,7 @@ export default function AgentGX() {
                 <CardTitle className="text-lg font-display text-white">Product scope</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground space-y-2">
-                <p>Any autonomous or AI-assisted system that proposes actions via tools — IT, cloud, enterprise, robotics, OT.</p>
+                <p>Any autonomous or AI-assisted system that proposes actions via tools, IT, cloud, enterprise, robotics, OT.</p>
               </CardContent>
             </Card>
             <Card className="bg-card/40 border-primary/20">
@@ -190,7 +246,7 @@ export default function AgentGX() {
                 <CardTitle className="text-lg font-display text-primary">First beachhead</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground space-y-2">
-                <p>OT, ICS, and critical infrastructure — extreme risk justifies rigorous proof first. FactoryXChange partner PoC next.</p>
+                <p>OT, ICS, and critical infrastructure, extreme risk justifies rigorous proof first. FactoryXChange partner PoC next.</p>
               </CardContent>
             </Card>
           </div>
@@ -226,7 +282,7 @@ export default function AgentGX() {
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 AgentGX uses GenomeX behavioral evidence to qualify autonomous systems and
-                govern whether they may act — supervising agents and their interaction with
+                govern whether they may act, supervising agents and their interaction with
                 tools, machines, networks, and operational processes.
               </p>
             </div>
@@ -306,7 +362,7 @@ export default function AgentGX() {
         <div className="container mx-auto px-4 max-w-5xl">
           <SectionHeader
             eyebrow="Behavioral Passports"
-            title="GXBP — operational contracts, not safety certificates"
+            title="GXBP | operational contracts, not safety certificates"
             description="Passports bind an agent deployment to evidence-backed authority with lifecycle state, modes, per-tag bounds, and authority policy (GX-A1 advise through GX-A3 bounded autonomous execution)."
           />
           <div className="rounded-xl border border-primary/30 bg-primary/5 p-6 font-mono text-sm text-center mb-6">
@@ -344,7 +400,7 @@ export default function AgentGX() {
               { name: "Agents", purpose: "Fleet of governed deployments" },
               { name: "Agent Detail", purpose: "GenomeX state, qualification, timeline" },
               { name: "Passports", purpose: "Modes, bounds, lifecycle, fingerprint" },
-              { name: "Observation Lens", purpose: "Governed evidence graph — not raw PCAP" },
+              { name: "Observation Lens", purpose: "Governed evidence graph, not raw PCAP" },
               { name: "Decisions", purpose: "Receipt log with G_E, G_A, audit trail" },
             ].map((view) => (
               <Card key={view.name} className="bg-card/40 border-white/10">
@@ -364,24 +420,9 @@ export default function AgentGX() {
       <section className="py-16 md:py-20 bg-card/20 border-y border-white/5">
         <div className="container mx-auto px-4 max-w-3xl">
           <SectionHeader eyebrow="Architecture" title="Where AgentGX sits" />
-          <pre className="text-xs md:text-sm text-muted-foreground bg-background/60 border border-white/10 rounded-xl p-6 overflow-x-auto leading-relaxed font-mono text-center">
-{`        ┌─────────────────┐
-        │  AI / LLM Agent │
-        └────────┬────────┘
-                 │ proposes action
-                 ▼
-        ┌─────────────────┐
-        │    AgentGX      │  ← ALLOW / CONFIRM / DENY / UNKNOWN
-        │ Authority Layer │
-        └────────┬────────┘
-                 │ only if permitted
-                 ▼
-        ┌─────────────────┐
-        │ Tools · APIs · OT│
-        └─────────────────┘`}
-          </pre>
-          <p className="text-center text-sm text-muted-foreground mt-6">
-            MCP tool surfaces, agent runtimes, enterprise APIs, and industrial adapters — without
+          <ArchitectureFlow />
+          <p className="text-center text-sm text-muted-foreground mt-8 max-w-xl mx-auto leading-relaxed">
+            MCP tool surfaces, agent runtimes, enterprise APIs, and industrial adapters, without
             owning the underlying system or model.
           </p>
         </div>
@@ -392,7 +433,7 @@ export default function AgentGX() {
         <div className="container mx-auto px-4 max-w-5xl">
           <SectionHeader
             eyebrow="Validated in the laboratory"
-            title="Proven first in ICS — domain-neutral authority contract"
+            title="Proven first in ICS | domain-neutral authority contract"
             description="Public ICS environments (SWaT, HAI, TEP, BATADAL, WaDi) and live LLM agent loops. We report failures as clearly as successes."
           />
           <div className="overflow-x-auto rounded-xl border border-white/10 mb-8">
@@ -462,7 +503,7 @@ export default function AgentGX() {
           <SectionHeader eyebrow="Who it's for" title="Roles and deployment surfaces" />
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             {[
-              { role: "Operators (OT / IT)", value: "Clear ALLOW/CONFIRM/DENY with receipts — not another alarm flood" },
+              { role: "Operators (OT / IT)", value: "Clear ALLOW/CONFIRM/DENY with receipts, not another alarm flood" },
               { role: "CISO / GRC", value: "Evidence-backed qualification and audit trail for AI in production" },
               { role: "Automation & AI engineers", value: "Authority boundary that works with any agent framework or LLM" },
               { role: "Integrators & OEMs", value: "Behavioral Passport as a deliverable qualification artifact" },
@@ -501,7 +542,7 @@ export default function AgentGX() {
               },
               {
                 q: "Does it replace our safety PLC?",
-                a: "No. AgentGX governs agent authority — what an AI is permitted to request — not primary process safety interlocks.",
+                a: "No. AgentGX governs agent authority, what an AI is permitted to request, not primary process safety interlocks.",
               },
               {
                 q: "How is this different from anomaly detection?",
@@ -513,7 +554,7 @@ export default function AgentGX() {
               },
               {
                 q: "Is this production-ready?",
-                a: "Core authority composition and operator console v0.1 are implemented and lab-validated. FactoryXChange industrial PoC is the first commercialization beachhead — contact us for pilot timing.",
+                a: "Core authority composition and operator console v0.1 are implemented and lab-validated. FactoryXChange industrial PoC is the first commercialization beachhead, contact us for pilot timing.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-xl border border-white/10 bg-background/40 p-5">

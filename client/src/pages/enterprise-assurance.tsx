@@ -75,7 +75,7 @@ export default function EnterpriseAssuranceHub() {
           <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
             Technical evidence supports audit and operational review. It does not by itself
             establish legal compliance. We describe evidence workflows that can support
-            DORA-oriented recoverability reviews and EU AI Act-oriented logging and oversight —
+            DORA-oriented recoverability reviews and EU AI Act-oriented logging and oversight,
             not guaranteed regulatory outcomes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

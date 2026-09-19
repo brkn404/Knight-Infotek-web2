@@ -253,7 +253,7 @@ export function About() {
                   VETERAN-OWNED & <span className="text-primary">MISSION-DRIVEN</span>
                 </h3>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Knight InfoTek is a certified Service-Disabled Veteran-Owned Small Business (SDVOSB) and California Disabled Veteran Business Enterprise (DVBE)–eligible company.
+                  Knight InfoTek is a certified Service-Disabled Veteran-Owned Small Business (SDVOSB) and California Disabled Veteran Business Enterprise (DVBE)-eligible company.
                 </p>
               </div>
 
@@ -269,7 +269,7 @@ export function About() {
                   <ul className="space-y-2 text-sm text-muted-foreground mb-4">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">✔</span>
-                      <span><strong>SDVOSB</strong> – Service-Disabled Veteran-Owned Small Business</span>
+                      <span><strong>SDVOSB</strong>: Service-Disabled Veteran-Owned Small Business</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">✔</span>
@@ -283,7 +283,7 @@ export function About() {
                   
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <h5 className="font-bold text-white mb-3">Federal Contracting Eligibility</h5>
-                    <p className="text-sm text-muted-foreground mb-3">As a 100% service-disabled veteran–owned company, Knight InfoTek is eligible for:</p>
+                    <p className="text-sm text-muted-foreground mb-3">As a 100% service-disabled veteran-owned company, Knight InfoTek is eligible for:</p>
                     <ul className="space-y-1.5 text-sm text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -328,7 +328,7 @@ export function About() {
                   <ul className="space-y-2 text-sm text-muted-foreground mb-4">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">✔</span>
-                      <span><strong>California DVBE</strong> – Disabled Veteran Business Enterprise</span>
+                      <span><strong>California DVBE</strong>: Disabled Veteran Business Enterprise</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">✔</span>
@@ -345,7 +345,7 @@ export function About() {
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span>California DVBE bid incentives (5%–7%)</span>
+                        <span>California DVBE bid incentives (5%-7%)</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -399,7 +399,7 @@ export function About() {
                       Complete IP ownership transfer. Buyer receives full patents, trademarks, codebase, and all rights. One-time purchase payment.
                     </p>
                     <p className="text-xs text-primary font-medium">
-                      "It's gone" — Product fully transferred
+                      "It's gone", Product fully transferred
                     </p>
                   </CardContent>
                 </Card>
@@ -415,7 +415,7 @@ export function About() {
                       Buyer owns the product. Knight InfoTek provides 12-36 months of transitional support: migration, training, stabilization, and feature development.
                     </p>
                     <p className="text-xs text-primary font-medium">
-                      Most common model — Paid support during transition
+                      Most common model, Paid support during transition
                     </p>
                   </CardContent>
                 </Card>
@@ -431,7 +431,7 @@ export function About() {
                       Best long-term model. Buyer gets full usage rights, rebranding, and product building capabilities. Knight InfoTek Global retains IP ownership, licensing fees, and royalties.
                     </p>
                     <p className="text-xs text-primary font-medium">
-                      Recurring revenue — IP ownership retained
+                      Recurring revenue, IP ownership retained
                     </p>
                   </CardContent>
                 </Card>

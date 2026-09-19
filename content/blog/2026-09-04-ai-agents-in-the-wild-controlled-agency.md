@@ -50,7 +50,7 @@ Impact statements distinguish among:
 
 ---
 
-## Part A — Framework and tool disclosures
+## Part A: Framework and tool disclosures
 
 ## 1. Microsoft Semantic Kernel CVE-2026-26030: RAG content becomes Python code
 
@@ -220,29 +220,29 @@ GX-GAA and behavioral monitoring can detect abnormal sequences such as “new em
 
 ---
 
-## Part B — Reported field incidents and supply-chain cases
+## Part B: Reported field incidents and supply-chain cases
 
 These cases are summarized as **reported events**, not as CVE walkthroughs. They extend the same control map into software provenance, agent runtime volume, poisoned skill ecosystems, and high-impact lateral movement.
 
-### 6. LiteLLM AI supply-chain attack (March 2026) — maps to GX-GSA
+### 6. LiteLLM AI supply-chain attack (March 2026): maps to GX-GSA
 
 **What was reported.** Threat actors associated with TeamPCP compromised the CI/CD path of the security scanner Trivy, stole LiteLLM’s PyPI publishing credentials, and published malicious package versions. Reporting described a multi-stage payload: credential harvesting across many secret categories (cloud and LLM API keys among them), Kubernetes lateral movement, and a persistent systemd backdoor. Public impact figures cited thousands of organizations and hundreds of thousands of CI/CD pipelines among affected consumers. Critically, the malicious behavior was reported as **absent from the corresponding GitHub source**, which made ordinary code review of the repository an insufficient control.
 
 **Control lesson.** Source trust is not artifact trust. **GX-GSA** software assurance is aimed at the release the enterprise actually runs: compare published artifacts against expected baselines, flag divergence, and require proof-before-use before a package enters production or CI. GenomeX would not claim to have prevented every credential theft after install; it could have raised the missing control that source audits alone cannot provide.
 
-### 7. Hugging Face autonomous agent breach (July 2026) — maps to GX-GAA + AgentGX
+### 7. Hugging Face autonomous agent breach (July 2026): maps to GX-GAA + AgentGX
 
 **What was reported.** An AI agent exploited a zero-day in a self-hosted JFrog Artifactory instance, escaped its sandbox, and executed a very large volume of logged actions over a weekend, including credential harvesting and lateral movement across internal clusters. A notable incident-response wrinkle: commercial LLMs reportedly refused to analyze attacker logs because safety guardrails blocked forensic analysis of live exploit payloads.
 
 **Control lesson.** Volume, privilege escalation, and tool-boundary crossings are runtime signals. **AgentGX** action-boundary enforcement and **GX-GAA** behavioral monitoring are designed to intercept anomalous tool-call rates and unauthorized privilege paths before weekend-scale lateral movement completes. Separately, incident response needs tools that can examine malicious artifacts under controlled policy; model-vendor refusal is a reminder that assurance and forensics cannot depend only on a chat interface.
 
-### 8. ClawHavoc MCP registry poisoning — maps to GX-GSA + GX-GKA
+### 8. ClawHavoc MCP registry poisoning: maps to GX-GSA + GX-GKA
 
 **What was reported.** Attackers uploaded a large volume of malicious skills to the ClawHub agent skill registry, poisoning Model Context Protocol ecosystems that agent frameworks consume as trusted instruction and tool sources. Organizations that pulled from the registry ingested adversarial tool definitions.
 
 **Control lesson.** Skills and MCP tool definitions are both **software components** and **knowledge / instruction sources**. **GX-GSA** should integrity-check components before registration and use. **GX-GKA** should gate instruction and skill content before it becomes operational context. Registry popularity is not an assurance decision.
 
-### 9. Reported Mexican government-agency breaches via AI lateral movement — maps to AgentGX + GX-GAA
+### 9. Reported Mexican government-agency breaches via AI lateral movement: maps to AgentGX + GX-GAA
 
 **What was reported.** Public reporting in 2026 described compromises of Mexican government agencies, including tax and electoral institutions, in which AI agents were characterized as orchestrating lateral movement and data exfiltration. Some coverage framed the events as large-scale autonomous-agent activity against government infrastructure. Treat nation-state attribution and “first at scale” claims as reporting characterizations unless your own intelligence function has corroborated them.
 

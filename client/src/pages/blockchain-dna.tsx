@@ -12,7 +12,7 @@ export default function BlockchainDNA() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
         title="BlockchainDNA"
-        description="Behavioral overlay and evidence store for multi-chain observation — GenomeX Life Arc depth that Cha-Ching Analytics and other products read."
+        description="Behavioral overlay and evidence store for multi-chain observation, GenomeX Life Arc depth that Cha-Ching Analytics and other products read."
         path="/blockchain-dna"
       />
       <Navbar />
@@ -40,7 +40,7 @@ export default function BlockchainDNA() {
               </p>
 
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-                GenomeX behavioral intelligence on live chain data — observation, freshness,
+                GenomeX behavioral intelligence on live chain data, observation, freshness,
                 coverage, and Life Arc on Ethereum, Base, BNB Chain, Arbitrum, Optimism, Tron,
                 and Solana. The store Cha-Ching Analytics and platform APIs read.
               </p>
@@ -77,7 +77,7 @@ export default function BlockchainDNA() {
               <h2 className="text-lg font-bold text-white mb-2 font-display">Life Arc evidence</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Quality-gated behavioral depth and transition artifacts desks and investigators
-                can open — not a second truth invented by downstream products.
+                can open, not a second truth invented by downstream products.
               </p>
             </div>
             <div className="rounded-xl border border-white/10 bg-card/40 p-6">
@@ -85,7 +85,7 @@ export default function BlockchainDNA() {
               <h2 className="text-lg font-bold text-white mb-2 font-display">Platform surface</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 GenomeX coordinates and API access for named watch programs, Maltego
-                transforms, and exchange pre-listing similarity — same store as CCA.
+                transforms, and exchange pre-listing similarity, same store as CCA.
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function BlockchainDNA() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium"
             >
-              Cha-Ching Analytics — desk on this store
+              Cha-Ching Analytics, desk on this store
               <ArrowRight className="w-4 h-4" />
             </a>
             <a

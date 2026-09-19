@@ -16,7 +16,7 @@ export default function GenomeXAssurancePlatform() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
-        title={`${resource.title} — Architecture`}
+        title={`${resource.title} | Architecture`}
         description={resource.subtitle}
         path="/enterprise-assurance/genomex-assurance-platform"
       />
@@ -118,7 +118,7 @@ export default function GenomeXAssurancePlatform() {
           </ul>
           <p className="text-sm mt-4">
             GX-GRA fuses a Recovery Environment Genome and a Recovery Asset Genome into Restore
-            Authority — the question is whether the{" "}
+            Authority, the question is whether the{" "}
             <strong className="text-foreground">recovery chain</strong> can be trusted, not only a
             single recovery point checksum.
           </p>
@@ -133,7 +133,7 @@ export default function GenomeXAssurancePlatform() {
             poisoned training data. A secure application may be deployed from an untrusted release.
             A hardened backup environment may faithfully preserve a compromised state. In each
             case GenomeX measures trust before use and produces an evidence-backed decision that
-            can be proven later — evidence suitable for audit review and operational underwriting
+            can be proven later, evidence suitable for audit review and operational underwriting
             conversations, without claiming that evidence alone establishes legal compliance.
           </p>
         </section>

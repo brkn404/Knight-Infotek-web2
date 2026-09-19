@@ -94,7 +94,7 @@ export default function WhenDataBecomesInfrastructure() {
           The question that defines Enterprise Assurance
         </h2>
         <blockquote className="border-l-4 border-primary pl-4 my-4 text-foreground text-xl font-medium">
-          Can this digital asset be trusted before the enterprise uses it — and can that decision
+          Can this digital asset be trusted before the enterprise uses it, and can that decision
           be proven?
         </blockquote>
         <p>
@@ -137,7 +137,7 @@ export default function WhenDataBecomesInfrastructure() {
           Many enterprise tools are advisory. Enterprise Assurance is decision-oriented. The
           output is a governed decision: <strong className="text-white">ALLOW</strong>,{" "}
           <strong className="text-white">DENY</strong>, or{" "}
-          <strong className="text-white">CONFIRM</strong>. CONFIRM is not a weakness — incomplete
+          <strong className="text-white">CONFIRM</strong>. CONFIRM is not a weakness, incomplete
           or conflicting evidence is normal. A mature platform must prevent silent risk acceptance
           while still allowing accountable escalation. Proof is part of the product: a decision
           without evidence may help in the moment; it does not survive audit, incident response,
@@ -153,9 +153,9 @@ export default function WhenDataBecomesInfrastructure() {
 
         <h2 className="text-2xl font-bold font-display text-white pt-6">Next step</h2>
         <p>
-          How GenomeX implements that layer — one Behavioral Genome (
+          How GenomeX implements that layer, one Behavioral Genome (
           <code className="text-primary text-sm">platform_genome_128</code>
-          ), five shared engines, five assurance domains — is the subject of the companion
+          ), five shared engines, five assurance domains, is the subject of the companion
           architecture paper.
         </p>
       </article>

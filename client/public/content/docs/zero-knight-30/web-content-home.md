@@ -9,10 +9,10 @@
 ## Hero Section
 
 ### Headline
-**The Only Defense Platform That Knows Your System Better Than Any Attacker—And Can Instantly Heal Itself**
+**The Only Defense Platform That Knows Your System Better Than Any Attacker, And Can Instantly Heal Itself**
 
 ### Subheadline
-ZK30-Gladiator is the world's first autonomous AI defense platform featuring Blockchain-Anchored Behavioral Snapshot Recovery (BSR). Detect threats through behavioral analysis, restore files in seconds, and maintain immutable proof of integrity—all while operating fully offline.
+ZK30-Gladiator is the world's first autonomous AI defense platform featuring Blockchain-Anchored Behavioral Snapshot Recovery (BSR). Detect threats through behavioral analysis, restore files in seconds, and maintain immutable proof of integrity, all while operating fully offline.
 
 ### Call-to-Action Buttons
 - **Get Started** → [Link to demo/signup]
@@ -35,7 +35,7 @@ Go beyond static file hashing to understand *how* and *why* files change. Behavi
 ### Feature 2: Instant Selective Recovery
 **Restore Files in Seconds, Not Hours**
 
-BSR enables selective file restoration—only fix what's broken. Recover from ransomware, corruption, or tampering in less than 10 seconds per file, with minimal operational impact.
+BSR enables selective file restoration, only fix what's broken. Recover from ransomware, corruption, or tampering in less than 10 seconds per file, with minimal operational impact.
 
 **Icon/Visual**: Recovery speed comparison
 
@@ -62,7 +62,7 @@ ORACLE AI engine analyzes threats in real-time using local LLMs. No data leaves 
 ### Feature 5: Air-Gap Compatible
 **Full Offline Operation**
 
-Designed for high-security environments, ZK30-Gladiator operates completely offline. No internet connectivity required—perfect for classified networks, SCADA systems, and isolated environments.
+Designed for high-security environments, ZK30-Gladiator operates completely offline. No internet connectivity required, perfect for classified networks, SCADA systems, and isolated environments.
 
 **Icon/Visual**: Air-gap symbol
 

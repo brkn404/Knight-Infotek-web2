@@ -43,11 +43,11 @@ export const solutionStacks: SolutionStack[] = [
     badge: "blockchain-dna.com · cha-chinganalytics.com",
     badgeIcon: Landmark,
     intro:
-      "Launched product sites for the behavioral evidence store and the institutional desk that reads it — GenomeX on chain, Life Arc depth, named watch for counterparty risk.",
+      "Launched product sites for the behavioral evidence store and the institutional desk that reads it, GenomeX on chain, Life Arc depth, named watch for counterparty risk.",
     whyTitle: "Why these products lead",
     whyBullets: [
       "BlockchainDNA fingerprints chains; Cha-Ching Analytics reads the store for named addresses.",
-      "Desks need observation and Life Arc evidence — not another chain-scale scanner.",
+      "Desks need observation and Life Arc evidence, not another chain-scale scanner.",
       "Knight InfoTek licensing and API tiers sit alongside the live product sites.",
     ],
     products: [
@@ -56,7 +56,7 @@ export const solutionStacks: SolutionStack[] = [
         title: "BlockchainDNA",
         subtitle: "Behavioral overlay & evidence store",
         description:
-          "GenomeX behavioral intelligence on live chains — observation, freshness, coverage, and Life Arc evidence other products read.",
+          "GenomeX behavioral intelligence on live chains, observation, freshness, coverage, and Life Arc evidence other products read.",
         link: PRODUCT_SITES.blockchainDna,
         icon: Dna,
         imageKey: "dna",
@@ -67,7 +67,7 @@ export const solutionStacks: SolutionStack[] = [
         title: "Cha-Ching Analytics",
         subtitle: "Institutional named watch",
         description:
-          "Your named counterparty list on the BlockchainDNA store — Attention, Facts, Convergence, and Transact now for desks.",
+          "Your named counterparty list on the BlockchainDNA store, Attention, Facts, Convergence, and Transact now for desks.",
         link: PRODUCT_SITES.chaChingAnalytics,
         icon: Activity,
         imageKey: "cca",
@@ -83,7 +83,7 @@ export const solutionStacks: SolutionStack[] = [
     badge: "GenomeX platform · five domains · recovery to agents",
     badgeIcon: ShieldCheck,
     intro:
-      "Measure trust before restore, index, train, deploy, or act — ALLOW / DENY / CONFIRM with retainable evidence across recovery, knowledge, ML, agents, and software.",
+      "Measure trust before restore, index, train, deploy, or act, ALLOW / DENY / CONFIRM with retainable evidence across recovery, knowledge, ML, agents, and software.",
     whyTitle: "Why assurance matters now",
     whyBullets: [
       "Data and digital assets behave like operational infrastructure in AI-native enterprises.",
@@ -96,7 +96,7 @@ export const solutionStacks: SolutionStack[] = [
         title: "GenomeX Assurance Platform",
         subtitle: "Enterprise Assurance control plane",
         description:
-          "One control plane, five domain gates, and ALLOW / DENY / CONFIRM with portable receipts — interactive product overview and papers.",
+          "One control plane, five domain gates, and ALLOW / DENY / CONFIRM with portable receipts, interactive product overview and papers.",
         link: "/genomex-assurance-platform",
         icon: ShieldCheck,
         imageKey: "gxra",
@@ -112,11 +112,11 @@ export const solutionStacks: SolutionStack[] = [
     badge: "AgentGX · behavioral authority · OT beachhead",
     badgeIcon: Bot,
     intro:
-      "Independent authority layer for autonomous systems — Behavioral Passports, dual gates, and ALLOW / CONFIRM / DENY / UNKNOWN with evidence receipts. Validated first in OT and critical infrastructure.",
+      "Independent authority layer for autonomous systems, Behavioral Passports, dual gates, and ALLOW / CONFIRM / DENY / UNKNOWN with evidence receipts. Validated first in OT and critical infrastructure.",
     whyTitle: "Why this stack matters",
     whyBullets: [
       "Agents propose actions; most security tools govern users and networks, not authority at the actuation seam.",
-      "Qualification campaigns issue versioned GXBP artifacts — operational contracts, not trust scores.",
+      "Qualification campaigns issue versioned GXBP artifacts, operational contracts, not trust scores.",
       "Lab-validated on public ICS datasets and live LLM loops; FactoryXChange industrial PoC next.",
     ],
     products: [

@@ -122,7 +122,7 @@ export function ServicePageLayout({
             Ready to get started?
           </h2>
           <p className="text-muted-foreground mb-8 leading-relaxed">
-            Tell us about your environment, compliance drivers, and timeline — we will scope an
+            Tell us about your environment, compliance drivers, and timeline, we will scope an
             engagement that fits.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

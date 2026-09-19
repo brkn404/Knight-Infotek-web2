@@ -28,7 +28,7 @@ export const securityServiceOfferings: ServiceOffering[] = [
     title: "Cybersecurity Consulting",
     shortTitle: "Consulting",
     description:
-      "Strategic security planning, architecture design, and program guidance — from posture review through remediation roadmaps.",
+      "Strategic security planning, architecture design, and program guidance, from posture review through remediation roadmaps.",
     href: "/services/cybersecurity-consulting",
     icon: Users,
     bullets: [
@@ -43,7 +43,7 @@ export const securityServiceOfferings: ServiceOffering[] = [
     title: "Security Assessments",
     shortTitle: "Assessments",
     description:
-      "Structured evaluations of your environment — vulnerability analysis, AI/LLM audits, red-team exercises, and threat hunting.",
+      "Structured evaluations of your environment, vulnerability analysis, AI/LLM audits, red-team exercises, and threat hunting.",
     href: "/services/security-assessments",
     icon: Shield,
     bullets: [
@@ -58,7 +58,7 @@ export const securityServiceOfferings: ServiceOffering[] = [
     title: "Penetration Testing",
     shortTitle: "Pen Testing",
     description:
-      "Hands-on offensive testing across external, internal, application, and physical layers — OSSTMM, PTES, and OWASP aligned.",
+      "Hands-on offensive testing across external, internal, application, and physical layers, OSSTMM, PTES, and OWASP aligned.",
     href: "/services/penetration-testing",
     icon: Target,
     bullets: [
@@ -81,7 +81,7 @@ export const consultingBlocks: ServiceDetailBlock[] = [
   {
     title: "Security Architecture",
     description:
-      "Design and review security controls for cloud, on-prem, and hybrid environments — aligned to your risk profile and compliance context.",
+      "Design and review security controls for cloud, on-prem, and hybrid environments, aligned to your risk profile and compliance context.",
     icon: Shield,
     items: [
       "Zero-trust & segmentation design",
@@ -93,7 +93,7 @@ export const consultingBlocks: ServiceDetailBlock[] = [
   {
     title: "Program & Posture Review",
     description:
-      "Evaluate how security is run today — policies, tooling, detection, and response — and build a prioritized improvement plan.",
+      "Evaluate how security is run today, policies, tooling, detection, and response, and build a prioritized improvement plan.",
     icon: Target,
     items: [
       "Current-state assessment",
@@ -105,7 +105,7 @@ export const consultingBlocks: ServiceDetailBlock[] = [
   {
     title: "AI & LLM Governance",
     description:
-      "Advisory for teams deploying language models and autonomous agents — policy, monitoring, and proof-before-use patterns.",
+      "Advisory for teams deploying language models and autonomous agents, policy, monitoring, and proof-before-use patterns.",
     icon: Brain,
     items: [
       "LLM deployment risk review",
@@ -117,7 +117,7 @@ export const consultingBlocks: ServiceDetailBlock[] = [
   {
     title: "Incident Readiness",
     description:
-      "Prepare teams to detect, contain, and recover — tabletop exercises, playbooks, and coordination with existing SOC workflows.",
+      "Prepare teams to detect, contain, and recover, tabletop exercises, playbooks, and coordination with existing SOC workflows.",
     icon: AlertTriangle,
     items: [
       "IR plan review & tabletops",
@@ -144,7 +144,7 @@ export const assessmentBlocks: ServiceDetailBlock[] = [
   {
     title: "AI & LLM Security Audits",
     description:
-      "Assess models, prompts, integrations, and data flows for abuse paths — without treating AI as a black box.",
+      "Assess models, prompts, integrations, and data flows for abuse paths, without treating AI as a black box.",
     icon: Brain,
     items: [
       "LLM security assessment",
@@ -168,7 +168,7 @@ export const assessmentBlocks: ServiceDetailBlock[] = [
   {
     title: "Threat Hunting",
     description:
-      "Proactive search for latent compromise and misconfiguration — especially in high-value or regulated environments.",
+      "Proactive search for latent compromise and misconfiguration, especially in high-value or regulated environments.",
     icon: Target,
     items: [
       "Hypothesis-driven hunting",
@@ -183,7 +183,7 @@ export const penTestBlocks: ServiceDetailBlock[] = [
   {
     title: "External Penetration Testing",
     description:
-      "Assessment of your internet-facing perimeter — services, applications, and mail — from an attacker outside the organization.",
+      "Assessment of your internet-facing perimeter, services, applications, and mail, from an attacker outside the organization.",
     icon: Network,
     items: [
       "Network infrastructure testing",
@@ -195,7 +195,7 @@ export const penTestBlocks: ServiceDetailBlock[] = [
   {
     title: "Internal Penetration Testing",
     description:
-      "Simulate an insider or post-breach attacker moving inside your network — segmentation, identity, and privilege paths.",
+      "Simulate an insider or post-breach attacker moving inside your network, segmentation, identity, and privilege paths.",
     icon: Shield,
     items: [
       "Network segmentation testing",
@@ -207,7 +207,7 @@ export const penTestBlocks: ServiceDetailBlock[] = [
   {
     title: "Physical & Social Engineering",
     description:
-      "Test physical controls and human factors — access procedures, facility security, and targeted social engineering where scoped.",
+      "Test physical controls and human factors, access procedures, facility security, and targeted social engineering where scoped.",
     icon: Building,
     items: [
       "Access control testing",
@@ -219,7 +219,7 @@ export const penTestBlocks: ServiceDetailBlock[] = [
   {
     title: "Application Security Testing",
     description:
-      "Deep review of web, API, and mobile surfaces — automated and manual techniques against OWASP-class issues.",
+      "Deep review of web, API, and mobile surfaces, automated and manual techniques against OWASP-class issues.",
     icon: Code,
     items: [
       "OWASP Top 10 testing",
@@ -237,7 +237,7 @@ export const methodologySteps = [
   },
   {
     title: "Testing & Analysis",
-    description: "Manual and automated techniques — with clear evidence chains and reproducible findings.",
+    description: "Manual and automated techniques, with clear evidence chains and reproducible findings.",
   },
   {
     title: "Reporting & Briefing",

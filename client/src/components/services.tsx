@@ -13,7 +13,7 @@ export function Services() {
               CYBERSECURITY <span className="text-primary">SERVICES</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Veteran-led consulting, assessments, and penetration testing — delivered by the
+              Veteran-led consulting, assessments, and penetration testing, delivered by the
               same team that builds our in-house product stack.
             </p>
           </div>
