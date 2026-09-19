@@ -1,18 +1,16 @@
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 import {
-  Scale,
-  Shield,
   Bot,
-  Eye,
   Fingerprint,
-  Zap,
-  ShieldCheck,
-  FileKey,
-  Users,
-  Building2,
-  Gavel,
-  HeartPulse,
   Factory,
+  Building2,
+  Cloud,
+  Cpu,
+  HelpCircle,
+  ArrowRight,
+  CheckCircle2,
+  XCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,581 +19,340 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageSeo } from "@/components/page-seo";
 
-import defenseImg from "@assets/generated_images/active_defense_system_visualization.png";
-import vaultImg from "@assets/generated_images/air-gapped_server_vault_visualization.png";
-import mapImg from "@assets/generated_images/global_threat_monitoring_map.png";
 import heroBg from "@assets/generated_images/futuristic_zero_trust_security_concept.png";
+import defenseImg from "@assets/generated_images/active_defense_system_visualization.png";
+
+function SectionHeader({
+  eyebrow,
+  title,
+  description,
+  id,
+}: {
+  eyebrow?: string;
+  title: ReactNode;
+  description?: string;
+  id?: string;
+}) {
+  return (
+    <div id={id} className="text-center mb-10 md:mb-12 max-w-3xl mx-auto scroll-mt-28">
+      {eyebrow && (
+        <p className="text-primary text-sm font-semibold uppercase tracking-wider mb-3">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">{title}</h2>
+      {description && (
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
+      )}
+    </div>
+  );
+}
+
+const DECISIONS = [
+  { label: "ALLOW", desc: "Within qualified bounds; evidence sufficient.", className: "border-green-500/30 bg-green-500/10 text-green-400" },
+  { label: "CONFIRM", desc: "Human approval required before execution.", className: "border-amber-500/30 bg-amber-500/10 text-amber-400" },
+  { label: "DENY", desc: "Outside qualified authority.", className: "border-red-500/30 bg-red-500/10 text-red-400" },
+  { label: "UNKNOWN", desc: "Insufficient evidence — authority withheld.", className: "border-white/20 bg-white/5 text-muted-foreground" },
+];
+
+const PRODUCT_LOOP = [
+  { phase: "Observe", detail: "Agent telemetry, tool calls, environmental context, session evidence." },
+  { phase: "Characterize", detail: "GenomeX behavioral state, drift, trajectory — one wire across environments." },
+  { phase: "Qualify", detail: "Qualification campaign → versioned GX Behavioral Passport (GXBP)." },
+  { phase: "Govern", detail: "Every proposed action vs. Passport and policy before actuation." },
+  { phase: "Prove", detail: "Evidence receipt: gates, bounds, passport fingerprint, operator override." },
+];
 
 export default function AgentGX() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <PageSeo
-        title="AgentGX"
-        description="Governed AI agent operations for regulated industries: behavioral oversight, licensed responsible party workflows, and auditable autonomous actions."
+        title="AgentGX — Behavioral Authority for Autonomous Systems"
+        description="AgentGX is an independent behavioral authority layer for AI agents and autonomous systems. Qualify deployments with evidence-backed Behavioral Passports; govern every action with ALLOW, CONFIRM, DENY, or UNKNOWN. Validated first in OT and critical infrastructure."
         path="/agent-gx"
       />
       <Navbar />
 
-      <section className="relative min-h-[85vh] flex items-center pt-20 md:pt-24 overflow-hidden">
+      {/* Hero */}
+      <section className="relative min-h-[80vh] flex items-center pt-20 md:pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroBg}
-            alt="AgentGX background"
-            className="w-full h-full object-cover opacity-50"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-45" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/75 via-background/55 to-background" />
           <div className="absolute inset-0 cyber-grid opacity-15" />
         </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-                <Scale className="w-4 h-4" />
-                Licensed, regulated & industrial AI governance
-              </div>
-
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-display">
-                AGENT<span className="text-primary">G</span>
-                <span className="text-destructive">X</span>
-              </h1>
-
-              <p className="text-xl md:text-2xl text-white/80 font-display font-medium tracking-wide mb-8">
-                Trusted AI agent operations in regulated and industrial environments
-              </p>
-
-              <p className="text-lg text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-                The universal behavioral intelligence platform for{" "}
-                <strong className="text-white">licensed professionals</strong>,{" "}
-                <strong className="text-white">regulated enterprises</strong>, and{" "}
-                <strong className="text-white">high-stakes operations</strong> that
-                must scale with AI without sacrificing accountability. The same
-                governance layer extends to{" "}
-                <strong className="text-white">Factory&nbsp;4.0</strong> and smart
-                manufacturing—where AI agents orchestrate OT/IT, SCADA/ICS, IIoT,
-                and cyber-physical systems—and to regulated verticals such as{" "}
-                <strong className="text-white">
-                  pharmaceuticals, energy, aerospace, and critical infrastructure
-                </strong>
-                . GenomeX oversight, AgentGX-ARE runtime policy enforcement, and
-                immutable Proof-of-Behavior attestations let you delegate with
-                confidence and produce evidence suitable for audit review under
-                supervision, safety, and oversight requirements.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <Button asChild className="font-display">
-                  <a href="#contact">Talk to Knight InfoTek</a>
-                </Button>
-                <Button asChild variant="outline" className="font-display border-white/20">
-                  <Link href="/enterprise-assurance">Enterprise Assurance</Link>
-                </Button>
-                <Button asChild variant="outline" className="font-display border-white/20">
-                  <a href="/genomex-assurance-platform">GenomeX Assurance Platform</a>
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-background relative">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-                WHAT IS <span className="text-primary">AGENTGX</span>?
-              </h2>
+        <div className="container mx-auto px-4 relative z-10 pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
+              <Bot className="w-4 h-4" />
+              AgentGX · v1.1 · September 2026
             </div>
-
-            <div className="prose prose-invert max-w-none mb-16">
-              <div className="bg-card/50 rounded-xl p-8 md:p-12 border border-white/10 mb-8">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">
-                  Product overview
-                </h3>
-                <p className="text-xl text-muted-foreground mb-6 leading-relaxed text-center">
-                  <strong className="text-white">AgentGX</strong> is the
-                  operational governance layer for AI agents in{" "}
-                  <strong className="text-white">regulated environments</strong>
-                  —from licensed professional services to{" "}
-                  <strong className="text-white">industrial and Factory&nbsp;4.0</strong>{" "}
-                  settings. It unifies identity, behavioral DNA (GenomeX),
-                  authority chains, compliance pre-checks, and blockchain-backed
-                  attestations so every action is authenticated, explainable, and
-                  auditable.
-                </p>
-
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
-                    <h4 className="text-lg font-bold text-white mb-3">
-                      What it does
-                    </h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      {[
-                        "Delegates work to AI agents under clear chains of accountability—licensed roles, control-room operators, and accountable owners",
-                        "Monitors agent behavior with GenomeX—drift, anomalies, and risk scoring across office and OT environments",
-                        "Enforces policy in real time via AgentGX-ARE: professional duty, safety envelopes, and operational guardrails",
-                        "Produces privacy-preserving Proof-of-Behavior records for regulators, counsel, quality, and safety teams",
-                        "Supports secure delegation workflows, guardrails, and coordinated kill-switches across the agent lifecycle",
-                      ].map((t) => (
-                        <li key={t} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          <span>{t}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="bg-background/50 rounded-lg p-6 border border-white/5">
-                    <h4 className="text-lg font-bold text-white mb-3">
-                      Problems it solves
-                    </h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      {[
-                        {
-                          strong: "Accountability stays with people",
-                          rest: "— Emerging AI rules and professional regimes (e.g. Utah AI Policy Act, ABA, FSMB, FINRA) still place duty on licensed and accountable parties; in industry, operational and safety liability works the same way.",
-                        },
-                        {
-                          strong: "No visibility at scale",
-                          rest: "— GenomeX delivers supervisory-style oversight across many concurrent agents—in the enterprise and on the plant floor.",
-                        },
-                        {
-                          strong: "Agents exceed delegated scope",
-                          rest: "— ARE encodes scope, mandatory escalation, competence limits, and safe operating envelopes in enforceable policies.",
-                        },
-                        {
-                          strong: "“Who supervised this agent?”",
-                          rest: "— Proof-of-Behavior and audit trails back diligence for regulators, boards, insurers, and post-incident review—not slide decks.",
-                        },
-                        {
-                          strong: "Perimeter security is not enough",
-                          rest: "— IAM and firewalls do not govern what an authorized agent does next. AgentGX governs behavior—professional, safety, and compliance-aligned.",
-                        },
-                      ].map(({ strong, rest }) => (
-                        <li key={strong} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2 flex-shrink-0" />
-                          <span>
-                            <strong className="text-white">{strong}</strong>
-                            {rest}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
-                Competitors optimize for generic AI safety. AgentGX is built for
-                the <strong className="text-white">Licensed Responsible Party</strong>{" "}
-                and <strong className="text-white">accountable operations</strong>{" "}
-                model—whether the duty is professional, regulatory, or
-                industrial: authority, behavioral monitoring, policy
-                enforcement, and immutable compliance in one stack.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
-              <Card className="bg-card/50 border-white/10">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Fingerprint className="w-6 h-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-white">
-                    GenomeX behavioral intelligence
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Multi-dimensional behavioral DNA for agents—embeddings,
-                    drift detection, anomaly signals, and trust scoring so
-                    supervisors, operators, and compliance owners see change
-                    before it becomes a clinical, financial, or plant-floor
-                    incident.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-white/10">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Shield className="w-6 h-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-white">AgentGX-ARE runtime</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Patent-pending signal-to-policy-to-enforcement pipeline:
-                    YAML policies, real-time evaluation, explainable blocks and
-                    escalations—Zero Trust for AI behavior in the office and on
-                    OT-adjacent paths, not just identity.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-white/10">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <FileKey className="w-6 h-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-white">
-                    Proof-of-Behavior & audit
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Cryptographic attestations tie authorized oversight to agent
-                    actions—supporting HIPAA, privilege, fiduciary, and
-                    malpractice workflows alongside GxP-style traceability,
-                    safety case evidence, and board- or insurer-ready reporting.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-white/10">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Bot className="w-6 h-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-white">AgentGX-CORE kernel</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Unified governance core: KYA identity, AuthorityChain
-                    delegation, compliance pre-checks, encrypted memory, and
-                    coordinated kill-switches—from back-office agents to
-                    OT-adjacent and Factory&nbsp;4.0 workloads.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-card/30 border-y border-white/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
-              THE <span className="text-destructive">TRUST GAP</span>
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8 text-center">
-              Licensed professionals, regulated enterprises, and industrial
-              operators need AI scale without surrendering duty of care,
-              safety, judgment, or supervisory responsibility
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight font-display">
+              Behavioral authority for{" "}
+              <span className="text-primary">autonomous systems</span>
+            </h1>
+            <blockquote className="border-l-2 border-primary pl-4 text-lg md:text-xl text-white/90 mb-6 italic max-w-2xl">
+              Given what this agent is doing, what it has been qualified to do, and the
+              evidence available right now — should it be allowed to act?
+            </blockquote>
+            <p className="text-muted-foreground mb-4 max-w-2xl leading-relaxed">
+              AgentGX observes behavior through <strong className="text-white">GenomeX</strong>,
+              establishes <strong className="text-white">Behavioral Passports</strong> from
+              qualified evidence, and governs every proposed action:
             </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  title: "Undelegatable judgment & duty",
-                  desc: "Bar, medical board, FINRA, and similar regimes still require human authority; in manufacturing, safety culture and process integrity demand the same. AgentGX encodes those boundaries in runtime policy—not slide decks.",
-                  icon: Gavel,
-                },
-                {
-                  title: "Opaque agent behavior",
-                  desc: "LLMs and tool-using agents drift. GenomeX baselines behavior and surfaces early warning before customers, patients, production, or critical services are exposed.",
-                  icon: Eye,
-                },
-                {
-                  title: "No proof of oversight",
-                  desc: "When counsel, regulators, insurers, or internal safety teams ask what happened, you need artifacts. Proof-of-Behavior and audit trails demonstrate diligence—not guesswork.",
-                  icon: FileKey,
-                },
-                {
-                  title: "Regulatory & OT convergence",
-                  desc: "AI liability rules and IT/OT convergence are tightening together. AgentGX maps controls to professional duty, emerging AI law, and high-stakes operational expectations.",
-                  icon: Scale,
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="p-6 rounded-xl bg-background/50 border border-white/10"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 rounded bg-destructive/10 text-destructive">
-                      <item.icon className="w-5 h-5" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground">{item.desc}</p>
-                </div>
-              ))}
+            <p className="text-lg font-display font-semibold text-primary mb-6 tracking-wide">
+              ALLOW · CONFIRM · DENY · UNKNOWN
+            </p>
+            <p className="text-sm text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+              Judgment stays outside the agent. Evidence stays inside the receipt. Knight
+              InfoTek is proving AgentGX first in <strong className="text-white">OT, ICS, and
+              critical infrastructure</strong> — where ungoverned agent action carries the
+              highest consequence. The same authority model applies to enterprise, cloud, and
+              robotics agents.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button asChild className="font-display">
+                <a href="mailto:contact@knightinfotek.com?subject=AgentGX%20pilot%20inquiry">
+                  Talk to us about a pilot
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="font-display border-white/20">
+                <a href="#how-it-works">See how it works</a>
+              </Button>
+              <Button asChild variant="outline" className="font-display border-white/20">
+                <a href="/genomex-assurance-platform">GenomeX Assurance Platform</a>
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-top-left" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">
-              CORE <span className="text-primary">CAPABILITIES</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Behavioral policy engine, trust zones, and enforcement designed
-              for production agent fleets in regulated offices and on the path
-              to autonomous Factory&nbsp;4.0 operations—not demos
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            <div className="order-2 lg:order-1">
-              <div className="space-y-8">
+      {/* Problem */}
+      <section className="py-16 md:py-20 bg-card/20 border-y border-white/5">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader
+            eyebrow="The problem"
+            title="Agents read, reason, and act — most tools govern users and networks"
+            description="In OT and critical infrastructure, a wrong ALLOW can mean physical harm or outage. That is why validation starts there. The authority problem is universal."
+          />
+          <div className="overflow-x-auto rounded-xl border border-white/10">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-white/10 bg-background/50">
+                  <th className="text-left p-4 text-white font-semibold">Gap</th>
+                  <th className="text-left p-4 text-white font-semibold">What goes wrong</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
                 {[
-                  {
-                    title: "Behavioral policy engine",
-                    desc: "Human-readable rules, signal-based detection decoupled from enforcement, lifecycle states, and GenomeX-enriched evaluation—for chat, APIs, tools, and industrial agent workflows.",
-                    icon: Shield,
-                  },
-                  {
-                    title: "Trust zones & competence",
-                    desc: "Dynamic trust bands based on behavioral competence—tighten or expand what an agent may do as risk, environment, and history evolve (office or OT context).",
-                    icon: Users,
-                  },
-                  {
-                    title: "Runtime protection that learns",
-                    desc: "AgentGX-ARE watches prompts, tools, data access, and outcomes; blocks jailbreaks, scope violations, and unsafe sequences with explainable references to the rule that fired.",
-                    icon: Zap,
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.title}
-                    className="p-6 rounded-xl bg-card/50 border border-white/10"
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="p-2 rounded bg-primary/10 text-primary">
-                        <item.icon className="w-5 h-5" />
-                      </div>
-                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
+                  ["No qualification boundary", "An agent that worked in demo has no formal envelope for production."],
+                  ["Behavior without authority", "Telemetry shows what happened — not whether the next action should be permitted."],
+                  ["Opaque decisions", "ALLOW/DENY with no receipt means no audit, replay, or operator trust."],
+                  ["Confused roles", "Process fault, attack, and unauthorized agent action treated as the same alarm."],
+                ].map(([gap, wrong]) => (
+                  <tr key={gap} className="border-b border-white/5">
+                    <td className="p-4 text-white font-medium align-top">{gap}</td>
+                    <td className="p-4 align-top">{wrong}</td>
+                  </tr>
                 ))}
-              </div>
-            </div>
-
-            <motion.div
-              className="order-1 lg:order-2"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full opacity-30" />
-                <img
-                  src={defenseImg}
-                  alt="Agent governance visualization"
-                  className="rounded-xl border border-white/10 shadow-2xl relative z-10"
-                />
-              </div>
-            </motion.div>
+              </tbody>
+            </table>
           </div>
+          <p className="text-center text-sm text-muted-foreground mt-6 max-w-2xl mx-auto">
+            AgentGX does not replace SCADA, safety PLCs, or SIEM. It sits at the authority seam
+            — between what an agent <em>proposes</em> and what the environment <em>allows</em>.
+          </p>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-card/50 border-primary/20">
+      {/* Domain scope */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader
+            eyebrow="Domain scope"
+            title={<>AgentGX is not an OT-only product. <span className="text-primary">OT is where we earn trust first.</span></>}
+          />
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="bg-card/40 border-white/10">
               <CardHeader>
-                <CardTitle className="text-primary flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5" /> Delegation with proof
-                </CardTitle>
+                <CardTitle className="text-lg font-display text-white">Product scope</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  AuthorityChain-style delegation means every agent action is
-                  tied to an authorized scope—with revocation, attestation, and
-                  forensic replay when disputes arise.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  {[
-                    "Scoped permissions and mandatory escalation paths",
-                    "Encrypted memory and secure workflow handoffs",
-                    "Tamper-evident logs aligned to regulatory, safety, and professional standards",
-                    "On-prem, hybrid, air-gapped, and high-assurance topologies",
-                  ].map((t) => (
-                    <li key={t} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
+              <CardContent className="text-sm text-muted-foreground space-y-2">
+                <p>Any autonomous or AI-assisted system that proposes actions via tools — IT, cloud, enterprise, robotics, OT.</p>
               </CardContent>
             </Card>
-
-            <Card className="bg-card/50 border-primary/20">
+            <Card className="bg-card/40 border-primary/20">
               <CardHeader>
-                <CardTitle className="text-primary flex items-center gap-2">
-                  <Fingerprint className="w-5 h-5" /> Behavioral assurance
-                </CardTitle>
+                <CardTitle className="text-lg font-display text-primary">First beachhead</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Snapshot-style behavioral hashing, cohort comparison, and
-                  temporal windows give supervisors and operators the same
-                  instinct they use with human teams—quantified for regulated
-                  and industrial settings.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  {[
-                    "Drift velocity and acceleration tracking",
-                    "Offline-capable analysis where required",
-                    "Risk scores mapped to policy and trust zones",
-                    "Early warning before reputational, clinical, or operational harm",
-                  ].map((t) => (
-                    <li key={t} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
+              <CardContent className="text-sm text-muted-foreground space-y-2">
+                <p>OT, ICS, and critical infrastructure — extreme risk justifies rigorous proof first. FactoryXChange partner PoC next.</p>
               </CardContent>
             </Card>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { icon: Factory, label: "Critical infrastructure", detail: "Historians, setpoints, SCADA-adjacent APIs" },
+              { icon: Building2, label: "Enterprise agents", detail: "CRM, ERP, ticketing, MCP tools" },
+              { icon: Cloud, label: "Cloud automation", detail: "Infra agents, deployment bots" },
+              { icon: Cpu, label: "Robotics & field", detail: "Bounded actuation with CONFIRM paths" },
+            ].map(({ icon: Icon, label, detail }) => (
+              <div key={label} className="rounded-xl border border-white/10 bg-background/40 p-4">
+                <Icon className="w-5 h-5 text-primary mb-2" />
+                <p className="text-sm font-semibold text-white mb-1">{label}</p>
+                <p className="text-xs text-muted-foreground">{detail}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-card/30 border-y border-white/5">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* What it is / is not */}
+      <section className="py-16 md:py-20 bg-card/20 border-y border-white/5">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader
+            eyebrow="What AgentGX is"
+            title="Independent behavioral authority layer"
+            description="GenomeX is the behavioral instrument. AgentGX is the decision surface."
+          />
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-xl border border-primary/25 bg-primary/5 p-6">
+              <h3 className="font-bold text-white mb-4 flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary" /> What it is
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                AgentGX uses GenomeX behavioral evidence to qualify autonomous systems and
+                govern whether they may act — supervising agents and their interaction with
+                tools, machines, networks, and operational processes.
+              </p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-background/40 p-6">
+              <h3 className="font-bold text-white mb-4 flex items-center gap-2">
+                <XCircle className="w-5 h-5 text-destructive" /> What it is not
+              </h3>
+              <ul className="text-sm text-muted-foreground space-y-2">
+                {[
+                  "Not a replacement SCADA or safety controller",
+                  "Not a generic SOC dashboard or packet analyzer",
+                  "Not a single trust score or black-box AI filter",
+                  "Not tied to one LLM, cloud, or agent framework",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground mt-2 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section id="how-it-works" className="py-16 md:py-20 scroll-mt-24">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader
+            eyebrow="How it works"
+            title="Observe → Characterize → Qualify → Govern → Prove"
+            description="For every request: may this agent perform this action, with this tool, on this target, under the conditions that exist now?"
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+            {PRODUCT_LOOP.map((step, i) => (
+              <div key={step.phase} className="rounded-xl border border-white/10 bg-card/30 p-4 text-center">
+                <div className="text-primary font-display font-bold text-lg mb-1">{i + 1}</div>
+                <p className="text-sm font-semibold text-white mb-2">{step.phase}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{step.detail}</p>
+              </div>
+            ))}
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-                IMMUTABLE <span className="text-primary">COMPLIANCE</span>
-              </h2>
-              <p className="text-muted-foreground mb-8 text-lg">
-                Privacy-preserving attestations create irrefutable evidence of
-                oversight—so when regulators, counsel, quality, or safety teams
-                ask whether an accountable party supervised an agent, the answer
-                is documented, not improvised.
-              </p>
-              <div className="space-y-4">
-                {[
-                  "Blockchain-backed Proof-of-Behavior where policy requires it",
-                  "Local-first options for sovereign, classified-style, and air-gapped programs",
-                  "Maps to HIPAA, privilege, FINRA, GxP-style traceability, and emerging AI duty rules",
-                  "Malpractice defense, quality, safety, audit, and board-ready reporting",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span className="text-foreground font-medium">{item}</span>
+              <h3 className="text-xl font-bold font-display text-white mb-4">Decision surface</h3>
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {DECISIONS.map((d) => (
+                  <div key={d.label} className={`rounded-lg border p-3 ${d.className}`}>
+                    <strong className="block text-sm mb-1">{d.label}</strong>
+                    <span className="text-xs opacity-90">{d.desc}</span>
                   </div>
                 ))}
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Two gates, one decision</h3>
+              <div className="space-y-3 text-sm">
+                <div className="rounded-lg border border-white/10 bg-background/50 p-4">
+                  <span className="text-primary font-mono font-semibold">G_E</span>
+                  <span className="text-white font-medium ml-2">Evidence sufficiency</span>
+                  <p className="text-muted-foreground mt-1">Is there enough qualified evidence to decide at all?</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-background/50 p-4">
+                  <span className="text-primary font-mono font-semibold">G_A</span>
+                  <span className="text-white font-medium ml-2">Action qualification</span>
+                  <p className="text-muted-foreground mt-1">Is this specific proposed change within the Passport envelope?</p>
+                </div>
               </div>
             </div>
             <div className="relative">
-              <img
-                src={vaultImg}
-                alt="Secure compliance vault"
-                className="rounded-xl border border-white/10 shadow-2xl"
-              />
+              <img src={defenseImg} alt="Agent authority layer" className="rounded-xl border border-white/10 shadow-xl" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-bottom-right" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-8 text-center">
-              RUNTIME <span className="text-primary">ENFORCEMENT</span>
-            </h2>
-            <p className="text-xl text-muted-foreground mb-12 text-center">
-              When signals violate policy, AgentGX-ARE can act immediately—with
-              explanations tied to the rule that fired—whether the agent
-              touches PHI, client records, or OT-adjacent workflows
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Block unsafe tool, API, or data access",
-                "Quarantine suspicious agent sessions",
-                "Force human-in-the-loop or control-room escalation",
-                "Throttle or downgrade trust zones",
-                "Halt outputs or sequences that breach scope or safety envelope",
-                "Kill-switch coordinated shutdown across agent fleets",
-                "Immutable event log for forensics and compliance review",
-              ].map((action) => (
-                <div
-                  key={action}
-                  className="p-4 rounded-lg bg-card/50 border border-white/10 flex items-center gap-3"
-                >
-                  <div className="p-2 rounded bg-primary/10 text-primary">
-                    <ShieldCheck className="w-4 h-4" />
-                  </div>
-                  <span className="text-foreground font-medium">{action}</span>
-                </div>
-              ))}
-            </div>
+      {/* Behavioral Passports */}
+      <section className="py-16 md:py-20 bg-card/20 border-y border-white/5">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader
+            eyebrow="Behavioral Passports"
+            title="GXBP — operational contracts, not safety certificates"
+            description="Passports bind an agent deployment to evidence-backed authority with lifecycle state, modes, per-tag bounds, and authority policy (GX-A1 advise through GX-A3 bounded autonomous execution)."
+          />
+          <div className="rounded-xl border border-primary/30 bg-primary/5 p-6 font-mono text-sm text-center mb-6">
+            GXBP:FXC:TEP-AGENT-01:003
           </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-card/30 border-y border-white/5">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
-            KEY <span className="text-primary">INDUSTRIES</span>
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              {
-                title: "Healthcare",
-                desc: "Licensed care organizations scaling triage, documentation, and clinical pathways while professional and FSMB-aligned oversight stays intact.",
-                icon: HeartPulse,
-              },
-              {
-                title: "Legal",
-                desc: "Law firms and legal departments deploying research and drafting agents with Model Rule 5.3–style supervision encoded in policy.",
-                icon: Gavel,
-              },
-              {
-                title: "Financial services",
-                desc: "Advisors and compliance officers governing client-facing agents under FINRA and fiduciary frameworks.",
-                icon: Building2,
-              },
-              {
-                title: "Smart manufacturing & Factory 4.0",
-                desc: "Behavioral governance for autonomous agents on the plant floor—OT/IT, SCADA/ICS, IIoT, and cyber-physical systems—with bounded autonomy, explainable decisions, and audit trails aligned to safety and quality regimes.",
-                icon: Factory,
-              },
-              {
-                title: "Enterprise operations",
-                desc: "Procurement, risk, HR, and back-office agents with jurisdictional controls, data-residency limits, and spend guardrails across regions.",
-                icon: Building2,
-              },
-              {
-                title: "Government & defense-adjacent",
-                desc: "High-assurance and critical-infrastructure contexts needing classified-style discipline, separation of duties, and safe automation.",
-                icon: Shield,
-              },
-              {
-                title: "Professional services",
-                desc: "CPAs, consultants, engineers, and regulated advisors proving diligence as AI becomes baseline client and stakeholder expectation.",
-                icon: Users,
-              },
-            ].map((useCase) => (
-              <Card
-                key={useCase.title}
-                className="bg-background/50 border-white/10 hover:border-primary/30 transition-colors"
-              >
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded bg-primary/10 text-primary">
-                      <useCase.icon className="w-5 h-5" />
-                    </div>
-                    <CardTitle className="text-lg font-display">
-                      {useCase.title}
-                    </CardTitle>
-                  </div>
+              "Identity & fingerprint",
+              "Lifecycle: draft, frozen, revoked, requalification",
+              "Modes & per-tag actuation bounds",
+              "Authority policy GX-A1 → GX-A3",
+              "Evidence receipt on every decision",
+              "Portable across qualification campaigns",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-2 text-sm text-muted-foreground p-3 rounded-lg bg-background/40 border border-white/5">
+                <Fingerprint className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Operator console */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader
+            eyebrow="Operator experience"
+            title="Built for operators and engineers"
+            description="Five questions on every shift: which agent, which Passport, what authority, what changed, why was the last action allowed or denied?"
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "Command", purpose: "Live agent, passport, decision, approve/deny" },
+              { name: "Agents", purpose: "Fleet of governed deployments" },
+              { name: "Agent Detail", purpose: "GenomeX state, qualification, timeline" },
+              { name: "Passports", purpose: "Modes, bounds, lifecycle, fingerprint" },
+              { name: "Observation Lens", purpose: "Governed evidence graph — not raw PCAP" },
+              { name: "Decisions", purpose: "Receipt log with G_E, G_A, audit trail" },
+            ].map((view) => (
+              <Card key={view.name} className="bg-card/40 border-white/10">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base font-display text-white">{view.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {useCase.desc}
-                  </p>
+                  <p className="text-xs text-muted-foreground">{view.purpose}</p>
                 </CardContent>
               </Card>
             ))}
@@ -603,64 +360,197 @@ export default function AgentGX() {
         </div>
       </section>
 
-      <section className="py-24 bg-background border-y border-white/5">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold font-display mb-12 text-center">
-            WHY <span className="text-primary">AGENTGX</span>
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {/* Architecture */}
+      <section className="py-16 md:py-20 bg-card/20 border-y border-white/5">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <SectionHeader eyebrow="Architecture" title="Where AgentGX sits" />
+          <pre className="text-xs md:text-sm text-muted-foreground bg-background/60 border border-white/10 rounded-xl p-6 overflow-x-auto leading-relaxed font-mono text-center">
+{`        ┌─────────────────┐
+        │  AI / LLM Agent │
+        └────────┬────────┘
+                 │ proposes action
+                 ▼
+        ┌─────────────────┐
+        │    AgentGX      │  ← ALLOW / CONFIRM / DENY / UNKNOWN
+        │ Authority Layer │
+        └────────┬────────┘
+                 │ only if permitted
+                 ▼
+        ┌─────────────────┐
+        │ Tools · APIs · OT│
+        └─────────────────┘`}
+          </pre>
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            MCP tool surfaces, agent runtimes, enterprise APIs, and industrial adapters — without
+            owning the underlying system or model.
+          </p>
+        </div>
+      </section>
+
+      {/* Lab validation */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader
+            eyebrow="Validated in the laboratory"
+            title="Proven first in ICS — domain-neutral authority contract"
+            description="Public ICS environments (SWaT, HAI, TEP, BATADAL, WaDi) and live LLM agent loops. We report failures as clearly as successes."
+          />
+          <div className="overflow-x-auto rounded-xl border border-white/10 mb-8">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-white/10 bg-background/50">
+                  <th className="text-left p-3 text-white">Experiment</th>
+                  <th className="text-left p-3 text-white">What it proved</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
+                {[
+                  ["SWaT Lab 1.0", "0% false-positive on normal sequences; sub-60 ms gate latency"],
+                  ["TEP multi-mode", "Separates process fault from agent authority violation"],
+                  ["LOOP-002 (TEP)", "Same historian context, different proposed Δ → ALLOW vs DENY"],
+                  ["LOOP-003", "G_E and G_A compose independently; UNKNOWN ≠ DENY"],
+                ].map(([exp, result]) => (
+                  <tr key={exp} className="border-b border-white/5">
+                    <td className="p-3 text-white font-medium align-top">{exp}</td>
+                    <td className="p-3 align-top">{result}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-card/30 p-6">
+            <h3 className="text-lg font-bold font-display text-white mb-3">FactoryXChange design partner</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              First industrial beachhead: connect telemetry → characterize via GenomeX → qualify
+              → issue frozen GXBP → govern every proposed action → prove with auditor-ready receipts.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              FXC ingestion scaffold built and tested on SWaT-lab shadow data. Partner dialect and
+              live promotion to FROZEN passport are the active track.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* GenomeX family */}
+      <section className="py-16 md:py-20 bg-card/20 border-y border-white/5">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <SectionHeader
+            eyebrow="GenomeX family"
+            title="One behavioral science. Multiple decision surfaces."
+          />
+          <div className="grid sm:grid-cols-3 gap-4 text-sm">
+            <a href="https://blockchain-dna.com" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/10 bg-background/40 p-4 hover:border-primary/40 transition-colors">
+              <p className="font-semibold text-white mb-1">BlockchainDNA</p>
+              <p className="text-muted-foreground text-xs">What changed?</p>
+            </a>
+            <a href="/genomex-assurance-platform" className="rounded-xl border border-primary/30 bg-primary/5 p-4 hover:border-primary/50 transition-colors">
+              <p className="font-semibold text-primary mb-1">GenomeX Assurance</p>
+              <p className="text-muted-foreground text-xs">Trust before use?</p>
+            </a>
+            <div className="rounded-xl border border-white/10 bg-background/40 p-4">
+              <p className="font-semibold text-white mb-1">AgentGX</p>
+              <p className="text-muted-foreground text-xs">May it act?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who it's for */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <SectionHeader eyebrow="Who it's for" title="Roles and deployment surfaces" />
+          <div className="grid md:grid-cols-2 gap-4 mb-8">
             {[
-              "Built for Licensed Responsible Party and accountable operations—not generic chatbot filters",
-              "GenomeX + ARE + Proof-of-Behavior in one integrated architecture",
-              "Explainable enforcement: every block references policy, not a black box",
-              "Trust zones align autonomy with professional and operational risk appetite",
-              "Encrypted memory, delegation workflows, and kill-switches across enterprise and industrial deployments",
-              "Vertical depth: healthcare, legal, finance, Factory 4.0 / smart manufacturing, and public sector",
-              "Patent-pending runtime pipeline with multi-year replication moat",
-              "Knight InfoTek implements and supports AgentGX for U.S. enterprises and critical operations",
-            ].map((item) => (
-              <div
-                key={item}
-                className="p-4 rounded-lg bg-card/50 border border-white/10"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-sm text-foreground leading-relaxed">{item}</p>
-                </div>
+              { role: "Operators (OT / IT)", value: "Clear ALLOW/CONFIRM/DENY with receipts — not another alarm flood" },
+              { role: "CISO / GRC", value: "Evidence-backed qualification and audit trail for AI in production" },
+              { role: "Automation & AI engineers", value: "Authority boundary that works with any agent framework or LLM" },
+              { role: "Integrators & OEMs", value: "Behavioral Passport as a deliverable qualification artifact" },
+            ].map(({ role, value }) => (
+              <div key={role} className="p-4 rounded-xl border border-white/10 bg-card/30">
+                <p className="text-sm font-semibold text-white mb-1">{role}</p>
+                <p className="text-xs text-muted-foreground">{value}</p>
+              </div>
+            ))}
+          </div>
+          <h3 className="text-lg font-bold font-display text-white mb-4 text-center">Deployment shape</h3>
+          <ol className="max-w-2xl mx-auto space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+            {[
+              "Install AgentGX (edge or site-local; air-gapped supported)",
+              "Connect agent runtime and telemetry adapters",
+              "Observe representative operation",
+              "Run qualification campaign → issue GXBP",
+              "Enforce authority on every proposed action",
+              "Inspect receipts; requalify when the system or agent changes",
+            ].map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-20 bg-card/20 border-y border-white/5">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <SectionHeader eyebrow="FAQ" title="Common questions" />
+          <div className="space-y-4">
+            {[
+              {
+                q: "Does AgentGX require a specific LLM?",
+                a: "No. Any agent that exposes tool calls or actuation requests can sit behind the boundary.",
+              },
+              {
+                q: "Does it replace our safety PLC?",
+                a: "No. AgentGX governs agent authority — what an AI is permitted to request — not primary process safety interlocks.",
+              },
+              {
+                q: "How is this different from anomaly detection?",
+                a: "Anomaly detection asks if something is unusual. AgentGX asks if this specific proposed action is authorized under this Passport and this evidence.",
+              },
+              {
+                q: "Is AgentGX only for factories and plants?",
+                a: "No. OT is where we earn trust first because the bar for proof is highest. The same Passport, gates, and receipts apply to enterprise and cloud agents.",
+              },
+              {
+                q: "Is this production-ready?",
+                a: "Core authority composition and operator console v0.1 are implemented and lab-validated. FactoryXChange industrial PoC is the first commercialization beachhead — contact us for pilot timing.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="rounded-xl border border-white/10 bg-background/40 p-5">
+                <p className="text-sm font-semibold text-white mb-2 flex items-start gap-2">
+                  <HelpCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  {q}
+                </p>
+                <p className="text-sm text-muted-foreground pl-6">{a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-16 bg-card/30 border-t border-white/5">
+      {/* CTA */}
+      <section id="contact" className="py-20 bg-gradient-to-b from-background to-card/30 border-t border-white/5">
         <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h2 className="text-2xl md:text-3xl font-bold font-display mb-4">
-            License AgentGX for your organization, platform, or plant
+          <h2 className="text-2xl md:text-4xl font-bold font-display mb-4 text-white">
+            Ready to qualify an agent before it touches production?
           </h2>
-          <p className="text-muted-foreground mb-8">
-            Knight InfoTek is the U.S. implementation partner for Knight InfoTek Global
-            IP—including AgentGX rollout for regulated services,
-            enterprise programs, and industrial / Factory&nbsp;4.0 initiatives,
-            plus integration and ongoing support.
+          <p className="text-muted-foreground mb-8 leading-relaxed">
+            Knight InfoTek is engaging FactoryXChange design partners and early AgentGX pilots
+            across OT, enterprise, and cloud agent surfaces.
           </p>
-          <Button asChild size="lg" className="font-display">
-            <Link href="/">Return home</Link>
-          </Button>
-          <p className="text-sm text-muted-foreground mt-6">
-            Or use the contact form on the homepage to reach our team directly.
-          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="font-display">
+              <a href="mailto:contact@knightinfotek.com?subject=AgentGX%20pilot%20inquiry">
+                Request a pilot
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="font-display border-white/20">
+              <Link href="/#contact">Contact form</Link>
+            </Button>
+          </div>
         </div>
       </section>
-
-      <div className="relative h-64 overflow-hidden border-t border-white/5">
-        <img
-          src={mapImg}
-          alt=""
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
-      </div>
 
       <Footer />
     </div>
